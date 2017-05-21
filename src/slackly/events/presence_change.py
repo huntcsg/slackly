@@ -19,6 +19,7 @@ class PresenceChange(BaseEvent):
 
     For more information see https://api.slack.com/events/presence_change
     """
+
     @property
     def schema(self):
         return {

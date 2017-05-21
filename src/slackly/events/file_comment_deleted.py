@@ -18,6 +18,7 @@ class FileCommentDeleted(BaseEvent):
 
     For more information see https://api.slack.com/events/file_comment_deleted
     """
+    @property
     def schema(self):
         return {
             'type': types.String,

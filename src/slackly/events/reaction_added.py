@@ -24,6 +24,7 @@ class ReactionAdded(BaseEvent):
 
     For more information see https://api.slack.com/events/reaction_added
     """
+
     @property
     def schema(self):
         return {

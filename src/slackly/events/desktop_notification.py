@@ -44,13 +44,3 @@ class DesktopNotification(BaseEvent):
             'is_shared': types.Bool,
             'event_ts': types.SlackTimestamp,
         }
-
-    @property
-    def message(self):
-        if not hasattr(self, '_message'):
-            self._message = types.Message({
-                'ts': self.msg,
-                'channel': self.channel,
-            })
-
-        return self._message

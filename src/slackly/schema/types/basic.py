@@ -1,6 +1,7 @@
 import datetime
 from ._base import SlackType
 
+
 def Epoch(value):
     if value == 0:
         return None
@@ -25,6 +26,7 @@ def Bool(value):
     if value is None:
         return None
     return bool(value)
+
 
 class SlackTimestamp(SlackType):
     def __init__(self, timestamp):

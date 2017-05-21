@@ -26,6 +26,9 @@ class Channel(HasIDMixin, SlackType):
             'topic': ChannelTopic,
         }
 
+    def __repr__(self):
+        return "{0.__class__.__name__}(id='{0.id}', name='{0.name}')".format(self)
+
 
 class ChannelTopic(SlackType):
     @property
@@ -47,6 +50,7 @@ class ChannelPurpose(SlackType):
             'last_set': Epoch,
             'value': String,
         }
+
 
 class MPIM(SlackType):
     pass

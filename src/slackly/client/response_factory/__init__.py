@@ -18,6 +18,7 @@ class SlackAPIDictResponse(object):
     def __repr__(self):
         return json.dumps(self.data)
 
+
 class SlackAPIObjectResponse(object):
     _registry = {}
 

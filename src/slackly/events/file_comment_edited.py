@@ -18,6 +18,7 @@ class FileCommentEdited(BaseEvent):
 
     For more information see https://api.slack.com/events/file_comment_edited
     """
+    @property
     def schema(self):
         return {
             'type': types.String,

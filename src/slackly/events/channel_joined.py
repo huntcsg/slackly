@@ -2,6 +2,7 @@ from ._base import BaseEvent
 from . import register_event
 from ..schema import types
 
+
 @register_event('channel_joined')
 class ChannelJoined(BaseEvent):
     """
@@ -18,6 +19,7 @@ class ChannelJoined(BaseEvent):
 
     For more information see https://api.slack.com/events/channel_joined
     """
+
     @property
     def schema(self):
         return {

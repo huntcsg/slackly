@@ -2,6 +2,7 @@ from ._base import BaseEvent
 from . import register_event
 from ..schema import types
 
+
 @register_event('channel_created')
 class ChannelCreated(BaseEvent):
     """

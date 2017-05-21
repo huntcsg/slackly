@@ -20,6 +20,7 @@ class UserChange(BaseEvent):
 
     For more information see https://api.slack.com/events/user_change
     """
+
     @property
     def schema(self):
         return {

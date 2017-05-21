@@ -24,6 +24,7 @@ class BotChanged(BaseEvent):
 
     For more information see https://api.slack.com/events/bot_changed
     """
+    @property
     def schema(self):
         return {
             'type': types.String,

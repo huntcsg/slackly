@@ -17,6 +17,7 @@ class FileCreated(BaseEvent):
 
     For more information see https://api.slack.com/events/file_created
     """
+    @property
     def schema(self):
         return {
             'type': types.String,
