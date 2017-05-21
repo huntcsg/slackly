@@ -34,14 +34,14 @@ class BaseAPIDispatch(object):
     @classmethod
     def register(cls, name):
         def decorator(api_class):
-            cls.__registry[cls.__name__][name] = api_class
+            cls.__registry["{}.{}".format(cls.__module__, cls.__name__)][name] = api_class
             return api_class
 
         return decorator
 
     @property
     def registry(self):
-        return self.__registry[self.__class__.__name__]
+        return self.__registry["{}.{}".format(self.__class__.__module__, self.__class__.__name__)]
 
     @property
     def bound(self):

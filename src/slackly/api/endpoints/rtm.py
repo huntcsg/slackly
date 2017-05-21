@@ -44,6 +44,7 @@ class Connect(BaseAPIEndpoint):
     The self property contains a small amount of information concerning the connecting user &mdash; an id and their name.
     The team attribute also houses brief information about the team, including its id, name, domain, and if it's part of an Enterprise Grid, the corresponding enteprise_id.
     
+    For more information see https://api.slack.com/methods/connect
     """
     endpoint = 'rtm.connect'
     required_args = {}
@@ -149,6 +150,7 @@ class Start(BaseAPIEndpoint):
     authenticated user.
     The bots property gives details of the integrations set up on this team.
     
+    For more information see https://api.slack.com/methods/start
     """
     endpoint = 'rtm.start'
     required_args = {}

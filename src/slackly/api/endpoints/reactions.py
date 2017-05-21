@@ -16,6 +16,7 @@ class Add(BaseAPIEndpoint):
     
     After making this call, the reaction is saved and a reaction_added event is broadcast through the RTM API for the calling user.
     
+    For more information see https://api.slack.com/methods/add
     """
     endpoint = 'reactions.add'
     required_args = {
@@ -98,6 +99,7 @@ class Get(BaseAPIEndpoint):
     users who made that reaction (i.e. it may be greater than users.length). If the authenticated user has a given reaction then they are guaranteed to appear in the users array, regardless of
     whether count is greater than users.length or not. If the complete list of users is required they can still be obtained by specifying the full argument.
     
+    For more information see https://api.slack.com/methods/get
     """
     endpoint = 'reactions.get'
     required_args = {}
@@ -218,6 +220,7 @@ class List(BaseAPIEndpoint):
     number of items reacted to, the page of results returned in this response and
     the total number of pages available. Please note that the max count value is 1000 and the max page value is 100.
     
+    For more information see https://api.slack.com/methods/list
     """
     endpoint = 'reactions.list'
     required_args = {}
@@ -270,6 +273,7 @@ class Remove(BaseAPIEndpoint):
     
     After making this call, the reaction is removed and a reaction_removed event is broadcast through the RTM API for the calling user.
     
+    For more information see https://api.slack.com/methods/remove
     """
     endpoint = 'reactions.remove'
     required_args = {

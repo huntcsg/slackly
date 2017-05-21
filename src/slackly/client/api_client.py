@@ -26,7 +26,6 @@ class SlackClient(object):
 
         headers = {
             'user-agent': self.user_agent,
-            # 'content-type': 'application/json;charset=utf-8',
         }
 
         for key in kwargs:

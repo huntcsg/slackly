@@ -34,6 +34,7 @@ class Info(BaseAPIEndpoint):
     }
     
     
+    For more information see https://api.slack.com/methods/info
     """
     endpoint = 'bots.info'
     required_args = {}

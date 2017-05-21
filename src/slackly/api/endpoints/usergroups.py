@@ -45,6 +45,7 @@ class Create(BaseAPIEndpoint):
     }
     
     
+    For more information see https://api.slack.com/methods/create
     """
     endpoint = 'usergroups.create'
     required_args = {
@@ -126,6 +127,7 @@ class Disable(BaseAPIEndpoint):
     
     When a User Group has been disabled its date_delete parameter will be non-zero.
     
+    For more information see https://api.slack.com/methods/disable
     """
     endpoint = 'usergroups.disable'
     required_args = {
@@ -192,6 +194,7 @@ class Enable(BaseAPIEndpoint):
     
     When a User Group is enabled, it's date_delete parameter will be 0 (zero).
     
+    For more information see https://api.slack.com/methods/enable
     """
     endpoint = 'usergroups.enable'
     required_args = {
@@ -310,6 +313,7 @@ class List(BaseAPIEndpoint):
     }
     
     
+    For more information see https://api.slack.com/methods/list
     """
     endpoint = 'usergroups.list'
     required_args = {}
@@ -380,6 +384,7 @@ class Update(BaseAPIEndpoint):
     }
     
     
+    For more information see https://api.slack.com/methods/update
     """
     endpoint = 'usergroups.update'
     required_args = {
@@ -443,6 +448,7 @@ class List(BaseAPIEndpoint):
     }
     
     
+    For more information see https://api.slack.com/methods/list
     """
     endpoint = 'usergroups.users.list'
     required_args = {
@@ -512,6 +518,7 @@ class Update(BaseAPIEndpoint):
     }
     
     
+    For more information see https://api.slack.com/methods/update
     """
     endpoint = 'usergroups.users.update'
     required_args = {

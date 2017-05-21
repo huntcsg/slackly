@@ -22,6 +22,7 @@ class Close(BaseAPIEndpoint):
     }
     
     
+    For more information see https://api.slack.com/methods/close
     """
     endpoint = 'im.close'
     required_args = {
@@ -105,6 +106,7 @@ class History(BaseAPIEndpoint):
     reached the free message limit. If true, there are messages before the current
     result set, but they are beyond the message limit.
     
+    For more information see https://api.slack.com/methods/history
     """
     endpoint = 'im.history'
     required_args = {
@@ -183,6 +185,7 @@ class List(BaseAPIEndpoint):
     }
     
     
+    For more information see https://api.slack.com/methods/list
     """
     endpoint = 'im.list'
     required_args = {}
@@ -219,6 +222,7 @@ class Mark(BaseAPIEndpoint):
     or following a busy live channel. A timeout of 5 seconds is a good starting point. Be sure to flush these
     calls on shutdown/logout.
     
+    For more information see https://api.slack.com/methods/mark
     """
     endpoint = 'im.mark'
     required_args = {
@@ -292,6 +296,7 @@ class Open(BaseAPIEndpoint):
     }
     
     
+    For more information see https://api.slack.com/methods/open
     """
     endpoint = 'im.open'
     required_args = {
@@ -356,6 +361,7 @@ class Replies(BaseAPIEndpoint):
     }
     
     
+    For more information see https://api.slack.com/methods/replies
     """
     endpoint = 'im.replies'
     required_args = {

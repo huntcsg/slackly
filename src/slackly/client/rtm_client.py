@@ -4,6 +4,8 @@ import json
 import queue
 from threading import Thread
 
+from .event_factory import SlackEventDict
+
 def send_messages(q, websocket, keep_alive=True):
     ping_msg = json.dumps({'type': 'ping'}).encode('utf-8')
     while True:
@@ -29,7 +31,7 @@ def recieve_messages(q, websocket, ignore_pong=True):
 
 class SlackRTMClient(object):
 
-    def __init__(self, token, url, client=None, keep_alive=True, ignore_pong=True):
+    def __init__(self, token, url, event_factory=SlackEventDict, client=None, keep_alive=True, ignore_pong=True):
         if client is None:
             from .api_client import SlackClient
             client = SlackClient(token=token)
@@ -37,6 +39,8 @@ class SlackRTMClient(object):
         self.client = client
         self.token = token
         self.url = url
+        self.event_factory = event_factory
+
         self.websocket = None
         self.send_queue = queue.Queue()
         self.send_daemon = None
@@ -84,7 +88,7 @@ class SlackRTMClient(object):
 
     def get_event(self, timeout=None):
         try:
-            return self.receive_queue.get(timeout=timeout)
+            return self.event_factory(self.receive_queue.get(timeout=timeout))
         except queue.Empty:
             pass
 

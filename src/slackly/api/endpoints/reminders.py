@@ -24,6 +24,7 @@ class Add(BaseAPIEndpoint):
     }
     
     
+    For more information see https://api.slack.com/methods/add
     """
     endpoint = 'reminders.add'
     required_args = {
@@ -68,6 +69,7 @@ class Complete(BaseAPIEndpoint):
     }
     
     
+    For more information see https://api.slack.com/methods/complete
     """
     endpoint = 'reminders.complete'
     required_args = {
@@ -102,6 +104,7 @@ class Delete(BaseAPIEndpoint):
     }
     
     
+    For more information see https://api.slack.com/methods/delete
     """
     endpoint = 'reminders.delete'
     required_args = {
@@ -146,6 +149,7 @@ class Info(BaseAPIEndpoint):
     }
     
     
+    For more information see https://api.slack.com/methods/info
     """
     endpoint = 'reminders.info'
     required_args = {
@@ -199,6 +203,7 @@ class List(BaseAPIEndpoint):
     }
     
     
+    For more information see https://api.slack.com/methods/list
     """
     endpoint = 'reminders.list'
     required_args = {}

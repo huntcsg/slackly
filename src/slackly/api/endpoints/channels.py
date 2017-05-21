@@ -14,6 +14,7 @@ class Archive(BaseAPIEndpoint):
     }
     
     
+    For more information see https://api.slack.com/methods/archive
     """
     endpoint = 'channels.archive'
     required_args = {
@@ -69,6 +70,7 @@ class Create(BaseAPIEndpoint):
     }
     
     
+    For more information see https://api.slack.com/methods/create
     """
     endpoint = 'channels.create'
     required_args = {
@@ -185,6 +187,7 @@ class History(BaseAPIEndpoint):
     reached the free message limit. If true, there are messages before the current
     result set, but they are beyond the message limit.
     
+    For more information see https://api.slack.com/methods/history
     """
     endpoint = 'channels.history'
     required_args = {
@@ -273,6 +276,7 @@ class Info(BaseAPIEndpoint):
     
     An is_org_shared attribute may appear set to true when the channel is part of a shared channel between multiple teams of an Enterprise Grid. You'll also find the team's enterprise_id. See the Enterprise Grid shared channels documentation for more detail.
     
+    For more information see https://api.slack.com/methods/info
     """
     endpoint = 'channels.info'
     required_args = {
@@ -331,6 +335,7 @@ class Invite(BaseAPIEndpoint):
     }
     
     
+    For more information see https://api.slack.com/methods/invite
     """
     endpoint = 'channels.invite'
     required_args = {
@@ -412,6 +417,7 @@ class Join(BaseAPIEndpoint):
     }
     
     
+    For more information see https://api.slack.com/methods/join
     """
     endpoint = 'channels.join'
     required_args = {
@@ -452,6 +458,7 @@ class Kick(BaseAPIEndpoint):
     }
     
     
+    For more information see https://api.slack.com/methods/kick
     """
     endpoint = 'channels.kick'
     required_args = {
@@ -497,6 +504,7 @@ class Leave(BaseAPIEndpoint):
     }
     
     
+    For more information see https://api.slack.com/methods/leave
     """
     endpoint = 'channels.leave'
     required_args = {
@@ -565,6 +573,7 @@ class List(BaseAPIEndpoint):
     Use the exclude_members parameter to exclude the members collection from each listed channel. This improves performance, especially with larger teams. Use channels.info to retrieve members on a channel-by-channel basis instead.
     An is_org_shared attribute may appear set to true on channels that are shared channel between multiple teams of an enterprise grid. See the enterprise grid shared channels documentation for more detail.
     
+    For more information see https://api.slack.com/methods/list
     """
     endpoint = 'channels.list'
     required_args = {}
@@ -612,6 +621,7 @@ class Mark(BaseAPIEndpoint):
     or following a busy live channel. A timeout of 5 seconds is a good starting point. Be sure to flush these 
     calls on shutdown/logout.
     
+    For more information see https://api.slack.com/methods/mark
     """
     endpoint = 'channels.mark'
     required_args = {
@@ -662,6 +672,7 @@ class Rename(BaseAPIEndpoint):
     
     Returns the channel ID, name and date created (as a unix timestamp).
     
+    For more information see https://api.slack.com/methods/rename
     """
     endpoint = 'channels.rename'
     required_args = {
@@ -730,6 +741,7 @@ class Replies(BaseAPIEndpoint):
     }
     
     
+    For more information see https://api.slack.com/methods/replies
     """
     endpoint = 'channels.replies'
     required_args = {
@@ -769,6 +781,7 @@ class SetPurpose(BaseAPIEndpoint):
     }
     
     
+    For more information see https://api.slack.com/methods/setPurpose
     """
     endpoint = 'channels.setPurpose'
     required_args = {
@@ -808,6 +821,7 @@ class SetTopic(BaseAPIEndpoint):
     }
     
     
+    For more information see https://api.slack.com/methods/setTopic
     """
     endpoint = 'channels.setTopic'
     required_args = {
@@ -846,6 +860,7 @@ class Unarchive(BaseAPIEndpoint):
     }
     
     
+    For more information see https://api.slack.com/methods/unarchive
     """
     endpoint = 'channels.unarchive'
     required_args = {

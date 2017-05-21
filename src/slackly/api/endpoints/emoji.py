@@ -24,6 +24,7 @@ class List(BaseAPIEndpoint):
     emoji is an alias, the string following the colon is the name of the other
     emoji this emoji is an alias to.
     
+    For more information see https://api.slack.com/methods/list
     """
     endpoint = 'emoji.list'
     required_args = {}

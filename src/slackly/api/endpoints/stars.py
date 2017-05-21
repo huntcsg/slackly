@@ -16,6 +16,7 @@ class Add(BaseAPIEndpoint):
     
     After making this call, the item will be starred and a star_added event is broadcast through the RTM API for the calling user.
     
+    For more information see https://api.slack.com/methods/add
     """
     endpoint = 'stars.add'
     required_args = {}
@@ -108,6 +109,7 @@ class List(BaseAPIEndpoint):
     number of items starred, the page of results returned in this response and
     the total number of pages available. Please note that the max count value is 1000 and the max page value is 100.
     
+    For more information see https://api.slack.com/methods/list
     """
     endpoint = 'stars.list'
     required_args = {}
@@ -150,6 +152,7 @@ class Remove(BaseAPIEndpoint):
     
     After making this call, the item will be unstarred and a star_removed event is broadcast through the RTM API for the calling user.
     
+    For more information see https://api.slack.com/methods/remove
     """
     endpoint = 'stars.remove'
     required_args = {}

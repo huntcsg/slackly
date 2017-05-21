@@ -18,6 +18,7 @@ class Delete(BaseAPIEndpoint):
     The response includes the channel and timestamp properties of the deleted
     message.
     
+    For more information see https://api.slack.com/methods/delete
     """
     endpoint = 'chat.delete'
     required_args = {
@@ -64,6 +65,7 @@ class MeMessage(BaseAPIEndpoint):
     }
     
     
+    For more information see https://api.slack.com/methods/meMessage
     """
     endpoint = 'chat.meMessage'
     required_args = {
@@ -111,6 +113,7 @@ class PostMessage(BaseAPIEndpoint):
     may differ from the provided arguments as our servers sanitize links,
     attachments and other properties.
     
+    For more information see https://api.slack.com/methods/postMessage
     """
     endpoint = 'chat.postMessage'
     required_args = {
@@ -210,6 +213,7 @@ class Unfurl(BaseAPIEndpoint):
     
     As you can see, we provide a minimal positive response when your unfurl attempt is successful. When it is not, you'll receive one of the errors below and ok will not be false.
     
+    For more information see https://api.slack.com/methods/unfurl
     """
     endpoint = 'chat.unfurl'
     required_args = {
@@ -268,6 +272,7 @@ class Update(BaseAPIEndpoint):
     Interactive messages with buttons
     If you're posting message with buttons, you may use chat.update to continue updating ongoing state changes around a message. Provide the ts field the message you're updating and follow the bot user instructions above to update message text, remove or add attachments and actions.
     
+    For more information see https://api.slack.com/methods/update
     """
     endpoint = 'chat.update'
     required_args = {

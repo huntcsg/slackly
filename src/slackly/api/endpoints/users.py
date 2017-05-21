@@ -23,6 +23,7 @@ class DeletePhoto(BaseAPIEndpoint):
     }
     
     
+    For more information see https://api.slack.com/methods/deletePhoto
     """
     endpoint = 'users.deletePhoto'
     required_args = {}
@@ -72,6 +73,7 @@ class GetPresence(BaseAPIEndpoint):
     connection_count gives a count of total connections.
     last_activity indicates the last activity seen by our servers. If a user has no connected clients then this property will be absent.
     
+    For more information see https://api.slack.com/methods/getPresence
     """
     endpoint = 'users.getPresence'
     required_args = {
@@ -170,6 +172,7 @@ class Identity(BaseAPIEndpoint):
     }
     
     
+    For more information see https://api.slack.com/methods/identity
     """
     endpoint = 'users.identity'
     required_args = {}
@@ -232,6 +235,7 @@ class Info(BaseAPIEndpoint):
     Email addresses
     Apps created after January 4th, 2017 must request both the users:read and users:read.email OAuth permission scopes when using the OAuth app installation flow to enable access to the email field of user objects returned by this method.
     
+    For more information see https://api.slack.com/methods/info
     """
     endpoint = 'users.info'
     required_args = {
@@ -311,6 +315,7 @@ class List(BaseAPIEndpoint):
     Email addresses
     Apps created after January 4th, 2017 must request both the users:read and users:read.email OAuth permission scopes when using the OAuth app installation flow to enable access to the email field of user objects returned by this method.
     
+    For more information see https://api.slack.com/methods/list
     """
     endpoint = 'users.list'
     required_args = {}
@@ -348,6 +353,7 @@ class SetActive(BaseAPIEndpoint):
     }
     
     
+    For more information see https://api.slack.com/methods/setActive
     """
     endpoint = 'users.setActive'
     required_args = {}
@@ -389,6 +395,7 @@ class SetPhoto(BaseAPIEndpoint):
     }
     
     
+    For more information see https://api.slack.com/methods/setPhoto
     """
     endpoint = 'users.setPhoto'
     required_args = {
@@ -440,6 +447,7 @@ class SetPresence(BaseAPIEndpoint):
     }
     
     
+    For more information see https://api.slack.com/methods/setPresence
     """
     endpoint = 'users.setPresence'
     required_args = {
@@ -508,6 +516,7 @@ class Get(BaseAPIEndpoint):
     }
     
     
+    For more information see https://api.slack.com/methods/get
     """
     endpoint = 'users.profile.get'
     required_args = {}
@@ -579,6 +588,7 @@ class Set(BaseAPIEndpoint):
     
     This method will generate a user_change event on success, containing the complete user.
     
+    For more information see https://api.slack.com/methods/set
     """
     endpoint = 'users.profile.set'
     required_args = {}

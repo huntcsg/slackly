@@ -14,6 +14,7 @@ class Archive(BaseAPIEndpoint):
     }
     
     
+    For more information see https://api.slack.com/methods/archive
     """
     endpoint = 'groups.archive'
     required_args = {
@@ -56,6 +57,7 @@ class Close(BaseAPIEndpoint):
     }
     
     
+    For more information see https://api.slack.com/methods/close
     """
     endpoint = 'groups.close'
     required_args = {
@@ -117,6 +119,7 @@ class Create(BaseAPIEndpoint):
     }
     
     
+    For more information see https://api.slack.com/methods/create
     """
     endpoint = 'groups.create'
     required_args = {
@@ -191,6 +194,7 @@ class CreateChild(BaseAPIEndpoint):
     }
     
     
+    For more information see https://api.slack.com/methods/createChild
     """
     endpoint = 'groups.createChild'
     required_args = {
@@ -274,6 +278,7 @@ class History(BaseAPIEndpoint):
     reached the free message limit. If true, there are messages before the current
     result set, but they are beyond the message limit.
     
+    For more information see https://api.slack.com/methods/history
     """
     endpoint = 'groups.history'
     required_args = {
@@ -355,6 +360,7 @@ class Info(BaseAPIEndpoint):
     }
     
     
+    For more information see https://api.slack.com/methods/info
     """
     endpoint = 'groups.info'
     required_args = {
@@ -409,6 +415,7 @@ class Invite(BaseAPIEndpoint):
     }
     
     
+    For more information see https://api.slack.com/methods/invite
     """
     endpoint = 'groups.invite'
     required_args = {
@@ -447,6 +454,7 @@ class Kick(BaseAPIEndpoint):
     }
     
     
+    For more information see https://api.slack.com/methods/kick
     """
     endpoint = 'groups.kick'
     required_args = {
@@ -485,6 +493,7 @@ class Leave(BaseAPIEndpoint):
     }
     
     
+    For more information see https://api.slack.com/methods/leave
     """
     endpoint = 'groups.leave'
     required_args = {
@@ -544,6 +553,7 @@ class List(BaseAPIEndpoint):
     }
     
     
+    For more information see https://api.slack.com/methods/list
     """
     endpoint = 'groups.list'
     required_args = {}
@@ -586,6 +596,7 @@ class Mark(BaseAPIEndpoint):
     or following a busy live channel. A timeout of 5 seconds is a good starting point. Be sure to flush these
     calls on shutdown/logout.
     
+    For more information see https://api.slack.com/methods/mark
     """
     endpoint = 'groups.mark'
     required_args = {
@@ -632,6 +643,7 @@ class Open(BaseAPIEndpoint):
     }
     
     
+    For more information see https://api.slack.com/methods/open
     """
     endpoint = 'groups.open'
     required_args = {
@@ -673,6 +685,7 @@ class Rename(BaseAPIEndpoint):
     
     Returns the channel ID, name and date created (as a unix timestamp).
     
+    For more information see https://api.slack.com/methods/rename
     """
     endpoint = 'groups.rename'
     required_args = {
@@ -741,6 +754,7 @@ class Replies(BaseAPIEndpoint):
     }
     
     
+    For more information see https://api.slack.com/methods/replies
     """
     endpoint = 'groups.replies'
     required_args = {
@@ -780,6 +794,7 @@ class SetPurpose(BaseAPIEndpoint):
     }
     
     
+    For more information see https://api.slack.com/methods/setPurpose
     """
     endpoint = 'groups.setPurpose'
     required_args = {
@@ -819,6 +834,7 @@ class SetTopic(BaseAPIEndpoint):
     }
     
     
+    For more information see https://api.slack.com/methods/setTopic
     """
     endpoint = 'groups.setTopic'
     required_args = {
@@ -857,6 +873,7 @@ class Unarchive(BaseAPIEndpoint):
     }
     
     
+    For more information see https://api.slack.com/methods/unarchive
     """
     endpoint = 'groups.unarchive'
     required_args = {
