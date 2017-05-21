@@ -1,0 +1,11 @@
+requests
+websocket-client
+
+[docs]
+sphinx
+rtd_theme
+
+[testing]
+pytest
+pytest-cov
+mock

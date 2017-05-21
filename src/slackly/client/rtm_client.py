@@ -53,6 +53,8 @@ class SlackRTMClient(object):
         self.receive_daemon = None
         self.ignore_pong = ignore_pong
 
+        self.connected = False
+
     @classmethod
     def from_response(cls, endpoint, token, response):
         url = response['url']
@@ -88,12 +90,20 @@ class SlackRTMClient(object):
 
         self.receive_daemon = Thread(target=recieve_messages, args=(self.receive_queue, self.websocket), daemon=True)
         self.receive_daemon.start()
+        self.connected = True
 
     def get_event(self, timeout=None):
         try:
             return self.event_factory(self.receive_queue.get(timeout=timeout))
         except queue.Empty:
             pass
+
+    def get_events(self):
+        while True:
+            try:
+                yield self.event_factory(self.receive_queue.get(block=False))
+            except queue.Empty:
+                break
 
     def get_events_forever(self):
         while True:
@@ -102,3 +112,12 @@ class SlackRTMClient(object):
     def send_event(self, event):
         event_bytes = json.dumps(event).encode('utf-8')
         self.send_queue.put(event_bytes)
+
+    def __repr__(self):
+        inbox = self.receive_queue.qsize()
+        outbox = self.send_queue.qsize()
+        token = "...{}".format(self.token[-5:])
+        return "{cls.__class__.__name__}(token='{token}' | " \
+               "connected: {cls.connected} | " \
+               "inbox: {inbox} | " \
+               "outbox: {outbox})".format(cls=self, token=token, inbox=inbox, outbox=outbox)

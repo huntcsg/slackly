@@ -27,6 +27,8 @@ class BaseAPIDispatch(object):
     def __get__(self, instance, owner):
         if instance.bound:
             self._bind = lambda: instance.bind
+        else:
+            self._bind = lambda: None
 
         return self
 
@@ -69,6 +71,8 @@ class BaseAPIEndpoint(object):
     def __get__(self, instance, owner):
         if instance.bound:
             self._bind = lambda: instance.bind
+        else:
+            self._bind = lambda: None
 
         return self
 

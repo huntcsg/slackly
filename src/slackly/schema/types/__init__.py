@@ -112,7 +112,10 @@ class Item(SlackType):
         if kwargs is None:
             return None
         slack_type = kwargs['type']
-        return cls.items()[slack_type](kwargs)
+
+        default_item = SlackType.__new__
+
+        return cls.items().get(slack_type, default_item)(kwargs)
 
 
 class Bot(SlackType):
