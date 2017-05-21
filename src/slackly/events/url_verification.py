@@ -19,6 +19,7 @@ class UrlVerification(BaseEvent):
 
     For more information see https://api.slack.com/events/url_verification
     """
+
     @property
     def schema(self):
         return {

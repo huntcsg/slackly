@@ -17,6 +17,7 @@ class Pong(BaseEvent):
 
     This event type is returned after doing the special ping message
     """
+
     @property
     def schema(self):
         return {

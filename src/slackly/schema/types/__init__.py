@@ -47,9 +47,9 @@ class User(HasIDMixin, SlackType):
     def __repr__(self):
         return "User(id='{0.id}', name='{0.name}')".format(self)
 
+
 class DNDStatus(SlackType):
     pass
-
 
 
 class File(HasIDMixin, SlackType):
@@ -61,7 +61,10 @@ class FileComment(HasIDMixin, SlackType):
 
 
 class Reaction(SlackType):
-    pass
+
+    @classmethod
+    def String(cls, value):
+        return cls({'value': value})
 
 
 class Team(SlackType):
@@ -69,7 +72,10 @@ class Team(SlackType):
 
 
 class SubTeam(SlackType):
-    pass
+
+    @classmethod
+    def Id(cls, id):
+        return cls({'id': id})
 
 
 class Profile(SlackType):
@@ -81,7 +87,10 @@ class Subscription(SlackType):
 
 
 class Presence(SlackType):
-    pass
+
+    @classmethod
+    def String(cls, value):
+        return cls({'value': value})
 
 
 class Preference(SlackType):
@@ -104,3 +113,11 @@ class Item(SlackType):
             return None
         slack_type = kwargs['type']
         return cls.items()[slack_type](kwargs)
+
+
+class Bot(SlackType):
+    pass
+
+
+class TeamPlan(SlackType):
+    pass

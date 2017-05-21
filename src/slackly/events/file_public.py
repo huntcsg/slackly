@@ -20,6 +20,7 @@ class FilePublic(BaseEvent):
 
     For more information see https://api.slack.com/events/file_public
     """
+    @property
     def schema(self):
         return {
             'type': types.String,

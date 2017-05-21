@@ -6,8 +6,8 @@ from .response_factory import SlackAPIDictResponse
 from .rtm_client import SlackRTMClient
 import json
 
-class SlackClient(object):
 
+class SlackClient(object):
     def __init__(self,
                  token,
                  base_url="https://slack.com/api",
@@ -34,8 +34,6 @@ class SlackClient(object):
 
         response = requests.post(self.url(endpoint), data=kwargs, headers=headers)
 
-
-
         if endpoint in {'rtm.start', 'rtm.connect'}:
             return SlackRTMClient.from_response(endpoint=endpoint, token=self.token, response=response.json())
 
@@ -57,3 +55,6 @@ class SlackClient(object):
 
         return ''.join(self._user_agent.values())
 
+    def __repr__(self):
+        token = '...' + self.token[-5:]
+        return "{0.__class__.__name__}(base_url='{0.base_url}', token='{1}', response_factory={0.response_factory})".format(self, token)

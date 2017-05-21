@@ -2,6 +2,7 @@ from ._base import BaseEvent
 from . import register_event
 from ..schema import types
 
+
 @register_event('channel_history_changed')
 class ChannelHistoryChanged(BaseEvent):
     """

@@ -1,1 +1,3 @@
 recursive-include src *.jinja2
+include README.rst CHANGES.rst AUTHORS.rst LICENSE
+recursive-include tests *.py *.json

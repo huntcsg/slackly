@@ -82,6 +82,9 @@ class BaseAPIEndpoint(object):
         else:
             return SlackAPICall(self.endpoint, self.options, lambda: self.bind, **kwargs)
 
+    def __repr__(self):
+        return "{0.__class__.__name__}(bound: {0.bound} | endpoint: {0.endpoint})".format(self)
+
 
 class SlackAPICall(object):
 

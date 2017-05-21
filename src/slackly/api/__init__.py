@@ -22,6 +22,7 @@ from .endpoints import (
     users,
 )
 
+
 class SlackAPI(object):
     api = api.Api()
     auth = auth.Auth()
@@ -51,3 +52,6 @@ class SlackAPI(object):
     @property
     def bound(self):
         return self.bind is not None
+
+    def __repr__(self):
+        return "{0.__class__.__name__}(bind={0.bind})".format(self)

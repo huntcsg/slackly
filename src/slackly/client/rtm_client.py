@@ -6,6 +6,7 @@ from threading import Thread
 
 from .event_factory import SlackEventDict
 
+
 def send_messages(q, websocket, keep_alive=True):
     ping_msg = json.dumps({'type': 'ping'}).encode('utf-8')
     while True:
@@ -15,6 +16,7 @@ def send_messages(q, websocket, keep_alive=True):
         except queue.Empty:
             if keep_alive:
                 websocket.send(ping_msg)
+
 
 def recieve_messages(q, websocket, ignore_pong=True):
     while True:
@@ -28,6 +30,7 @@ def recieve_messages(q, websocket, ignore_pong=True):
             if e.errno == 2:
                 continue
             raise
+
 
 class SlackRTMClient(object):
 
@@ -64,14 +67,14 @@ class SlackRTMClient(object):
         from ..api import SlackAPI
         client = SlackClient(token=token)
         api = SlackAPI()
-        api.bind=client
+        api.bind = client
         return api.rtm.connect()
 
     @classmethod
     def from_client(cls, client):
         from ..api import SlackAPI
         api = SlackAPI()
-        api.bind=client
+        api.bind = client
         rtm_client = api.rtm.connect()
         rtm_client.client = client
         return rtm_client

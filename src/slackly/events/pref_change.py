@@ -26,13 +26,3 @@ class PrefChange(BaseEvent):
             'name': types.String,
             'value': types.String,
         }
-
-    @property
-    def preference(self):
-        if not hasattr(self, '_preference'):
-            self._preference = types.Preference({
-                'name': self.name,
-                'value': self.value,
-            }, client=self._client)
-
-        return self._preference

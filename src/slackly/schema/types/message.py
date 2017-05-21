@@ -1,5 +1,6 @@
 from ._base import SlackType
 
+
 class Message(SlackType):
     def __repr__(self):
         if not hasattr(self, 'ts'):
@@ -7,6 +8,7 @@ class Message(SlackType):
         if not hasattr(self, 'subtype'):
             self.subtype = None
         return "{0.__class__.__name__}(ts='{0.ts}', subtype='{0.subtype}')".format(self)
+
 
 class PostedMessage(SlackType):
     @property

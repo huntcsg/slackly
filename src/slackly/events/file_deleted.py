@@ -18,6 +18,7 @@ class FileDeleted(BaseEvent):
 
     For more information see https://api.slack.com/events/file_deleted
     """
+    @property
     def schema(self):
         return {
             'type': types.String,

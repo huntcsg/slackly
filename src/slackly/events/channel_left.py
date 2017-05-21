@@ -2,6 +2,7 @@ from ._base import BaseEvent
 from . import register_event
 from ..schema import types
 
+
 @register_event('channel_left')
 class ChannelLeft(BaseEvent):
     """
@@ -16,6 +17,7 @@ class ChannelLeft(BaseEvent):
 
     For more information see https://api.slack.com/events/channel_left
     """
+
     @property
     def schema(self):
         return {

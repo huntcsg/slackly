@@ -23,6 +23,7 @@ class TeamProfileDelete(BaseEvent):
 
     For more information see https://api.slack.com/events/team_profile_delete
     """
+
     @property
     def schema(self):
         return {

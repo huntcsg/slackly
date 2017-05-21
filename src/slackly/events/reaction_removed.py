@@ -24,6 +24,7 @@ class ReactionRemoved(BaseEvent):
 
     For more information see https://api.slack.com/events/reaction_removed
     """
+
     @property
     def schema(self):
         return {

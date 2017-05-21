@@ -25,6 +25,7 @@ class BotAdded(BaseEvent):
 
     For more information see https://api.slack.com/events/bot_added
     """
+    @property
     def schema(self):
         return {
             'type': types.String,

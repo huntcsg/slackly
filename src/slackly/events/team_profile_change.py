@@ -26,6 +26,7 @@ class TeamProfileChange(BaseEvent):
 
     For more information see https://api.slack.com/events/team_profile_change
     """
+
     @property
     def schema(self):
         return {
