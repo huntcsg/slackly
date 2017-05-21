@@ -35,7 +35,7 @@ testing_requires = [
 
 setup(
     name='slackly',
-    version='1.0.0',
+    version='1.0.1',
     description='A full featured python Slack API SDK',
     long_description="\n".join([README, CHANGES, AUTHORS]),
     author='Hunter Senft-Grupp',
