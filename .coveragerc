@@ -1,0 +1,7 @@
+[run]
+branch = True
+
+[paths]
+slackly =
+    src/slackly/
+    .tox/**/slackly/
