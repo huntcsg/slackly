@@ -16,6 +16,7 @@ class Add(BaseAPIEndpoint):
     
     After making this call the pin is saved to the database and a pin_added event is broadcast via the RTM API.
     
+    For more information see https://api.slack.com/methods/add
     """
     endpoint = 'pins.add'
     required_args = {
@@ -97,6 +98,7 @@ class List(BaseAPIEndpoint):
     The created property on each item is a unix timestamp representing when the item was pinned.
     The created_by property on each item is a string representing the encoded user id of the user who pinned the item.
     
+    For more information see https://api.slack.com/methods/list
     """
     endpoint = 'pins.list'
     required_args = {
@@ -133,6 +135,7 @@ class Remove(BaseAPIEndpoint):
     
     After making this call the pin is removed from the database and a pin_removed event is broadcast via the RTM API.
     
+    For more information see https://api.slack.com/methods/remove
     """
     endpoint = 'pins.remove'
     required_args = {

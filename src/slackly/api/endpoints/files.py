@@ -28,6 +28,7 @@ class Add(BaseAPIEndpoint):
     }
     
     
+    For more information see https://api.slack.com/methods/add
     """
     endpoint = 'files.comments.add'
     required_args = {
@@ -66,6 +67,7 @@ class Delete(BaseAPIEndpoint):
     }
     
     
+    For more information see https://api.slack.com/methods/delete
     """
     endpoint = 'files.comments.delete'
     required_args = {
@@ -112,6 +114,7 @@ class Edit(BaseAPIEndpoint):
     }
     
     
+    For more information see https://api.slack.com/methods/edit
     """
     endpoint = 'files.comments.edit'
     required_args = {
@@ -154,6 +157,7 @@ class Delete(BaseAPIEndpoint):
     }
     
     
+    For more information see https://api.slack.com/methods/delete
     """
     endpoint = 'files.delete'
     required_args = {
@@ -254,6 +258,7 @@ class Info(BaseAPIEndpoint):
     comments, the page of results returned in this response and the total number of pages available. Please note that the max count value is 1000 and the max page value is 100.
     Bot user tokens may use this method to access information about files appearing in the channels they belong to.
     
+    For more information see https://api.slack.com/methods/info
     """
     endpoint = 'files.info'
     required_args = {
@@ -316,6 +321,7 @@ class List(BaseAPIEndpoint):
     files matching the filter (if any was supplied), the page of results returned in this response and
     the total number of pages available.
     
+    For more information see https://api.slack.com/methods/list
     """
     endpoint = 'files.list'
     required_args = {}
@@ -390,6 +396,7 @@ class RevokePublicURL(BaseAPIEndpoint):
     
     The response contains a file object.
     
+    For more information see https://api.slack.com/methods/revokePublicURL
     """
     endpoint = 'files.revokePublicURL'
     required_args = {
@@ -490,6 +497,7 @@ class SharedPublicURL(BaseAPIEndpoint):
     The paging information contains the count of comments returned, the total number of
     comments, the page of results returned in this response and the total number of pages available. Please note that the max count value is 1000 and the max page value is 100.
     
+    For more information see https://api.slack.com/methods/sharedPublicURL
     """
     endpoint = 'files.sharedPublicURL'
     required_args = {
@@ -537,6 +545,7 @@ class Upload(BaseAPIEndpoint):
     curl -F content="Hello" -F token=xxxx-xxxxxxxxx-xxxx https://slack.com/api/files.upload
     
     
+    For more information see https://api.slack.com/methods/upload
     """
     endpoint = 'files.upload'
     required_args = {}

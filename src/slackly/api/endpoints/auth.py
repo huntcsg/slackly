@@ -16,6 +16,7 @@ class Revoke(BaseAPIEndpoint):
     }
     
     
+    For more information see https://api.slack.com/methods/revoke
     """
     endpoint = 'auth.revoke'
     required_args = {}
@@ -57,6 +58,7 @@ class Test(BaseAPIEndpoint):
     
     When working against a team within an Enterprise Grid, you'll also find their enterprise_id here.
     
+    For more information see https://api.slack.com/methods/test
     """
     endpoint = 'auth.test'
     required_args = {}

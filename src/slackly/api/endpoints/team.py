@@ -59,6 +59,7 @@ class AccessLogs(BaseAPIEndpoint):
     The paging information contains the count of items returned, the total number of items reacted to, the page of results returned in this response and
     the total number of pages available. Please note that the max count value is 1000 and the max page value is 100.
     
+    For more information see https://api.slack.com/methods/accessLogs
     """
     endpoint = 'team.accessLogs'
     required_args = {}
@@ -121,6 +122,7 @@ class BillableInfo(BaseAPIEndpoint):
     The billing_active status is computed periodically and the values returned by this API reflect the most recently
     computed status and should not be interpreted as a real-time view of each user's billing_active status.
     
+    For more information see https://api.slack.com/methods/billableInfo
     """
     endpoint = 'team.billableInfo'
     required_args = {}
@@ -177,6 +179,7 @@ class Info(BaseAPIEndpoint):
     If a team has not yet set a custom icon, the value of team.icon.image_default will be true.
     If the team belongs to an Enterprise Grid, the enterprise_id and enterprise_name fields will indicate the owning enterprise organization.
     
+    For more information see https://api.slack.com/methods/info
     """
     endpoint = 'team.info'
     required_args = {}
@@ -261,6 +264,7 @@ class IntegrationLogs(BaseAPIEndpoint):
     
     The paging information contains the count of logs returned, the total number of logs, the page of results returned in this response and the total number of pages available.
     
+    For more information see https://api.slack.com/methods/integrationLogs
     """
     endpoint = 'team.integrationLogs'
     required_args = {}
@@ -389,6 +393,7 @@ class Get(BaseAPIEndpoint):
     }
     
     
+    For more information see https://api.slack.com/methods/get
     """
     endpoint = 'team.profile.get'
     required_args = {}

@@ -27,6 +27,7 @@ class Access(BaseAPIEndpoint):
     
     You can use the returned token to call protected API methods on behalf of the user.
     
+    For more information see https://api.slack.com/methods/access
     """
     endpoint = 'oauth.access'
     required_args = {

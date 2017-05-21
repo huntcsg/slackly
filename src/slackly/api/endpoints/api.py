@@ -27,6 +27,7 @@ class Test(BaseAPIEndpoint):
     }
     
     
+    For more information see https://api.slack.com/methods/test
     """
     endpoint = 'api.test'
     required_args = {}

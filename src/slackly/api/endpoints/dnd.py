@@ -14,6 +14,7 @@ class EndDnd(BaseAPIEndpoint):
     }
     
     
+    For more information see https://api.slack.com/methods/endDnd
     """
     endpoint = 'dnd.endDnd'
     required_args = {}
@@ -47,6 +48,7 @@ class EndSnooze(BaseAPIEndpoint):
     }
     
     
+    For more information see https://api.slack.com/methods/endSnooze
     """
     endpoint = 'dnd.endSnooze'
     required_args = {}
@@ -86,6 +88,7 @@ class Info(BaseAPIEndpoint):
     All of the snooze_* properties will only be visible if the user being queried is also the current user.
     The snooze_endtime and snooze_remaining properties will only be returned if snooze_enabled is true.
     
+    For more information see https://api.slack.com/methods/info
     """
     endpoint = 'dnd.info'
     required_args = {}
@@ -125,6 +128,7 @@ class SetSnooze(BaseAPIEndpoint):
     
     The snooze_remaining field is expressed in seconds. If your request presents a num_minutes value of 1, the response's snooze_remaining will be 60.
     
+    For more information see https://api.slack.com/methods/setSnooze
     """
     endpoint = 'dnd.setSnooze'
     required_args = {
@@ -171,6 +175,7 @@ class TeamInfo(BaseAPIEndpoint):
     }
     
     
+    For more information see https://api.slack.com/methods/teamInfo
     """
     endpoint = 'dnd.teamInfo'
     required_args = {}

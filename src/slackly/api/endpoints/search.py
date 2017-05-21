@@ -33,6 +33,7 @@ class All(BaseAPIEndpoint):
     search.messages and search.files. These methods can be used to fetch
     further pages of messages or files.
     
+    For more information see https://api.slack.com/methods/all
     """
     endpoint = 'search.all'
     required_args = {
@@ -117,6 +118,7 @@ class Files(BaseAPIEndpoint):
     
     Please note that the max count value is 1000 and the max page value is 100.
     
+    For more information see https://api.slack.com/methods/files
     """
     endpoint = 'search.files'
     required_args = {
@@ -249,6 +251,7 @@ class Messages(BaseAPIEndpoint):
     
     Please note that the max count value is 1000 and the max page value is 100.
     
+    For more information see https://api.slack.com/methods/messages
     """
     endpoint = 'search.messages'
     required_args = {
