@@ -1,6 +1,7 @@
 import os
 from setuptools import setup, find_packages
 
+
 here = os.path.abspath(os.path.dirname(__file__))
 try:
     with open(os.path.join(here, 'README.rst')) as f:
@@ -13,22 +14,24 @@ except IOError:
     README = CHANGES = AUTHORS = ''
 
 
-
 install_requires = [
     'requests',
     'websocket-client',
 ]
+
 
 docs_require = [
     'sphinx',
     'sphinx_rtd_theme',
 ]
 
+
 testing_requires = [
     'pytest',
     'pytest-cov',
     'mock',
 ]
+
 
 setup(
     name='slackly',
