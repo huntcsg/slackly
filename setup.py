@@ -2,7 +2,7 @@ from setuptools import setup, find_packages
 
 setup(
     name='slackly',
-    version='0.1.0',
+    version='1.0.0',
     install_requires=[
         'requests',
         'websocket-client',
