@@ -76,7 +76,7 @@ Using Event Types
 .. |gitter| image:: https://badges.gitter.im/huntcsg/slackly.png
 .. |travis| image:: https://travis-ci.org/huntcsg/slackly.svg?branch=master
 .. |pypi| image:: https://img.shields.io/pypi/v/slackly.svg
-   :target: https://img.shields.io/pypi/v/slackly.svg
+   :target: https://pypi.python.org/pypi/slackly
 .. |docs| image:: https://readthedocs.org/projects/slackly/badge/?version=latest
    :target: http://slackly.readthedocs.io/en/latest/?badge=latest
 .. |coveralls| image:: https://coveralls.io/repos/github/huntcsg/slackly/badge.svg?branch=master
