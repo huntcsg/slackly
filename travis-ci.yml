@@ -1,0 +1,21 @@
+sudo: false
+cache:
+  directories:
+  - "$HOME/.cache/pip"
+language: python
+python: 3.6
+
+install: pip install -U tox
+script: tox
+after_success:
+- pip install -U python-coveralls
+- coveralls
+deploy:
+  provider: pypi
+  user: huntcsg
+  password:
+    secure: PwWwk7Jek+prv4NesT47mybq150cFBLT8kvZM0HImxjqYGp2TZa9PKiPfsDR1zPeEZ0azfrVpoArfs+OR6CiZh7LyAZntxf+f/LPQadiSBh9KG1QaSsRIXmTRFGN5iNMYpnrZADekhYu09Qmo2YZSe8RfXnWwuog+0pjxKEfr9kd8NsLyWf47XJWJzUNtKUuX8jcGhFxMZv88j9uC75/He4NI7ce2RGP85z9J/U1A+t6tfuGqn9/iOrxwKsGTsM9FNGYMdoGAKHsTkRmfw7wGby9ayig+W4M3ZQWbaii1W2IoKA2pfMSWGXG88xsSFfqazkE4k6An1ADhcXTpUiz0qWQsoCtNCBnOQPEE3vhRO1ITwyFCVpPo2WPSO3e4DCaEvneebbFv5AVFe4sCfoXZvhnKiDPwqBSCYXEx+Gd/StaWQOOHtlp4K+67x8CudCzDSA6GCjLGjVuDbpmb/eq1uGK3rDDHSOJ0ScJ1gWwouMBcoRthjvIqj8WRnHjkwwRSsKEBLv9dqe05TWQg1Mrj1Cdsy6gboncfGLTM+RS6WalTSJI0JTxIjKx2fLrn+1ze3MpC6KLWXonAkjASYPy+AKEldWKvSZTkTif9ibzTlS8ZAl7tNNkvRUAGZBOtRHlAlR6P7Ilfsn90KUxRXQ+WeES53ghAsoj+x8eGumFaow=
+  on:
+    tags: true
+    distributions: sdist bdist_wheel
+    repo: huntcsg/slackly
