@@ -1,7 +1,7 @@
 from ._base import HasIDMixin, SlackType
 
-
 class Channel(HasIDMixin, SlackType):
+    """A Channel"""
     @property
     def schema(self):
         from . import String, Epoch, User, Bool, Integer, SlackTimestamp, Item, List
@@ -31,6 +31,7 @@ class Channel(HasIDMixin, SlackType):
 
 
 class ChannelTopic(SlackType):
+    """A Channel Topic"""
     @property
     def schema(self):
         from . import User, Epoch, String
@@ -42,6 +43,7 @@ class ChannelTopic(SlackType):
 
 
 class ChannelPurpose(SlackType):
+    """A Channel Purpose"""
     @property
     def schema(self):
         from . import User, Epoch, String
@@ -51,10 +53,27 @@ class ChannelPurpose(SlackType):
             'value': String,
         }
 
+class CreatedChannel(SlackType):
+    """A Created Channel"""
+    @property
+    def schema(self):
+        from . import Team
+        return {
+            'channel': Channel,
+            'original_team': Team,
+        }
+
+
 
 class MPIM(SlackType):
+    """An Multi-Person Direct Message Channel"""
     pass
 
 
 class IM(SlackType):
+    """An Single Person Direct Message Channel"""
+    pass
+
+class ChannelType(SlackType):
+    """A Channel Type"""
     pass

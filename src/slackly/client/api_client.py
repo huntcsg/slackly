@@ -17,7 +17,7 @@ class SlackClient(object):
                  token,
                  base_url="https://slack.com/api",
                  user_agent=None,
-                 response_factory=SlackAPIObjectResponse,
+                 response_factory=SlackAPIDictResponse,
                  include_api=True,
                  ):
         """

@@ -1,12 +1,10 @@
-import json
-from copy import deepcopy
-import datetime
 from ._base import HasIDMixin, SlackType
 from .basic import (
     Epoch, String, Integer, Bool, Timestamp, SlackTimestamp, List
 )
 from .message import (
     Message,
+
     PostedMessage,
     PostedMeMessage,
     UpdatedMessage,
@@ -15,74 +13,70 @@ from .channel import (
     Channel,
     ChannelPurpose,
     ChannelTopic,
+    ChannelType,
+    CreatedChannel,
 
     MPIM,
     IM,
 )
-
-
-class User(HasIDMixin, SlackType):
-    @property
-    def schema(self):
-        return {
-            'id': String,
-            'color': String,
-            'deleted': Bool,
-            'is_admin': Bool,
-            'is_bot': Bool,
-            'is_owner': Bool,
-            'is_primary_owner': Bool,
-            'is_restricted': Bool,
-            'is_ultra_restricted': Bool,
-            'name': String,
-            'profile': Profile,
-            'real_name': String,
-            'status': String,
-            'team_id': String,
-            'tz': String,
-            'tz_label': String,
-            'tz_offset': Integer,
-        }
-
-    def __repr__(self):
-        return "User(id='{0.id}', name='{0.name}')".format(self)
+from .user import (
+    User,
+)
 
 
 class DNDStatus(SlackType):
+    """A Do Not Disturb Status"""
     pass
 
 
 class File(HasIDMixin, SlackType):
+    """A File"""
     pass
 
 
 class FileComment(HasIDMixin, SlackType):
+    """A File Comment"""
     pass
 
 
 class Reaction(SlackType):
+    """A Reaction"""
 
     @classmethod
     def String(cls, value):
+        """A Method for creating a Reaction from a String
+        
+        :param value: The reaction string representation
+        :return: a :class:`reaction`
+        """
         return cls({'value': value})
 
 
 class Team(SlackType):
+    """A team"""
     pass
 
 
 class SubTeam(SlackType):
+    """A Subteam"""
 
     @classmethod
     def Id(cls, id):
+        """A method for creating a subteam from a team id (vs. a dictionary of attributes)
+        
+        :param id: a Subteam ID, e.g. T1NASNDSP
+        :return: 
+        """
         return cls({'id': id})
 
 
 class Profile(SlackType):
+    """A Profile"""
     pass
 
 
 class Subscription(SlackType):
+    """A Subscription"""
     pass
 
 
