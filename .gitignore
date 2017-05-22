@@ -2,3 +2,10 @@
 .ipynb_checkpoints/
 
 .idea/
+
+.cache/
+.coverage
+.coverage.pypy
+.tox/
+docs/build/
+src/slackly.egg-info/
