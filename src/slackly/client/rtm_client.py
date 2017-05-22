@@ -33,8 +33,20 @@ def recieve_messages(q, websocket, ignore_pong=True):
 
 
 class SlackRTMClient(object):
+    """The RTM Client
+    
+    """
 
     def __init__(self, token, url, event_factory=SlackEventDict, client=None, keep_alive=True, ignore_pong=True):
+        """
+        
+        :param token: 
+        :param url: 
+        :param event_factory: 
+        :param client: 
+        :param keep_alive: 
+        :param ignore_pong: 
+        """
         if client is None:
             from .api_client import SlackClient
             client = SlackClient(token=token)

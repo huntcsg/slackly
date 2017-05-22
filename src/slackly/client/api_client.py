@@ -2,23 +2,41 @@ import pkg_resources
 import platform
 import requests
 import sys
-from .response_factory import SlackAPIDictResponse
+from .response_factory import SlackAPIDictResponse, SlackAPIObjectResponse
 from .rtm_client import SlackRTMClient
 import json
+from ..schema import endpoints
+from ..api import SlackAPI
 
 
 class SlackClient(object):
+    """The web client
+    
+    """
     def __init__(self,
                  token,
                  base_url="https://slack.com/api",
                  user_agent=None,
-                 response_factory=SlackAPIDictResponse
+                 response_factory=SlackAPIObjectResponse,
+                 include_api=True,
                  ):
+        """
+        
+        :param token: 
+        :param base_url: 
+        :param user_agent: 
+        :param response_factory: 
+        """
 
         self.token = token
         self.base_url = base_url
         self._user_agent = user_agent
         self.response_factory = response_factory
+        if include_api:
+            self.api = SlackAPI(bind=self)
+        else:
+            self.api = None
+
 
     def api_call(self, endpoint, options, **kwargs):
         if options.get('include_token', False):
