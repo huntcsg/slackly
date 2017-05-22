@@ -1,3 +1,4 @@
+"""This package contains all events"""
 from ._base import register_event, event_registry
 
 from .bot_added import BotAdded
