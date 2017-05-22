@@ -5,6 +5,7 @@ class User(HasIDMixin, SlackType):
     """A User"""
     @property
     def schema(self):
+        from . import String, Bool, Profile, Integer
         return {
             'id': String,
             'color': String,
