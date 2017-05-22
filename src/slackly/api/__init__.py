@@ -24,6 +24,8 @@ from .endpoints import (
 
 
 class SlackAPI(object):
+    "The API object"
+
     api = api.Api()
     auth = auth.Auth()
     bots = bots.Bots()
@@ -47,6 +49,10 @@ class SlackAPI(object):
     users = users.Users()
 
     def __init__(self, bind=None):
+        """
+        
+        :param bind: 
+        """
         self.bind = bind
 
     @property
