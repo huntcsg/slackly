@@ -2,6 +2,7 @@ from ._base import SlackType
 
 
 class Message(SlackType):
+    """A Message"""
     def __repr__(self):
         if not hasattr(self, 'ts'):
             self.ts = None
@@ -11,6 +12,7 @@ class Message(SlackType):
 
 
 class PostedMessage(SlackType):
+    """A Posted Message"""
     @property
     def schema(self):
         from . import Channel, SlackTimestamp
@@ -23,8 +25,8 @@ class PostedMessage(SlackType):
     def __repr__(self):
         return "{0.__class__.__name__}(channel={0.channel}, ts={0.ts})".format(self)
 
-
 class PostedMeMessage(SlackType):
+    """A posted meMessage (message posted as a user)"""
     @property
     def schema(self):
         from . import Channel, SlackTimestamp
@@ -38,6 +40,7 @@ class PostedMeMessage(SlackType):
 
 
 class UpdatedMessage(SlackType):
+    """An updated message"""
     @property
     def schema(self):
         from . import Channel, SlackTimestamp, String

@@ -1,4 +1,5 @@
 from ...events import event_registry
+from ...events._base import BaseEvent
 
 
 def SlackEventDict(event):
@@ -8,4 +9,4 @@ def SlackEventDict(event):
 
 def SlackEventParsed(event):
     event_type = event.get('type')
-    return event_registry[event_type].parse(event)
+    return event_registry.get(event_type, BaseEvent).parse(event)

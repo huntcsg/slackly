@@ -8,6 +8,8 @@ Users = SlackAPIObjectResponse.register('users.list', key='members')(types.List(
 # Channels
 Channel = SlackAPIObjectResponse.register('channels.info', key='channel')(types.Channel)
 Channels = SlackAPIObjectResponse.register('channels.list', key='channels')(types.List(types.Channel))
+CreatedChannel = SlackAPIObjectResponse.register('channels.create')(types.CreatedChannel)
+
 
 # Chat
 PostedMessage = SlackAPIObjectResponse.register('chat.postMessage')(types.PostedMessage)
