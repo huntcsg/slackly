@@ -8,3 +8,4 @@ Slackly API Docs
     top
     api/index
     types/index
+    events/index

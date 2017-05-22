@@ -1,3 +1,6 @@
+"""This package defines every type that Slackly defines. They are defined in a variety of sub modules for
+ease of discoverability and collaboration, but all types should be exposed in this top level package.
+"""
 from ._base import HasIDMixin, SlackType
 from .basic import (
     Epoch, String, Integer, Bool, Timestamp, SlackTimestamp, List

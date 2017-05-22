@@ -1,6 +1,17 @@
 Slack Types
 ===========
 
+.. automodule:: slackly.schema.types
+
+Base Classes and Utilities
+--------------------------
+
+.. autoclass:: slackly.schema.types._base.SlackType
+.. autoclass:: slackly.schema.types._base.HasIDMixin
+
+Types
+-----
+
 .. automodule:: slackly.schema.types._base
     :members:
     :special-members:
