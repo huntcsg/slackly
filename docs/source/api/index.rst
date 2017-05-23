@@ -1,5 +1,5 @@
-Slackly API Docs
-================
+API Docs
+========
 
 
 .. toctree::
