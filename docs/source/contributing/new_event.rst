@@ -1,5 +1,5 @@
-New Event
-=========
+How to add a New Event
+======================
 
 1. Add a new module in the src/slackly/events/ directory. Follow the below template:
 
