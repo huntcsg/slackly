@@ -56,6 +56,13 @@ class RtmConnect(BaseAPIEndpoint):
         'include_token': True
     }
 
+    # Scope Information
+    scopes = {
+        'all': set(),
+        'bot': set(),
+        'user': set(),
+    }
+
     def __call__(self,
                  ):
         """Starts a Real Time Messaging session.
@@ -168,6 +175,13 @@ class RtmStart(BaseAPIEndpoint):
     }
     options = {
         'include_token': True
+    }
+
+    # Scope Information
+    scopes = {
+        'all': set(),
+        'bot': set(),
+        'user': set(),
     }
 
     def __call__(self,

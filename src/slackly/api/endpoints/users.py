@@ -35,6 +35,15 @@ class UsersDeletePhoto(BaseAPIEndpoint):
         'include_token': True
     }
 
+    # Scope Information
+    scopes = {
+        'all': {
+            'users.profile:write'
+        },
+        'bot': set(),
+        'user': set(),
+    }
+
     def __call__(self,
                  ):
         """Delete the user profile photo
@@ -91,6 +100,15 @@ class UsersGetPresence(BaseAPIEndpoint):
     optional_args = {}
     options = {
         'include_token': True
+    }
+
+    # Scope Information
+    scopes = {
+        'all': {
+            'users:read'
+        },
+        'bot': set(),
+        'user': set(),
     }
 
     def __call__(self,
@@ -202,6 +220,15 @@ class UsersIdentity(BaseAPIEndpoint):
         'include_token': True
     }
 
+    # Scope Information
+    scopes = {
+        'all': {
+            'identity.basic'
+        },
+        'bot': set(),
+        'user': set(),
+    }
+
     def __call__(self,
                  ):
         """Get a user's identity.
@@ -268,6 +295,15 @@ class UsersInfo(BaseAPIEndpoint):
     optional_args = {}
     options = {
         'include_token': True
+    }
+
+    # Scope Information
+    scopes = {
+        'all': {
+            'users:read'
+        },
+        'bot': set(),
+        'user': set(),
     }
 
     def __call__(self,
@@ -353,6 +389,15 @@ class UsersList(BaseAPIEndpoint):
         'include_token': True
     }
 
+    # Scope Information
+    scopes = {
+        'all': {
+            'users:read'
+        },
+        'bot': set(),
+        'user': set(),
+    }
+
     def __call__(self,
                  presence=None,
                  ):
@@ -390,6 +435,15 @@ class UsersSetActive(BaseAPIEndpoint):
     optional_args = {}
     options = {
         'include_token': True
+    }
+
+    # Scope Information
+    scopes = {
+        'all': {
+            'users:write'
+        },
+        'bot': set(),
+        'user': set(),
     }
 
     def __call__(self,
@@ -443,6 +497,15 @@ class UsersSetPhoto(BaseAPIEndpoint):
         'include_token': True
     }
 
+    # Scope Information
+    scopes = {
+        'all': {
+            'users.profile:write'
+        },
+        'bot': set(),
+        'user': set(),
+    }
+
     def __call__(self,
                  image,
                  crop_w=None,
@@ -492,6 +555,15 @@ class UsersSetPresence(BaseAPIEndpoint):
     optional_args = {}
     options = {
         'include_token': True
+    }
+
+    # Scope Information
+    scopes = {
+        'all': {
+            'users:write'
+        },
+        'bot': set(),
+        'user': set(),
     }
 
     def __call__(self,
@@ -565,6 +637,15 @@ class ProfileGet(BaseAPIEndpoint):
     }
     options = {
         'include_token': True
+    }
+
+    # Scope Information
+    scopes = {
+        'all': {
+            'users.profile:read'
+        },
+        'bot': set(),
+        'user': set(),
     }
 
     def __call__(self,
@@ -642,6 +723,15 @@ class ProfileSet(BaseAPIEndpoint):
     }
     options = {
         'include_token': True
+    }
+
+    # Scope Information
+    scopes = {
+        'all': {
+            'users.profile:write'
+        },
+        'bot': set(),
+        'user': set(),
     }
 
     def __call__(self,

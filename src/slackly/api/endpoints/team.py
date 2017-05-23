@@ -75,6 +75,13 @@ class TeamAccessLogs(BaseAPIEndpoint):
         'include_token': True
     }
 
+    # Scope Information
+    scopes = {
+        'all': set(),
+        'bot': set(),
+        'user': set(),
+    }
+
     def __call__(self,
                  before=None,
                  count=None,
@@ -139,6 +146,13 @@ class TeamBillableInfo(BaseAPIEndpoint):
         'include_token': True
     }
 
+    # Scope Information
+    scopes = {
+        'all': set(),
+        'bot': set(),
+        'user': set(),
+    }
+
     def __call__(self,
                  user=None,
                  ):
@@ -195,6 +209,15 @@ class TeamInfo(BaseAPIEndpoint):
     optional_args = {}
     options = {
         'include_token': True
+    }
+
+    # Scope Information
+    scopes = {
+        'all': {
+            'team:read'
+        },
+        'bot': set(),
+        'user': set(),
     }
 
     def __call__(self,
@@ -290,6 +313,13 @@ class TeamIntegrationLogs(BaseAPIEndpoint):
     }
     options = {
         'include_token': True
+    }
+
+    # Scope Information
+    scopes = {
+        'all': set(),
+        'bot': set(),
+        'user': set(),
     }
 
     def __call__(self,
@@ -417,6 +447,15 @@ class ProfileGet(BaseAPIEndpoint):
     }
     options = {
         'include_token': True
+    }
+
+    # Scope Information
+    scopes = {
+        'all': {
+            'users.profile:read'
+        },
+        'bot': set(),
+        'user': set(),
     }
 
     def __call__(self,

@@ -36,6 +36,15 @@ class EmojiList(BaseAPIEndpoint):
         'include_token': True
     }
 
+    # Scope Information
+    scopes = {
+        'all': {
+            'emoji:read'
+        },
+        'bot': set(),
+        'user': set(),
+    }
+
     def __call__(self,
                  ):
         """Lists custom emoji for a team.

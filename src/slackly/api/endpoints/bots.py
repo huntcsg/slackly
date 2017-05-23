@@ -48,6 +48,15 @@ class BotsInfo(BaseAPIEndpoint):
         'include_token': True
     }
 
+    # Scope Information
+    scopes = {
+        'all': {
+            'users:read'
+        },
+        'bot': set(),
+        'user': set(),
+    }
+
     def __call__(self,
                  bot=None,
                  ):

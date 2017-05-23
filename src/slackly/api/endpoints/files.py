@@ -43,6 +43,15 @@ class CommentsAdd(BaseAPIEndpoint):
         'include_token': True
     }
 
+    # Scope Information
+    scopes = {
+        'all': set(),
+        'bot': set(),
+        'user': {
+            'files:write:user'
+        },
+    }
+
     def __call__(self,
                  comment,
                  file,
@@ -83,6 +92,15 @@ class CommentsDelete(BaseAPIEndpoint):
     optional_args = {}
     options = {
         'include_token': True
+    }
+
+    # Scope Information
+    scopes = {
+        'all': set(),
+        'bot': set(),
+        'user': {
+            'files:write:user'
+        },
     }
 
     def __call__(self,
@@ -136,6 +154,15 @@ class CommentsEdit(BaseAPIEndpoint):
         'include_token': True
     }
 
+    # Scope Information
+    scopes = {
+        'all': set(),
+        'bot': set(),
+        'user': {
+            'files:write:user'
+        },
+    }
+
     def __call__(self,
                  comment,
                  file,
@@ -178,6 +205,15 @@ class FilesDelete(BaseAPIEndpoint):
     optional_args = {}
     options = {
         'include_token': True
+    }
+
+    # Scope Information
+    scopes = {
+        'all': set(),
+        'bot': set(),
+        'user': {
+            'files:write:user'
+        },
     }
 
     def __call__(self,
@@ -287,6 +323,15 @@ class FilesInfo(BaseAPIEndpoint):
         'include_token': True
     }
 
+    # Scope Information
+    scopes = {
+        'all': {
+            'files:read'
+        },
+        'bot': set(),
+        'user': set(),
+    }
+
     def __call__(self,
                  file,
                  count=None,
@@ -356,6 +401,15 @@ class FilesList(BaseAPIEndpoint):
         'include_token': True
     }
 
+    # Scope Information
+    scopes = {
+        'all': {
+            'files:read'
+        },
+        'bot': set(),
+        'user': set(),
+    }
+
     def __call__(self,
                  channel=None,
                  count=None,
@@ -423,6 +477,15 @@ class FilesRevokePublicURL(BaseAPIEndpoint):
     optional_args = {}
     options = {
         'include_token': True
+    }
+
+    # Scope Information
+    scopes = {
+        'all': set(),
+        'bot': set(),
+        'user': {
+            'files:write:user'
+        },
     }
 
     def __call__(self,
@@ -529,6 +592,15 @@ class FilesSharedPublicURL(BaseAPIEndpoint):
         'include_token': True
     }
 
+    # Scope Information
+    scopes = {
+        'all': set(),
+        'bot': set(),
+        'user': {
+            'files:write:user'
+        },
+    }
+
     def __call__(self,
                  file,
                  ):
@@ -584,6 +656,15 @@ class FilesUpload(BaseAPIEndpoint):
     }
     options = {
         'include_token': True
+    }
+
+    # Scope Information
+    scopes = {
+        'all': set(),
+        'bot': set(),
+        'user': {
+            'files:write:user'
+        },
     }
 
     def __call__(self,

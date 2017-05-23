@@ -25,3 +25,5 @@ from .schema.types import (
     File,
     FileComment,
 )
+
+from .scopes import get_scopes_from_methods, create_request_url

@@ -43,6 +43,13 @@ class OauthAccess(BaseAPIEndpoint):
     }
     options = {}
 
+    # Scope Information
+    scopes = {
+        'all': set(),
+        'bot': set(),
+        'user': set(),
+    }
+
     def __call__(self,
                  client_id,
                  client_secret,

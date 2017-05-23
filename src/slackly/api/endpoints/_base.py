@@ -81,6 +81,15 @@ class BaseAPIEndpoint(object):
     def bound(self):
         return self.bind is not None
 
+    def get_scopes(self, bot=True):
+        all = self.scopes['all'].copy()
+        if bot:
+            all.update(self.scopes['bot'])
+        else:
+            all.update(self.scopes['user'])
+
+        return all
+
     def __call__(self, **kwargs):
         if self.bound:
             return self.bind.api_call(self.endpoint, self.options, **kwargs)

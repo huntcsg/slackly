@@ -35,6 +35,17 @@ class ChatDelete(BaseAPIEndpoint):
         'include_token': True
     }
 
+    # Scope Information
+    scopes = {
+        'all': set(),
+        'bot': {
+            'chat:write:bot'
+        },
+        'user': {
+            'chat:write:user'
+        },
+    }
+
     def __call__(self,
                  channel,
                  ts,
@@ -81,6 +92,15 @@ class ChatMeMessage(BaseAPIEndpoint):
     optional_args = {}
     options = {
         'include_token': True
+    }
+
+    # Scope Information
+    scopes = {
+        'all': set(),
+        'bot': set(),
+        'user': {
+            'chat:write:user'
+        },
     }
 
     def __call__(self,
@@ -144,6 +164,17 @@ class ChatPostMessage(BaseAPIEndpoint):
     }
     options = {
         'include_token': True
+    }
+
+    # Scope Information
+    scopes = {
+        'all': set(),
+        'bot': {
+            'chat:write:bot'
+        },
+        'user': {
+            'chat:write:user'
+        },
     }
 
     def __call__(self,
@@ -240,6 +271,15 @@ class ChatUnfurl(BaseAPIEndpoint):
         'include_token': True
     }
 
+    # Scope Information
+    scopes = {
+        'all': {
+            'links:write'
+        },
+        'bot': set(),
+        'user': set(),
+    }
+
     def __call__(self,
                  channel,
                  ts,
@@ -303,6 +343,17 @@ class ChatUpdate(BaseAPIEndpoint):
     }
     options = {
         'include_token': True
+    }
+
+    # Scope Information
+    scopes = {
+        'all': set(),
+        'bot': {
+            'chat:write:bot'
+        },
+        'user': {
+            'chat:write:user'
+        },
     }
 
     def __call__(self,

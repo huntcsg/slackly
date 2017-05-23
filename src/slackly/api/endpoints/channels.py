@@ -28,6 +28,15 @@ class ChannelsArchive(BaseAPIEndpoint):
         'include_token': True
     }
 
+    # Scope Information
+    scopes = {
+        'all': {
+            'channels:write'
+        },
+        'bot': set(),
+        'user': set(),
+    }
+
     def __call__(self,
                  channel,
                  ):
@@ -87,6 +96,15 @@ class ChannelsCreate(BaseAPIEndpoint):
     }
     options = {
         'include_token': True
+    }
+
+    # Scope Information
+    scopes = {
+        'all': {
+            'channels:write'
+        },
+        'bot': set(),
+        'user': set(),
     }
 
     def __call__(self,
@@ -213,6 +231,15 @@ class ChannelsHistory(BaseAPIEndpoint):
         'include_token': True
     }
 
+    # Scope Information
+    scopes = {
+        'all': {
+            'channels:history'
+        },
+        'bot': set(),
+        'user': set(),
+    }
+
     def __call__(self,
                  channel,
                  count=None,
@@ -299,6 +326,15 @@ class ChannelsInfo(BaseAPIEndpoint):
         'include_token': True
     }
 
+    # Scope Information
+    scopes = {
+        'all': {
+            'channels:read'
+        },
+        'bot': set(),
+        'user': set(),
+    }
+
     def __call__(self,
                  channel,
                  ):
@@ -360,6 +396,15 @@ class ChannelsInvite(BaseAPIEndpoint):
     optional_args = {}
     options = {
         'include_token': True
+    }
+
+    # Scope Information
+    scopes = {
+        'all': {
+            'channels:write'
+        },
+        'bot': set(),
+        'user': set(),
     }
 
     def __call__(self,
@@ -451,6 +496,15 @@ class ChannelsJoin(BaseAPIEndpoint):
         'include_token': True
     }
 
+    # Scope Information
+    scopes = {
+        'all': {
+            'channels:write'
+        },
+        'bot': set(),
+        'user': set(),
+    }
+
     def __call__(self,
                  name,
                  validate=None,
@@ -492,6 +546,15 @@ class ChannelsKick(BaseAPIEndpoint):
     optional_args = {}
     options = {
         'include_token': True
+    }
+
+    # Scope Information
+    scopes = {
+        'all': {
+            'channels:write'
+        },
+        'bot': set(),
+        'user': set(),
     }
 
     def __call__(self,
@@ -543,6 +606,15 @@ class ChannelsLeave(BaseAPIEndpoint):
     optional_args = {}
     options = {
         'include_token': True
+    }
+
+    # Scope Information
+    scopes = {
+        'all': {
+            'channels:write'
+        },
+        'bot': set(),
+        'user': set(),
     }
 
     def __call__(self,
@@ -618,6 +690,15 @@ class ChannelsList(BaseAPIEndpoint):
         'include_token': True
     }
 
+    # Scope Information
+    scopes = {
+        'all': {
+            'channels:read'
+        },
+        'bot': set(),
+        'user': set(),
+    }
+
     def __call__(self,
                  exclude_archived=None,
                  exclude_members=None,
@@ -667,6 +748,15 @@ class ChannelsMark(BaseAPIEndpoint):
     optional_args = {}
     options = {
         'include_token': True
+    }
+
+    # Scope Information
+    scopes = {
+        'all': {
+            'channels:write'
+        },
+        'bot': set(),
+        'user': set(),
     }
 
     def __call__(self,
@@ -723,6 +813,15 @@ class ChannelsRename(BaseAPIEndpoint):
     }
     options = {
         'include_token': True
+    }
+
+    # Scope Information
+    scopes = {
+        'all': {
+            'channels:write'
+        },
+        'bot': set(),
+        'user': set(),
     }
 
     def __call__(self,
@@ -795,6 +894,15 @@ class ChannelsReplies(BaseAPIEndpoint):
         'include_token': True
     }
 
+    # Scope Information
+    scopes = {
+        'all': {
+            'channels:history'
+        },
+        'bot': set(),
+        'user': set(),
+    }
+
     def __call__(self,
                  channel,
                  thread_ts,
@@ -836,6 +944,15 @@ class ChannelsSetPurpose(BaseAPIEndpoint):
     optional_args = {}
     options = {
         'include_token': True
+    }
+
+    # Scope Information
+    scopes = {
+        'all': {
+            'channels:write'
+        },
+        'bot': set(),
+        'user': set(),
     }
 
     def __call__(self,
@@ -881,6 +998,15 @@ class ChannelsSetTopic(BaseAPIEndpoint):
         'include_token': True
     }
 
+    # Scope Information
+    scopes = {
+        'all': {
+            'channels:write'
+        },
+        'bot': set(),
+        'user': set(),
+    }
+
     def __call__(self,
                  channel,
                  topic,
@@ -920,6 +1046,15 @@ class ChannelsUnarchive(BaseAPIEndpoint):
     optional_args = {}
     options = {
         'include_token': True
+    }
+
+    # Scope Information
+    scopes = {
+        'all': {
+            'channels:write'
+        },
+        'bot': set(),
+        'user': set(),
     }
 
     def __call__(self,

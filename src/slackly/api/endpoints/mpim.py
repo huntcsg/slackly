@@ -39,6 +39,15 @@ class MpimClose(BaseAPIEndpoint):
         'include_token': True
     }
 
+    # Scope Information
+    scopes = {
+        'all': {
+            'mpim:write'
+        },
+        'bot': set(),
+        'user': set(),
+    }
+
     def __call__(self,
                  channel,
                  ):
@@ -132,6 +141,15 @@ class MpimHistory(BaseAPIEndpoint):
         'include_token': True
     }
 
+    # Scope Information
+    scopes = {
+        'all': {
+            'mpim:history'
+        },
+        'bot': set(),
+        'user': set(),
+    }
+
     def __call__(self,
                  channel,
                  count=None,
@@ -216,6 +234,15 @@ class MpimList(BaseAPIEndpoint):
         'include_token': True
     }
 
+    # Scope Information
+    scopes = {
+        'all': {
+            'mpim:read'
+        },
+        'bot': set(),
+        'user': set(),
+    }
+
     def __call__(self,
                  ):
         """Lists multiparty direct message channels for the calling user.
@@ -257,6 +284,15 @@ class MpimMark(BaseAPIEndpoint):
     optional_args = {}
     options = {
         'include_token': True
+    }
+
+    # Scope Information
+    scopes = {
+        'all': {
+            'mpim:write'
+        },
+        'bot': set(),
+        'user': set(),
     }
 
     def __call__(self,
@@ -337,6 +373,15 @@ class MpimOpen(BaseAPIEndpoint):
         'include_token': True
     }
 
+    # Scope Information
+    scopes = {
+        'all': {
+            'mpim:write'
+        },
+        'bot': set(),
+        'user': set(),
+    }
+
     def __call__(self,
                  users,
                  ):
@@ -398,6 +443,15 @@ class MpimReplies(BaseAPIEndpoint):
     optional_args = {}
     options = {
         'include_token': True
+    }
+
+    # Scope Information
+    scopes = {
+        'all': {
+            'mpim:history'
+        },
+        'bot': set(),
+        'user': set(),
     }
 
     def __call__(self,

@@ -30,6 +30,13 @@ class AuthRevoke(BaseAPIEndpoint):
         'include_token': True
     }
 
+    # Scope Information
+    scopes = {
+        'all': set(),
+        'bot': set(),
+        'user': set(),
+    }
+
     def __call__(self,
                  test=None,
                  ):
@@ -71,6 +78,13 @@ class AuthTest(BaseAPIEndpoint):
     optional_args = {}
     options = {
         'include_token': True
+    }
+
+    # Scope Information
+    scopes = {
+        'all': set(),
+        'bot': set(),
+        'user': set(),
     }
 
     def __call__(self,
