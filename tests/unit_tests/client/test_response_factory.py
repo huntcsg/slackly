@@ -6,6 +6,8 @@ class TestResponseObjectFactory(TestCase):
 
     def setUp(self):
         from slackly import SlackAPIDictResponse, SlackAPIObjectResponse
+        from slackly.schema.types import List
+        self.list = List
         self.dict_response = SlackAPIDictResponse
         self.object_response = SlackAPIObjectResponse
 
@@ -14,7 +16,12 @@ class TestResponseObjectFactory(TestCase):
         return SlackAPIObjectResponse(endpoint, data)
 
     def get_registered_type(self, endpoint):
-        return self.object_response._registry.get(endpoint)
+        factory = self.object_response._registry.get(endpoint)['factory']
+
+        if isinstance(factory, self.list):
+            return factory.slack_type
+        else:
+            return factory
 
     def endpoint_is_registered(self, endpoint):
         return endpoint in self.object_response._registry
@@ -29,7 +36,8 @@ class TestResponseObjectFactory(TestCase):
                     result = self.callFUT(endpoint, response_data)
 
                     if self.endpoint_is_registered(endpoint):
-                        self.assertIsInstance(result, self.get_registered_type(endpoint))
+                        if isinstance(result, list) and result:
+                            self.assertIsInstance(result[0], self.get_registered_type(endpoint))
                     else:
                         self.assertIsInstance(result, self.dict_response)
 
@@ -41,9 +49,10 @@ class TestResponseObjectFactory(TestCase):
 class TestResponseDictFactory(TestCase):
 
     def setUp(self):
-        from slackly import SlackAPIDictResponse, SlackAPIObjectResponse
+        from slackly import SlackAPIDictResponse, SlackAPIObjectResponse, SlackType
         self.dict_response = SlackAPIDictResponse
         self.object_response = SlackAPIObjectResponse
+        self.slack_type = SlackType
 
     def callFUT(self, endpoint, data):
         from slackly import SlackAPIDictResponse
@@ -65,7 +74,11 @@ class TestResponseDictFactory(TestCase):
                     result = self.callFUT(endpoint, response_data)
 
                     if self.endpoint_is_registered(endpoint):
-                        self.assertIsInstance(result, self.get_registered_type(endpoint))
+                        if isinstance(result, list):
+                            test_object = result[0]
+                        else:
+                            test_object = result
+                        self.assertIsInstance(test_object, self.dict_response)
                     else:
                         self.assertIsInstance(result, self.dict_response)
 

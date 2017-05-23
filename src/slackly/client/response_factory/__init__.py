@@ -14,7 +14,7 @@ class SlackAPIDictResponse(object):
         self.error = self.data.get('error', None)
 
     def __repr__(self):
-        return json.dumps(self.data)
+        return "{0.__class__.__name__}('{0.endpoint}', {0.data})".format(self)
 
     @classmethod
     def initialize(cls):
@@ -60,7 +60,7 @@ class SlackAPIObjectResponse(object):
         factory = response_factory_spec['factory']
         preprocessor = response_factory_spec.get('preprocessor', lambda x: x)
 
-        return lambda response: factory(preprocessor(response.json()))
+        return lambda response: factory(preprocessor(response))
 
     @classmethod
     def initialize(cls):

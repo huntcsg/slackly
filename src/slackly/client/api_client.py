@@ -66,6 +66,14 @@ class SlackClient(object):
 
         return self.response_factory(endpoint, data)
 
+    def make_call(self, call):
+        """Given a prepared call, execute it.
+        
+        :param call: A :class:`slackly.api.endpoints._base.SlackAPICall` instance
+        :return: The result of making the egiven api call
+        """
+        return call(self)
+
     def url(self, endpoint):
         return "{}/{}".format(self.base_url, endpoint)
 

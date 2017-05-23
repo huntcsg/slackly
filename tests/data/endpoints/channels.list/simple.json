@@ -1,0 +1,206 @@
+{
+    "ok": true,
+    "channels": [
+        {
+            "is_member": true,
+            "is_general": true,
+            "is_shared": false,
+            "previous_names": [],
+            "is_channel": true,
+            "name_normalized": "general",
+            "name": "general",
+            "members": [
+                "U1NB5SLNP",
+                "U1NC3ME5C"
+            ],
+            "purpose": {
+                "creator": "",
+                "last_set": 0,
+                "value": "This channel is for team-wide communication and announcements. All team members are in this channel."
+            },
+            "is_archived": false,
+            "id": "C1NCJK01F",
+            "num_members": 2,
+            "creator": "U1NC3ME5C",
+            "topic": {
+                "creator": "",
+                "last_set": 0,
+                "value": "Company-wide announcements and work-based matters"
+            },
+            "created": 1467487489,
+            "is_org_shared": false
+        },
+        {
+            "is_member": true,
+            "is_general": false,
+            "is_shared": false,
+            "previous_names": [],
+            "is_channel": true,
+            "name_normalized": "new_channel",
+            "name": "new_channel",
+            "members": [
+                "U1NB5SLNP",
+                "U1NC3ME5C"
+            ],
+            "purpose": {
+                "creator": "",
+                "last_set": 0,
+                "value": ""
+            },
+            "is_archived": false,
+            "id": "C1QCTSZAM",
+            "num_members": 2,
+            "creator": "U1NC3ME5C",
+            "topic": {
+                "creator": "U1NC3ME5C",
+                "last_set": 1489612570,
+                "value": "Some Topic"
+            },
+            "created": 1468189650,
+            "is_org_shared": false
+        },
+        {
+            "is_member": true,
+            "is_general": false,
+            "is_shared": false,
+            "previous_names": [],
+            "is_channel": true,
+            "name_normalized": "nobotsallowed",
+            "name": "nobotsallowed",
+            "members": [
+                "U1NC3ME5C"
+            ],
+            "purpose": {
+                "creator": "U1NC3ME5C",
+                "last_set": 1489550842,
+                "value": "Don't invite any bots here"
+            },
+            "is_archived": false,
+            "id": "C4K63TWBH",
+            "num_members": 1,
+            "creator": "U1NC3ME5C",
+            "topic": {
+                "creator": "",
+                "last_set": 0,
+                "value": ""
+            },
+            "created": 1489550842,
+            "is_org_shared": false
+        },
+        {
+            "is_member": true,
+            "is_general": false,
+            "is_shared": false,
+            "previous_names": [],
+            "is_channel": true,
+            "name_normalized": "random",
+            "name": "random",
+            "members": [
+                "U1NB5SLNP",
+                "U1NC3ME5C",
+                "U1QAKLDNV",
+                "U1QBT6M0T"
+            ],
+            "purpose": {
+                "creator": "",
+                "last_set": 0,
+                "value": "A place for non-work-related flimflam, faffing, hodge-podge or jibber-jabber you'd prefer to keep out of more focused work-related channels."
+            },
+            "is_archived": false,
+            "id": "C1NC1F736",
+            "num_members": 4,
+            "creator": "U1NC3ME5C",
+            "topic": {
+                "creator": "",
+                "last_set": 0,
+                "value": "Non-work banter and water cooler conversation"
+            },
+            "created": 1467487489,
+            "is_org_shared": false
+        },
+        {
+            "is_member": true,
+            "is_general": false,
+            "is_shared": false,
+            "previous_names": [],
+            "is_channel": true,
+            "name_normalized": "test_channel2",
+            "name": "test_channel2",
+            "members": [
+                "U1NC3ME5C"
+            ],
+            "purpose": {
+                "creator": "",
+                "last_set": 0,
+                "value": ""
+            },
+            "is_archived": false,
+            "id": "C5GDDKZUJ",
+            "num_members": 1,
+            "creator": "U1NC3ME5C",
+            "topic": {
+                "creator": "",
+                "last_set": 0,
+                "value": ""
+            },
+            "created": 1495474350,
+            "is_org_shared": false
+        },
+        {
+            "is_member": true,
+            "is_general": false,
+            "is_shared": false,
+            "previous_names": [],
+            "is_channel": true,
+            "name_normalized": "test_channel3",
+            "name": "test_channel3",
+            "members": [
+                "U1NC3ME5C"
+            ],
+            "purpose": {
+                "creator": "",
+                "last_set": 0,
+                "value": ""
+            },
+            "is_archived": false,
+            "id": "C5GBBN09Z",
+            "num_members": 1,
+            "creator": "U1NC3ME5C",
+            "topic": {
+                "creator": "",
+                "last_set": 0,
+                "value": ""
+            },
+            "created": 1495474783,
+            "is_org_shared": false
+        },
+        {
+            "is_member": true,
+            "is_general": false,
+            "is_shared": false,
+            "previous_names": [],
+            "is_channel": true,
+            "name_normalized": "test_new_channel",
+            "name": "test_new_channel",
+            "members": [
+                "U1NC3ME5C"
+            ],
+            "purpose": {
+                "creator": "",
+                "last_set": 0,
+                "value": ""
+            },
+            "is_archived": false,
+            "id": "C1QB0CSHH",
+            "num_members": 1,
+            "creator": "U1NC3ME5C",
+            "topic": {
+                "creator": "",
+                "last_set": 0,
+                "value": ""
+            },
+            "created": 1468188661,
+            "is_org_shared": false
+        }
+    ]
+}
