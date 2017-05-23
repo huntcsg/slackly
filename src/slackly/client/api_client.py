@@ -22,8 +22,7 @@ class SlackClient(object):
         
         :param token: Required. A :class:`str` slack token
         :param base_url: Optional. A :class:`str` base url for slack
-        :param user_agent: Optional. A user agent string. leave this blank unless you know what
-        you are doing
+        :param user_agent: Optional. A user agent string. leave this blank unless you know what you are doing
         :param response_factory: A response factory (gets __call__'ed on every response)
         """
 

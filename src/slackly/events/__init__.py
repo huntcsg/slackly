@@ -1,6 +1,7 @@
 """This package contains all events"""
 from ._base import register_event, event_registry
 
+from .accounts_changed import AccountsChanged
 from .bot_added import BotAdded
 from .bot_changed import BotChanged
 from .channel_archive import ChannelArchive
@@ -45,6 +46,7 @@ from .im_marked import ImMarked
 from .im_open import ImOpen
 from .manual_presence_change import ManualPresenceChange
 from .message import Message
+from .member_joined_channel import MemberJoinedChannel
 from .pin_added import PinAdded
 from .pin_removed import PinRemoved
 from .pong import Pong

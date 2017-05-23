@@ -17,6 +17,7 @@ except IOError:
 install_requires = [
     'requests',
     'websocket-client',
+    'six',
 ]
 
 
