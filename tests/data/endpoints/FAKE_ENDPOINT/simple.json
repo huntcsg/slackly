@@ -1,0 +1,10 @@
+{
+    "foo": "bar",
+    "baz": 1,
+    "bar": [42, 52],
+    "foobar": {
+      "baz": 5,
+      "bar": "25"
+    },
+    "ok": true
+}

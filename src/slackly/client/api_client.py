@@ -17,6 +17,7 @@ class SlackClient(object):
                  user_agent=None,
                  response_factory=SlackAPIDictResponse,
                  include_api=True,
+                 raise_for_status=True
                  ):
         """
         
@@ -24,16 +25,22 @@ class SlackClient(object):
         :param base_url: Optional. A :class:`str` base url for slack
         :param user_agent: Optional. A user agent string. leave this blank unless you know what you are doing
         :param response_factory: A response factory (gets __call__'ed on every response)
+        :param raise_for_status: Indicates whether a non 200 http status code cause a python exception
         """
 
         self.token = token
         self.base_url = base_url
         self._user_agent = user_agent
         self.response_factory = response_factory
+
+        self.raise_for_status = raise_for_status
         if include_api:
             self.api = SlackAPI(bind=self)
         else:
             self.api = None
+
+        # Fill the registry if this needs to happen
+        self.response_factory.initialize()
 
     def api_call(self, endpoint, options, **kwargs):
         if options.get('include_token', False):
@@ -52,7 +59,12 @@ class SlackClient(object):
         if endpoint in {'rtm.start', 'rtm.connect'}:
             return SlackRTMClient.from_response(endpoint=endpoint, token=self.token, response=response.json())
 
-        return self.response_factory(endpoint, response)
+        if self.raise_for_status:
+            response.raise_for_status()
+
+        data = response.json()
+
+        return self.response_factory(endpoint, data)
 
     def url(self, endpoint):
         return "{}/{}".format(self.base_url, endpoint)
