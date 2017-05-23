@@ -279,7 +279,7 @@ class UsersInfo(BaseAPIEndpoint):
         """
         optional_kwargs = {}
 
-        return BaseAPIEndpoint.__call__(self,
+        return BaseAPIEndpoint.savecall(self,
                                         user=user,
                                         **optional_kwargs
                                         )
@@ -364,7 +364,7 @@ class UsersList(BaseAPIEndpoint):
         if presence is not None:
             optional_kwargs['presence'] = presence
 
-        return BaseAPIEndpoint.__call__(self,
+        return BaseAPIEndpoint.savecall(self,
                                         **optional_kwargs
                                         )
 

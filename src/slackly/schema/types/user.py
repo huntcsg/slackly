@@ -2,6 +2,16 @@ from ._base import HasIDMixin, SlackType
 
 
 class User(HasIDMixin, SlackType):
+
+    def __init__(self, *args, **kwargs):
+        super(User, self).__init__(*args, **kwargs)
+        self._repr_keys.update([
+            'id',
+            'name',
+            'deleted',
+            'status'
+        ])
+
     """A User"""
     @property
     def schema(self):
@@ -25,6 +35,3 @@ class User(HasIDMixin, SlackType):
             'tz_label': String,
             'tz_offset': Integer,
         }
-
-    def __repr__(self):
-        return "User(id='{0.id}', name='{0.name}')".format(self)

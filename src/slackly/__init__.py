@@ -1,4 +1,6 @@
 __version__ = '1.0.0'
+from .config import get_config_value
+
 from .client import (
     SlackClient,
     SlackRTMClient,

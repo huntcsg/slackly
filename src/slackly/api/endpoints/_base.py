@@ -1,4 +1,6 @@
 from collections import defaultdict
+import os
+from ...compat import lru_cache
 
 
 class BaseAPIDispatch(object):
@@ -87,6 +89,16 @@ class BaseAPIEndpoint(object):
 
     def __repr__(self):
         return "{0.__class__.__name__}(bound: {0.bound} | endpoint: {0.endpoint})".format(self)
+
+    # I named it this so I could auto generate code more easily. So...sue me.
+    # It should be cache_call or some such thing but it's not
+    def savecall(self, *args, **kwargs):
+        return BaseAPIEndpoint.__call__(self, *args, **kwargs)
+
+    # Make the calls to this function be cached if configured to do so
+    from ...config import get_config_value
+    if get_config_value('ENDPOINT_CACHE_ENABLED'):
+        savecall = lru_cache(get_config_value('ENDPOINT_CACHE_SIZE'), typed=True)(savecall)
 
 
 class SlackAPICall(object):
