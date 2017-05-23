@@ -11,3 +11,15 @@ from .client import (
 from .api import SlackAPI
 from . import events
 from .schema import types
+from .schema.types import (
+    SlackType,
+
+    Message,
+    User,
+    Channel,
+    Team,
+    IM,
+    MPIM,
+    File,
+    FileComment,
+)

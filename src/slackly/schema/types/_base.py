@@ -13,7 +13,10 @@ class SlackType(object):
         if kwargs is None:
             kwargs = {}
 
-        self._dict = deepcopy(kwargs)
+        if isinstance(kwargs, dict):
+            self._dict = deepcopy(kwargs)
+        else:
+            self._dict = {'value': deepcopy(kwargs)}
 
         if hasattr(self, 'schema'):
             for key, factory in self.schema.items():
