@@ -43,6 +43,13 @@ class ApiTest(BaseAPIEndpoint):
     }
     options = {}
 
+    # Scope Information
+    scopes = {
+        'all': set(),
+        'bot': set(),
+        'user': set(),
+    }
+
     def __call__(self,
                  error=None,
                  foo=None,

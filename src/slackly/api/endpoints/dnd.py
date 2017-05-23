@@ -26,6 +26,15 @@ class DndEndDnd(BaseAPIEndpoint):
         'include_token': True
     }
 
+    # Scope Information
+    scopes = {
+        'all': {
+            'dnd:write'
+        },
+        'bot': set(),
+        'user': set(),
+    }
+
     def __call__(self,
                  ):
         """Ends the current user's Do Not Disturb session immediately.
@@ -61,6 +70,15 @@ class DndEndSnooze(BaseAPIEndpoint):
     optional_args = {}
     options = {
         'include_token': True
+    }
+
+    # Scope Information
+    scopes = {
+        'all': {
+            'dnd:write'
+        },
+        'bot': set(),
+        'user': set(),
     }
 
     def __call__(self,
@@ -108,6 +126,15 @@ class DndInfo(BaseAPIEndpoint):
         'include_token': True
     }
 
+    # Scope Information
+    scopes = {
+        'all': {
+            'dnd:read'
+        },
+        'bot': set(),
+        'user': set(),
+    }
+
     def __call__(self,
                  user=None,
                  ):
@@ -149,6 +176,15 @@ class DndSetSnooze(BaseAPIEndpoint):
     optional_args = {}
     options = {
         'include_token': True
+    }
+
+    # Scope Information
+    scopes = {
+        'all': {
+            'dnd:write'
+        },
+        'bot': set(),
+        'user': set(),
     }
 
     def __call__(self,
@@ -199,6 +235,15 @@ class DndTeamInfo(BaseAPIEndpoint):
     }
     options = {
         'include_token': True
+    }
+
+    # Scope Information
+    scopes = {
+        'all': {
+            'dnd:read'
+        },
+        'bot': set(),
+        'user': set(),
     }
 
     def __call__(self,

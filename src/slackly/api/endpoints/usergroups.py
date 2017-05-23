@@ -64,6 +64,15 @@ class UsergroupsCreate(BaseAPIEndpoint):
         'include_token': True
     }
 
+    # Scope Information
+    scopes = {
+        'all': {
+            'usergroups:write'
+        },
+        'bot': set(),
+        'user': set(),
+    }
+
     def __call__(self,
                  name,
                  channels=None,
@@ -146,6 +155,15 @@ class UsergroupsDisable(BaseAPIEndpoint):
         'include_token': True
     }
 
+    # Scope Information
+    scopes = {
+        'all': {
+            'usergroups:write'
+        },
+        'bot': set(),
+        'user': set(),
+    }
+
     def __call__(self,
                  usergroup,
                  include_count=None,
@@ -214,6 +232,15 @@ class UsergroupsEnable(BaseAPIEndpoint):
     }
     options = {
         'include_token': True
+    }
+
+    # Scope Information
+    scopes = {
+        'all': {
+            'usergroups:write'
+        },
+        'bot': set(),
+        'user': set(),
     }
 
     def __call__(self,
@@ -338,6 +365,15 @@ class UsergroupsList(BaseAPIEndpoint):
         'include_token': True
     }
 
+    # Scope Information
+    scopes = {
+        'all': {
+            'usergroups:read'
+        },
+        'bot': set(),
+        'user': set(),
+    }
+
     def __call__(self,
                  include_count=None,
                  include_disabled=None,
@@ -416,6 +452,15 @@ class UsergroupsUpdate(BaseAPIEndpoint):
         'include_token': True
     }
 
+    # Scope Information
+    scopes = {
+        'all': {
+            'usergroups:write'
+        },
+        'bot': set(),
+        'user': set(),
+    }
+
     def __call__(self,
                  usergroup,
                  channels=None,
@@ -477,6 +522,15 @@ class UsersList(BaseAPIEndpoint):
     }
     options = {
         'include_token': True
+    }
+
+    # Scope Information
+    scopes = {
+        'all': {
+            'usergroups:read'
+        },
+        'bot': set(),
+        'user': set(),
     }
 
     def __call__(self,
@@ -551,6 +605,15 @@ class UsersUpdate(BaseAPIEndpoint):
     }
     options = {
         'include_token': True
+    }
+
+    # Scope Information
+    scopes = {
+        'all': {
+            'usergroups:write'
+        },
+        'bot': set(),
+        'user': set(),
     }
 
     def __call__(self,

@@ -33,6 +33,15 @@ class StarsAdd(BaseAPIEndpoint):
         'include_token': True
     }
 
+    # Scope Information
+    scopes = {
+        'all': {
+            'stars:write'
+        },
+        'bot': set(),
+        'user': set(),
+    }
+
     def __call__(self,
                  channel=None,
                  file=None,
@@ -127,6 +136,15 @@ class StarsList(BaseAPIEndpoint):
         'include_token': True
     }
 
+    # Scope Information
+    scopes = {
+        'all': {
+            'stars:read'
+        },
+        'bot': set(),
+        'user': set(),
+    }
+
     def __call__(self,
                  count=None,
                  page=None,
@@ -173,6 +191,15 @@ class StarsRemove(BaseAPIEndpoint):
     }
     options = {
         'include_token': True
+    }
+
+    # Scope Information
+    scopes = {
+        'all': {
+            'stars:write'
+        },
+        'bot': set(),
+        'user': set(),
     }
 
     def __call__(self,

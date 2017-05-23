@@ -35,6 +35,15 @@ class ReactionsAdd(BaseAPIEndpoint):
         'include_token': True
     }
 
+    # Scope Information
+    scopes = {
+        'all': {
+            'reactions:write'
+        },
+        'bot': set(),
+        'user': set(),
+    }
+
     def __call__(self,
                  name,
                  channel=None,
@@ -118,6 +127,15 @@ class ReactionsGet(BaseAPIEndpoint):
     }
     options = {
         'include_token': True
+    }
+
+    # Scope Information
+    scopes = {
+        'all': {
+            'reactions:read'
+        },
+        'bot': set(),
+        'user': set(),
     }
 
     def __call__(self,
@@ -243,6 +261,15 @@ class ReactionsList(BaseAPIEndpoint):
         'include_token': True
     }
 
+    # Scope Information
+    scopes = {
+        'all': {
+            'reactions:read'
+        },
+        'bot': set(),
+        'user': set(),
+    }
+
     def __call__(self,
                  count=None,
                  full=None,
@@ -299,6 +326,15 @@ class ReactionsRemove(BaseAPIEndpoint):
     }
     options = {
         'include_token': True
+    }
+
+    # Scope Information
+    scopes = {
+        'all': {
+            'reactions:write'
+        },
+        'bot': set(),
+        'user': set(),
     }
 
     def __call__(self,

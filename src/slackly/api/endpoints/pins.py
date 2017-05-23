@@ -34,6 +34,15 @@ class PinsAdd(BaseAPIEndpoint):
         'include_token': True
     }
 
+    # Scope Information
+    scopes = {
+        'all': {
+            'pins:write'
+        },
+        'bot': set(),
+        'user': set(),
+    }
+
     def __call__(self,
                  channel,
                  file=None,
@@ -115,6 +124,15 @@ class PinsList(BaseAPIEndpoint):
         'include_token': True
     }
 
+    # Scope Information
+    scopes = {
+        'all': {
+            'pins:read'
+        },
+        'bot': set(),
+        'user': set(),
+    }
+
     def __call__(self,
                  channel,
                  ):
@@ -157,6 +175,15 @@ class PinsRemove(BaseAPIEndpoint):
     }
     options = {
         'include_token': True
+    }
+
+    # Scope Information
+    scopes = {
+        'all': {
+            'pins:write'
+        },
+        'bot': set(),
+        'user': set(),
     }
 
     def __call__(self,

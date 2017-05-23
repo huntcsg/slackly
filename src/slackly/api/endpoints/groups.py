@@ -28,6 +28,15 @@ class GroupsArchive(BaseAPIEndpoint):
         'include_token': True
     }
 
+    # Scope Information
+    scopes = {
+        'all': {
+            'groups:write'
+        },
+        'bot': set(),
+        'user': set(),
+    }
+
     def __call__(self,
                  channel,
                  ):
@@ -75,6 +84,15 @@ class GroupsClose(BaseAPIEndpoint):
     optional_args = {}
     options = {
         'include_token': True
+    }
+
+    # Scope Information
+    scopes = {
+        'all': {
+            'groups:write'
+        },
+        'bot': set(),
+        'user': set(),
     }
 
     def __call__(self,
@@ -142,6 +160,15 @@ class GroupsCreate(BaseAPIEndpoint):
     }
     options = {
         'include_token': True
+    }
+
+    # Scope Information
+    scopes = {
+        'all': {
+            'groups:write'
+        },
+        'bot': set(),
+        'user': set(),
     }
 
     def __call__(self,
@@ -218,6 +245,15 @@ class GroupsCreateChild(BaseAPIEndpoint):
     optional_args = {}
     options = {
         'include_token': True
+    }
+
+    # Scope Information
+    scopes = {
+        'all': {
+            'groups:write'
+        },
+        'bot': set(),
+        'user': set(),
     }
 
     def __call__(self,
@@ -313,6 +349,15 @@ class GroupsHistory(BaseAPIEndpoint):
         'include_token': True
     }
 
+    # Scope Information
+    scopes = {
+        'all': {
+            'groups:history'
+        },
+        'bot': set(),
+        'user': set(),
+    }
+
     def __call__(self,
                  channel,
                  count=None,
@@ -392,6 +437,15 @@ class GroupsInfo(BaseAPIEndpoint):
         'include_token': True
     }
 
+    # Scope Information
+    scopes = {
+        'all': {
+            'groups:read'
+        },
+        'bot': set(),
+        'user': set(),
+    }
+
     def __call__(self,
                  channel,
                  ):
@@ -454,6 +508,15 @@ class GroupsInvite(BaseAPIEndpoint):
         'include_token': True
     }
 
+    # Scope Information
+    scopes = {
+        'all': {
+            'groups:write'
+        },
+        'bot': set(),
+        'user': set(),
+    }
+
     def __call__(self,
                  channel,
                  user,
@@ -496,6 +559,15 @@ class GroupsKick(BaseAPIEndpoint):
         'include_token': True
     }
 
+    # Scope Information
+    scopes = {
+        'all': {
+            'groups:write'
+        },
+        'bot': set(),
+        'user': set(),
+    }
+
     def __call__(self,
                  channel,
                  user,
@@ -535,6 +607,15 @@ class GroupsLeave(BaseAPIEndpoint):
     optional_args = {}
     options = {
         'include_token': True
+    }
+
+    # Scope Information
+    scopes = {
+        'all': {
+            'groups:write'
+        },
+        'bot': set(),
+        'user': set(),
     }
 
     def __call__(self,
@@ -600,6 +681,15 @@ class GroupsList(BaseAPIEndpoint):
         'include_token': True
     }
 
+    # Scope Information
+    scopes = {
+        'all': {
+            'groups:read'
+        },
+        'bot': set(),
+        'user': set(),
+    }
+
     def __call__(self,
                  exclude_archived=None,
                  ):
@@ -645,6 +735,15 @@ class GroupsMark(BaseAPIEndpoint):
     optional_args = {}
     options = {
         'include_token': True
+    }
+
+    # Scope Information
+    scopes = {
+        'all': {
+            'groups:write'
+        },
+        'bot': set(),
+        'user': set(),
     }
 
     def __call__(self,
@@ -699,6 +798,15 @@ class GroupsOpen(BaseAPIEndpoint):
         'include_token': True
     }
 
+    # Scope Information
+    scopes = {
+        'all': {
+            'groups:write'
+        },
+        'bot': set(),
+        'user': set(),
+    }
+
     def __call__(self,
                  channel,
                  ):
@@ -745,6 +853,15 @@ class GroupsRename(BaseAPIEndpoint):
     }
     options = {
         'include_token': True
+    }
+
+    # Scope Information
+    scopes = {
+        'all': {
+            'groups:write'
+        },
+        'bot': set(),
+        'user': set(),
     }
 
     def __call__(self,
@@ -817,6 +934,15 @@ class GroupsReplies(BaseAPIEndpoint):
         'include_token': True
     }
 
+    # Scope Information
+    scopes = {
+        'all': {
+            'groups:history'
+        },
+        'bot': set(),
+        'user': set(),
+    }
+
     def __call__(self,
                  channel,
                  thread_ts,
@@ -858,6 +984,15 @@ class GroupsSetPurpose(BaseAPIEndpoint):
     optional_args = {}
     options = {
         'include_token': True
+    }
+
+    # Scope Information
+    scopes = {
+        'all': {
+            'groups:write'
+        },
+        'bot': set(),
+        'user': set(),
     }
 
     def __call__(self,
@@ -903,6 +1038,15 @@ class GroupsSetTopic(BaseAPIEndpoint):
         'include_token': True
     }
 
+    # Scope Information
+    scopes = {
+        'all': {
+            'groups:write'
+        },
+        'bot': set(),
+        'user': set(),
+    }
+
     def __call__(self,
                  channel,
                  topic,
@@ -942,6 +1086,15 @@ class GroupsUnarchive(BaseAPIEndpoint):
     optional_args = {}
     options = {
         'include_token': True
+    }
+
+    # Scope Information
+    scopes = {
+        'all': {
+            'groups:write'
+        },
+        'bot': set(),
+        'user': set(),
     }
 
     def __call__(self,

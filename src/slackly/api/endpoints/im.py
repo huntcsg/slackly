@@ -39,6 +39,15 @@ class ImClose(BaseAPIEndpoint):
         'include_token': True
     }
 
+    # Scope Information
+    scopes = {
+        'all': {
+            'im:write'
+        },
+        'bot': set(),
+        'user': set(),
+    }
+
     def __call__(self,
                  channel,
                  ):
@@ -132,6 +141,15 @@ class ImHistory(BaseAPIEndpoint):
         'include_token': True
     }
 
+    # Scope Information
+    scopes = {
+        'all': {
+            'im:history'
+        },
+        'bot': set(),
+        'user': set(),
+    }
+
     def __call__(self,
                  channel,
                  count=None,
@@ -206,6 +224,15 @@ class ImList(BaseAPIEndpoint):
         'include_token': True
     }
 
+    # Scope Information
+    scopes = {
+        'all': {
+            'im:read'
+        },
+        'bot': set(),
+        'user': set(),
+    }
+
     def __call__(self,
                  ):
         """Lists direct message channels for the calling user.
@@ -247,6 +274,15 @@ class ImMark(BaseAPIEndpoint):
     optional_args = {}
     options = {
         'include_token': True
+    }
+
+    # Scope Information
+    scopes = {
+        'all': {
+            'im:write'
+        },
+        'bot': set(),
+        'user': set(),
     }
 
     def __call__(self,
@@ -333,6 +369,15 @@ class ImOpen(BaseAPIEndpoint):
         'include_token': True
     }
 
+    # Scope Information
+    scopes = {
+        'all': {
+            'im:write'
+        },
+        'bot': set(),
+        'user': set(),
+    }
+
     def __call__(self,
                  user,
                  return_im=None,
@@ -398,6 +443,15 @@ class ImReplies(BaseAPIEndpoint):
     optional_args = {}
     options = {
         'include_token': True
+    }
+
+    # Scope Information
+    scopes = {
+        'all': {
+            'im:history'
+        },
+        'bot': set(),
+        'user': set(),
     }
 
     def __call__(self,

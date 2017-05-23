@@ -56,6 +56,15 @@ class SearchAll(BaseAPIEndpoint):
         'include_token': True
     }
 
+    # Scope Information
+    scopes = {
+        'all': {
+            'search:read'
+        },
+        'bot': set(),
+        'user': set(),
+    }
+
     def __call__(self,
                  query,
                  count=None,
@@ -142,6 +151,15 @@ class SearchFiles(BaseAPIEndpoint):
     }
     options = {
         'include_token': True
+    }
+
+    # Scope Information
+    scopes = {
+        'all': {
+            'search:read'
+        },
+        'bot': set(),
+        'user': set(),
     }
 
     def __call__(self,
@@ -281,6 +299,15 @@ class SearchMessages(BaseAPIEndpoint):
     }
     options = {
         'include_token': True
+    }
+
+    # Scope Information
+    scopes = {
+        'all': {
+            'search:read'
+        },
+        'bot': set(),
+        'user': set(),
     }
 
     def __call__(self,

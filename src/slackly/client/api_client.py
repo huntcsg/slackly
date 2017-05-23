@@ -12,7 +12,7 @@ from ..api import SlackAPI
 class SlackClient(object):
     """The web client"""
     def __init__(self,
-                 token,
+                 token=None,
                  base_url="https://slack.com/api",
                  user_agent=None,
                  response_factory=SlackAPIDictResponse,

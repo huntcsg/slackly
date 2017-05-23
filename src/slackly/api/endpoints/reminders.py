@@ -41,6 +41,15 @@ class RemindersAdd(BaseAPIEndpoint):
         'include_token': True
     }
 
+    # Scope Information
+    scopes = {
+        'all': {
+            'reminders:write'
+        },
+        'bot': set(),
+        'user': set(),
+    }
+
     def __call__(self,
                  text,
                  time,
@@ -86,6 +95,15 @@ class RemindersComplete(BaseAPIEndpoint):
         'include_token': True
     }
 
+    # Scope Information
+    scopes = {
+        'all': {
+            'reminders:write'
+        },
+        'bot': set(),
+        'user': set(),
+    }
+
     def __call__(self,
                  reminder,
                  ):
@@ -122,6 +140,15 @@ class RemindersDelete(BaseAPIEndpoint):
     optional_args = {}
     options = {
         'include_token': True
+    }
+
+    # Scope Information
+    scopes = {
+        'all': {
+            'reminders:write'
+        },
+        'bot': set(),
+        'user': set(),
     }
 
     def __call__(self,
@@ -170,6 +197,15 @@ class RemindersInfo(BaseAPIEndpoint):
     optional_args = {}
     options = {
         'include_token': True
+    }
+
+    # Scope Information
+    scopes = {
+        'all': {
+            'reminders:read'
+        },
+        'bot': set(),
+        'user': set(),
     }
 
     def __call__(self,
@@ -225,6 +261,15 @@ class RemindersList(BaseAPIEndpoint):
     optional_args = {}
     options = {
         'include_token': True
+    }
+
+    # Scope Information
+    scopes = {
+        'all': {
+            'reminders:read'
+        },
+        'bot': set(),
+        'user': set(),
     }
 
     def __call__(self,
