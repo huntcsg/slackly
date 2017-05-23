@@ -6,24 +6,27 @@ class Reminders(BaseAPIDispatch):
 
 
 @Reminders.register('add')
-class Add(BaseAPIEndpoint):
+class RemindersAdd(BaseAPIEndpoint):
     """This method creates a reminder.
-    
+
     (Note: only non-recurring reminders will have time and complete_ts field.)
-    {
-        "ok": true,
-        "reminder": {
-            "id": "Rm12345678",
-            "creator": "U18888888",
-            "user": "U18888888",
-            "text": "eat a banana",
-            "recurring": false,
-            "time": 1602288000,
-            "complete_ts": 0
+
+    .. code-block:: json
+
+        {
+            "ok": true,
+            "reminder": {
+                "id": "Rm12345678",
+                "creator": "U18888888",
+                "user": "U18888888",
+                "text": "eat a banana",
+                "recurring": false,
+                "time": 1602288000,
+                "complete_ts": 0
+            }
         }
-    }
-    
-    
+
+
     For more information see https://api.slack.com/methods/add
     """
     endpoint = 'reminders.add'
@@ -44,7 +47,7 @@ class Add(BaseAPIEndpoint):
                  user=None,
                  ):
         """Creates a reminder.
-        
+
         :param text: Required. The content of the reminder e.g. eat a banana
         :param time: Required. When this reminder should happen: the Unix timestamp (up to five years from now), the number of seconds until the reminder (if within 24 hours), or a natural language description (Ex. "in 15 minutes," or "every Thursday") e.g. 1602288000
         :param user: Optional. The user who will receive the reminder. If no user is specified, the reminder will go to user who created it. e.g. U18888888
@@ -56,19 +59,22 @@ class Add(BaseAPIEndpoint):
         return BaseAPIEndpoint.__call__(self,
                                         text=text,
                                         time=time,
-                                        **optional_kwargs,
+                                        **optional_kwargs
                                         )
 
 
 @Reminders.register('complete')
-class Complete(BaseAPIEndpoint):
+class RemindersComplete(BaseAPIEndpoint):
     """This method completes a reminder.
-    
-    {
-        "ok": true
-    }
-    
-    
+
+
+    .. code-block:: json
+
+        {
+            "ok": true
+        }
+
+
     For more information see https://api.slack.com/methods/complete
     """
     endpoint = 'reminders.complete'
@@ -84,26 +90,29 @@ class Complete(BaseAPIEndpoint):
                  reminder,
                  ):
         """Marks a reminder as complete.
-        
+
         :param reminder: Required. The ID of the reminder to be marked as complete e.g. Rm12345678
         """
         optional_kwargs = {}
 
         return BaseAPIEndpoint.__call__(self,
                                         reminder=reminder,
-                                        **optional_kwargs,
+                                        **optional_kwargs
                                         )
 
 
 @Reminders.register('delete')
-class Delete(BaseAPIEndpoint):
+class RemindersDelete(BaseAPIEndpoint):
     """This method deletes a reminder.
-    
-    {
-        "ok": true
-    }
-    
-    
+
+
+    .. code-block:: json
+
+        {
+            "ok": true
+        }
+
+
     For more information see https://api.slack.com/methods/delete
     """
     endpoint = 'reminders.delete'
@@ -119,36 +128,39 @@ class Delete(BaseAPIEndpoint):
                  reminder,
                  ):
         """Deletes a reminder.
-        
+
         :param reminder: Required. The ID of the reminder e.g. Rm12345678
         """
         optional_kwargs = {}
 
         return BaseAPIEndpoint.__call__(self,
                                         reminder=reminder,
-                                        **optional_kwargs,
+                                        **optional_kwargs
                                         )
 
 
 @Reminders.register('info')
-class Info(BaseAPIEndpoint):
+class RemindersInfo(BaseAPIEndpoint):
     """This method returns information about a reminder.
-    
+
     (Note: only non-recurring reminders will have time and complete_ts field.)
-    {
-        "ok": true,
-        "reminder": {
-            "id": "Rm12345678",
-            "creator": "U18888888",
-            "user": "U18888888",
-            "text": "eat a banana",
-            "recurring": false,
-            "time": 1458678068,
-            "complete_ts": 1458678200
+
+    .. code-block:: json
+
+        {
+            "ok": true,
+            "reminder": {
+                "id": "Rm12345678",
+                "creator": "U18888888",
+                "user": "U18888888",
+                "text": "eat a banana",
+                "recurring": false,
+                "time": 1458678068,
+                "complete_ts": 1458678200
+            }
         }
-    }
-    
-    
+
+
     For more information see https://api.slack.com/methods/info
     """
     endpoint = 'reminders.info'
@@ -164,45 +176,48 @@ class Info(BaseAPIEndpoint):
                  reminder,
                  ):
         """Gets information about a reminder.
-        
+
         :param reminder: Required. The ID of the reminder e.g. Rm23456789
         """
         optional_kwargs = {}
 
         return BaseAPIEndpoint.__call__(self,
                                         reminder=reminder,
-                                        **optional_kwargs,
+                                        **optional_kwargs
                                         )
 
 
 @Reminders.register('list')
-class List(BaseAPIEndpoint):
+class RemindersList(BaseAPIEndpoint):
     """This method lists all reminders created by or for a given user.
-    
+
     (Note: only non-recurring reminders will have time and complete_ts field.)
-    {
-        "ok": true,
-        "reminders": [
-            {
-                "id": "Rm12345678",
-                "creator": "U18888888",
-                "user": "U18888888",
-                "text": "eat a banana",
-                "recurring": false,
-                "time": 1458678068,
-                "complete_ts": 0
-            },
-            {
-                "id": "Rm23456789",
-                "creator": "U18888888",
-                "user": "U18888888",
-                "text": "drink water",
-                "recurring": true
-            }
-        ]
-    }
-    
-    
+
+    .. code-block:: json
+
+        {
+            "ok": true,
+            "reminders": [
+                {
+                    "id": "Rm12345678",
+                    "creator": "U18888888",
+                    "user": "U18888888",
+                    "text": "eat a banana",
+                    "recurring": false,
+                    "time": 1458678068,
+                    "complete_ts": 0
+                },
+                {
+                    "id": "Rm23456789",
+                    "creator": "U18888888",
+                    "user": "U18888888",
+                    "text": "drink water",
+                    "recurring": true
+                }
+            ]
+        }
+
+
     For more information see https://api.slack.com/methods/list
     """
     endpoint = 'reminders.list'
@@ -215,10 +230,10 @@ class List(BaseAPIEndpoint):
     def __call__(self,
                  ):
         """Lists all reminders created by or for a given user.
-        
+
         """
         optional_kwargs = {}
 
         return BaseAPIEndpoint.__call__(self,
-                                        **optional_kwargs,
+                                        **optional_kwargs
                                         )

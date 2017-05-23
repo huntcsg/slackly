@@ -6,22 +6,28 @@ class Mpim(BaseAPIDispatch):
 
 
 @Mpim.register('close')
-class Close(BaseAPIEndpoint):
+class MpimClose(BaseAPIEndpoint):
     """This method closes a multiparty direct message channel.
-    
-    {
-        "ok": true
-    }
-    
+
+
+    .. code-block:: json
+
+        {
+            "ok": true
+        }
+
     If the mpim was already closed the response will include no_op and
     already_closed properties:
-    {
-        "ok": true,
-        "no_op": true,
-        "already_closed": true
-    }
-    
-    
+
+    .. code-block:: json
+
+        {
+            "ok": true,
+            "no_op": true,
+            "already_closed": true
+        }
+
+
     For more information see https://api.slack.com/methods/close
     """
     endpoint = 'mpim.close'
@@ -37,49 +43,52 @@ class Close(BaseAPIEndpoint):
                  channel,
                  ):
         """Closes a multiparty direct message channel.
-        
+
         :param channel: Required. MPIM to close. e.g. G1234567890
         """
         optional_kwargs = {}
 
         return BaseAPIEndpoint.__call__(self,
                                         channel=channel,
-                                        **optional_kwargs,
+                                        **optional_kwargs
                                         )
 
 
 @Mpim.register('history')
-class History(BaseAPIEndpoint):
+class MpimHistory(BaseAPIEndpoint):
     """This method returns a portion of messages/events from the specified multiparty direct message channel.
     To read the entire history for a multiparty direct message, call the method with no latest or
     oldest arguments, and then continue paging using the instructions below.
-    
-        {
-            "ok": true,
-            "latest": "1358547726.000003",
-            "messages": [
-                {
-                    "type": "message",
-                    "ts": "1358546515.000008",
-                    "user": "U2147483896",
-                    "text": "Hello"
-                },
-                {
-                    "type": "message",
-                    "ts": "1358546515.000007",
-                    "user": "U2147483896",
-                    "text": "World",
-                    "is_starred": true,
-                },
-                {
-                    "type": "something_else",
-                    "ts": "1358546515.000007",
-                    "wibblr": true
-                }
-            ],
-            "has_more": false
-        }
-    
+
+
+    .. code-block:: json
+
+            {
+                "ok": true,
+                "latest": "1358547726.000003",
+                "messages": [
+                    {
+                        "type": "message",
+                        "ts": "1358546515.000008",
+                        "user": "U2147483896",
+                        "text": "Hello"
+                    },
+                    {
+                        "type": "message",
+                        "ts": "1358546515.000007",
+                        "user": "U2147483896",
+                        "text": "World",
+                        "is_starred": true,
+                    },
+                    {
+                        "type": "something_else",
+                        "ts": "1358546515.000007",
+                        "wibblr": true
+                    }
+                ],
+                "has_more": false
+            }
+
     The messages array up to 100 messages between latest and oldest. If
     there were more than 100 messages between those two points, then has_more
     will be true.
@@ -105,7 +114,7 @@ class History(BaseAPIEndpoint):
     The is_limited boolean property is only included for free teams that have
     reached the free message limit. If true, there are messages before the current
     result set, but they are beyond the message limit.
-    
+
     For more information see https://api.slack.com/methods/history
     """
     endpoint = 'mpim.history'
@@ -132,7 +141,7 @@ class History(BaseAPIEndpoint):
                  unreads=None,
                  ):
         """Fetches history of messages and events from a multiparty direct message.
-        
+
         :param channel: Required. Multiparty direct message to fetch history for. e.g. G1234567890
         :param count: Optional, default=100. Number of messages to return, between 1 and 1000. e.g. 100
         :param inclusive: Optional, default=0. Include messages with latest or oldest timestamp in results. e.g. true
@@ -154,47 +163,50 @@ class History(BaseAPIEndpoint):
 
         return BaseAPIEndpoint.__call__(self,
                                         channel=channel,
-                                        **optional_kwargs,
+                                        **optional_kwargs
                                         )
 
 
 @Mpim.register('list')
-class List(BaseAPIEndpoint):
+class MpimList(BaseAPIEndpoint):
     """This method returns a list of all multiparty direct message channels that the user has.
-    
+
     Returns a list of group objects:
-    {
-        "ok": true,
-        "groups": [
-            {
-                "id": "G024BE91L",
-                "name": "dm-messaging-user-1",
-                "created": 1360782804,
-                "creator": "U024BE7LH",
-                "is_archived": false,
-                "is_mpim": true
-                "members": [
-                    "U024BE7LH",
-                    "U1234567890",
-                    "U2345678901",
-                    "U3456789012"
-                ],
-                "topic": {
-                    "value": "Group messaging.",
+
+    .. code-block:: json
+
+        {
+            "ok": true,
+            "groups": [
+                {
+                    "id": "G024BE91L",
+                    "name": "dm-messaging-user-1",
+                    "created": 1360782804,
                     "creator": "U024BE7LH",
-                    "last_set": 1360782804
+                    "is_archived": false,
+                    "is_mpim": true
+                    "members": [
+                        "U024BE7LH",
+                        "U1234567890",
+                        "U2345678901",
+                        "U3456789012"
+                    ],
+                    "topic": {
+                        "value": "Group messaging.",
+                        "creator": "U024BE7LH",
+                        "last_set": 1360782804
+                    },
+                    "purpose": {
+                        "value": "Group messaging with: @user @user_a @user_b @user_c",
+                        "creator": "U024BE7LH",
+                        "last_set": 1360782804
+                    }
                 },
-                "purpose": {
-                    "value": "Group messaging with: @user @user_a @user_b @user_c",
-                    "creator": "U024BE7LH",
-                    "last_set": 1360782804
-                }
-            },
-            ....
-        ]
-    }
-    
-    
+                ....
+            ]
+        }
+
+
     For more information see https://api.slack.com/methods/list
     """
     endpoint = 'mpim.list'
@@ -207,23 +219,26 @@ class List(BaseAPIEndpoint):
     def __call__(self,
                  ):
         """Lists multiparty direct message channels for the calling user.
-        
+
         """
         optional_kwargs = {}
 
         return BaseAPIEndpoint.__call__(self,
-                                        **optional_kwargs,
+                                        **optional_kwargs
                                         )
 
 
 @Mpim.register('mark')
-class Mark(BaseAPIEndpoint):
+class MpimMark(BaseAPIEndpoint):
     """This method moves the read cursor in a multiparty direct message channel.
-    
-    {
-        "ok": true
-    }
-    
+
+
+    .. code-block:: json
+
+        {
+            "ok": true
+        }
+
     After making this call, the mark is saved to the database and broadcast via the message server to
     all open connections for the calling user.
     Clients should try to avoid making this call too often. When needing to mark a read position, a client
@@ -231,7 +246,7 @@ class Mark(BaseAPIEndpoint):
     will not generate extra calls (just one per channel). This is useful for when reading scroll-back history,
     or following a busy live channel. A timeout of 5 seconds is a good starting point. Be sure to flush these
     calls on shutdown/logout.
-    
+
     For more information see https://api.slack.com/methods/mark
     """
     endpoint = 'mpim.mark'
@@ -249,7 +264,7 @@ class Mark(BaseAPIEndpoint):
                  ts,
                  ):
         """Sets the read cursor in a multiparty direct message channel.
-        
+
         :param channel: Required. multiparty direct message channel to set reading cursor in. e.g. G1234567890
         :param ts: Required. Timestamp of the most recently seen message. e.g. 1234567890.123456
         """
@@ -258,56 +273,59 @@ class Mark(BaseAPIEndpoint):
         return BaseAPIEndpoint.__call__(self,
                                         channel=channel,
                                         ts=ts,
-                                        **optional_kwargs,
+                                        **optional_kwargs
                                         )
 
 
 @Mpim.register('open')
-class Open(BaseAPIEndpoint):
+class MpimOpen(BaseAPIEndpoint):
     """This method opens a multiparty direct message.
-    
-    
-    
+
+
+
     Opening a multiparty direct message takes a list of up-to 8 encoded user ids.  If there is no MPIM already created that
     includes that exact set of members, a new MPIM will be created.  Subsequent calls to mpim.open with the same set of
     users will return the already existing MPIM conversation.
-    
+
     If successful, the command returns a mpim object, including state information:
-    {
-        "ok": true,
-        "group": {
-            "id": "G024BE91L",
-            "name": "mpdm-user--user_a--user_b--user_c-1",
-            "is_group": "true",
-            "created": 1360782804,
-            "creator": "U024BE7LH",
-            "is_archived": false,
-            "is_open": false,
-            "is_mpim": true,
-            "last_read": "0000000000.000000",
-            "latest": null,
-            "unread_count": 0,
-            "unread_count_display": 0,
-            "members": [
-                "U024BE7LH",
-                "U1234567890",
-                "U2345678901",
-                "U3456789012"
-            ],
-            "topic": {
-                "value": "Group messaging.",
+
+    .. code-block:: json
+
+        {
+            "ok": true,
+            "group": {
+                "id": "G024BE91L",
+                "name": "mpdm-user--user_a--user_b--user_c-1",
+                "is_group": "true",
+                "created": 1360782804,
                 "creator": "U024BE7LH",
-                "last_set": 1360782804
-            },
-            "purpose": {
-                "value": "Group messaging with: @user @user_a @user_b @user_c",
-                "creator": "U024BE7LH",
-                "last_set": 1360782804
+                "is_archived": false,
+                "is_open": false,
+                "is_mpim": true,
+                "last_read": "0000000000.000000",
+                "latest": null,
+                "unread_count": 0,
+                "unread_count_display": 0,
+                "members": [
+                    "U024BE7LH",
+                    "U1234567890",
+                    "U2345678901",
+                    "U3456789012"
+                ],
+                "topic": {
+                    "value": "Group messaging.",
+                    "creator": "U024BE7LH",
+                    "last_set": 1360782804
+                },
+                "purpose": {
+                    "value": "Group messaging with: @user @user_a @user_b @user_c",
+                    "creator": "U024BE7LH",
+                    "last_set": 1360782804
+                }
             }
         }
-    }
-    
-    
+
+
     For more information see https://api.slack.com/methods/open
     """
     endpoint = 'mpim.open'
@@ -323,50 +341,53 @@ class Open(BaseAPIEndpoint):
                  users,
                  ):
         """This method opens a multiparty direct message.
-        
+
         :param users: Required. Comma separated lists of users.  The ordering of the users is preserved whenever a MPIM group is returned. e.g. U1234567890,U2345678901,U3456789012
         """
         optional_kwargs = {}
 
         return BaseAPIEndpoint.__call__(self,
                                         users=users,
-                                        **optional_kwargs,
+                                        **optional_kwargs
                                         )
 
 
 @Mpim.register('replies')
-class Replies(BaseAPIEndpoint):
+class MpimReplies(BaseAPIEndpoint):
     """This method returns an entire thread (a message plus all the messages in reply to it).
-    
-    {
-        "ok": true,
-        "messages": [
-            {
-                "type": "message",
-                "ts": "1358546515.000008",
-                "user": "U2147483896",
-                "text": "Hello"
-            },
-            {
-                "type": "message",
-                "ts": "1358546515.000007",
-                "user": "U2147483896",
-                "text": "World",
-                "is_starred": true,
-            },
-            {
-                "type": "something_else",
-                "ts": "1358546515.000007",
-                "wibblr": true
-            }
-        ],
-        "thread_info": [
-            "complete": true,
-            "count": 3,
-        ]
-    }
-    
-    
+
+
+    .. code-block:: json
+
+        {
+            "ok": true,
+            "messages": [
+                {
+                    "type": "message",
+                    "ts": "1358546515.000008",
+                    "user": "U2147483896",
+                    "text": "Hello"
+                },
+                {
+                    "type": "message",
+                    "ts": "1358546515.000007",
+                    "user": "U2147483896",
+                    "text": "World",
+                    "is_starred": true,
+                },
+                {
+                    "type": "something_else",
+                    "ts": "1358546515.000007",
+                    "wibblr": true
+                }
+            ],
+            "thread_info": [
+                "complete": true,
+                "count": 3,
+            ]
+        }
+
+
     For more information see https://api.slack.com/methods/replies
     """
     endpoint = 'mpim.replies'
@@ -384,7 +405,7 @@ class Replies(BaseAPIEndpoint):
                  thread_ts,
                  ):
         """Retrieve a thread of messages posted to a direct message conversation from a multiparty direct message.
-        
+
         :param channel: Required. Multiparty direct message channel to fetch thread from. e.g. C1234567890
         :param thread_ts: Required. Unique identifier of a thread's parent message. e.g. 1234567890.123456
         """
@@ -393,5 +414,5 @@ class Replies(BaseAPIEndpoint):
         return BaseAPIEndpoint.__call__(self,
                                         channel=channel,
                                         thread_ts=thread_ts,
-                                        **optional_kwargs,
+                                        **optional_kwargs
                                         )

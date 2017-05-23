@@ -46,7 +46,7 @@ class Reaction(SlackType):
     """A Reaction"""
 
     @classmethod
-    def String(cls, value):
+    def String(cls, value):  # flake8: noqa F811
         """A Method for creating a Reaction from a String
         
         :param value: The reaction string representation
@@ -68,7 +68,7 @@ class SubTeam(SlackType):
         """A method for creating a subteam from a team id (vs. a dictionary of attributes)
         
         :param id: a Subteam ID, e.g. T1NASNDSP
-        :return: 
+        :return: a :class:`SlackType` subclass
         """
         return cls({'id': id})
 
@@ -86,7 +86,7 @@ class Subscription(SlackType):
 class Presence(SlackType):
 
     @classmethod
-    def String(cls, value):
+    def String(cls, value):  # flake8: noqa F811
         return cls({'value': value})
 
 

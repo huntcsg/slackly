@@ -16,7 +16,7 @@ class BaseAPIDispatch(object):
         """Returns the current bound client for this api endpoint. `self._bind` is a function that returns the
         currently bound client.
 
-        :return: 
+        :return: A :class:`slackly.SlackClient` or :class:`NoneType`
         """
         return self._bind()
 
@@ -31,7 +31,6 @@ class BaseAPIDispatch(object):
             self._bind = lambda: None
 
         return self
-
 
     @classmethod
     def register(cls, name):
@@ -60,7 +59,7 @@ class BaseAPIEndpoint(object):
         """Returns the current bound client for this api endpoint. `self._bind` is a function that returns the
         currently bound client.
 
-        :return: 
+        :return: A :class:`SlackClient` or :class:`NoneType`
         """
         return self._bind()
 

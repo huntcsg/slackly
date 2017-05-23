@@ -1,7 +1,7 @@
 from websocket import create_connection
 from ssl import SSLError
 import json
-import queue
+from ..compat import queue
 from threading import Thread
 
 from .event_factory import SlackEventDict
@@ -40,12 +40,12 @@ class SlackRTMClient(object):
     def __init__(self, token, url, event_factory=SlackEventDict, client=None, keep_alive=True, ignore_pong=True):
         """
         
-        :param token: 
-        :param url: 
-        :param event_factory: 
-        :param client: 
-        :param keep_alive: 
-        :param ignore_pong: 
+        :param token: A :class:`str` token
+        :param url: A :class:`str` the base url for slack
+        :param event_factory: A class to process events coming off the real time messaging api
+        :param client: A :class:`slackly.SlackClient` or None.
+        :param keep_alive: The option to have the websocket automatically written to at least every 3 seconds
+        :param ignore_pong: Whether to emit or squash the response to pings
         """
         if client is None:
             from .api_client import SlackClient

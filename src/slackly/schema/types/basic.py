@@ -55,15 +55,15 @@ class SlackTimestamp(SlackType):
     def __init__(self, timestamp):
         """
         
-        :param timestamp: A :class:`str` representing a timestamp 
+        :param timestamp: A :class:`str` representing a timestamp
         """
         self._timestamp = timestamp
 
     @property
     def uuid(self):
-        """Returns the actual :class:`str` timestamp
-        
-        :return: 
+        """
+
+        :return: A :class:`str` representing a a timestampe
         """
         return self._timestamp
 
@@ -71,7 +71,7 @@ class SlackTimestamp(SlackType):
     def dt(self):
         """Returns the :class:`SlackTimeStamp` as a :class:`datetime.datetime`
         
-        :return: 
+        :return: A :class:`datetime.datetime`
         """
         return datetime.datetime.fromtimestamp(float(self._timestamp))
 
@@ -92,7 +92,7 @@ class List(SlackType):
     def __init__(self, slack_type):
         """
         
-        :param slack_type: A :class:`SlackType` 
+        :param slack_type: A :class:`SlackType`
         """
         self.slack_type = slack_type
 

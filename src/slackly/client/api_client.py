@@ -10,9 +10,7 @@ from ..api import SlackAPI
 
 
 class SlackClient(object):
-    """The web client
-    
-    """
+    """The web client"""
     def __init__(self,
                  token,
                  base_url="https://slack.com/api",
@@ -22,10 +20,11 @@ class SlackClient(object):
                  ):
         """
         
-        :param token: 
-        :param base_url: 
-        :param user_agent: 
-        :param response_factory: 
+        :param token: Required. A :class:`str` slack token
+        :param base_url: Optional. A :class:`str` base url for slack
+        :param user_agent: Optional. A user agent string. leave this blank unless you know what
+        you are doing
+        :param response_factory: A response factory (gets __call__'ed on every response)
         """
 
         self.token = token
@@ -36,7 +35,6 @@ class SlackClient(object):
             self.api = SlackAPI(bind=self)
         else:
             self.api = None
-
 
     def api_call(self, endpoint, options, **kwargs):
         if options.get('include_token', False):

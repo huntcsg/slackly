@@ -26,7 +26,7 @@ class SlackType(object):
     def as_dict(self):
         """Returns a deepcopy of the object as a dictionary
         
-        :return: 
+        :return: A :class:`dict`
         """
         return deepcopy(self._dict)
 
@@ -34,7 +34,7 @@ class SlackType(object):
     def as_json(self):
         """Returns a utf-8 string of the json dump of the dictionary
         
-        :return: 
+        :return: A :class:`str`
         """
         return json.dumps(self._dict)
 
