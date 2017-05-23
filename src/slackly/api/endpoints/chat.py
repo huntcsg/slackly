@@ -6,18 +6,21 @@ class Chat(BaseAPIDispatch):
 
 
 @Chat.register('delete')
-class Delete(BaseAPIEndpoint):
+class ChatDelete(BaseAPIEndpoint):
     """This method deletes a message from a channel.
-    
-    {
-        "ok": true,
-        "channel": "C024BE91L",
-        "ts": "1401383885.000061"
-    }
-    
+
+
+    .. code-block:: json
+
+        {
+            "ok": true,
+            "channel": "C024BE91L",
+            "ts": "1401383885.000061"
+        }
+
     The response includes the channel and timestamp properties of the deleted
     message.
-    
+
     For more information see https://api.slack.com/methods/delete
     """
     endpoint = 'chat.delete'
@@ -38,7 +41,7 @@ class Delete(BaseAPIEndpoint):
                  as_user=None,
                  ):
         """Deletes a message.
-        
+
         :param channel: Required. Channel containing the message to be deleted. e.g. C1234567890
         :param ts: Required. Timestamp of the message to be deleted. e.g. 1405894322.002768
         :param as_user: Optional. Pass true to delete the message as the authed user. Bot users in this context are considered authed users. e.g. true
@@ -50,21 +53,24 @@ class Delete(BaseAPIEndpoint):
         return BaseAPIEndpoint.__call__(self,
                                         channel=channel,
                                         ts=ts,
-                                        **optional_kwargs,
+                                        **optional_kwargs
                                         )
 
 
 @Chat.register('meMessage')
-class MeMessage(BaseAPIEndpoint):
+class ChatMeMessage(BaseAPIEndpoint):
     """This method sends a me message to a channel from the calling user.
-    
-    {
-        "ok": true,
-        "channel": "C024BE7LR",
-        "ts": "1417671948.000006"
-    }
-    
-    
+
+
+    .. code-block:: json
+
+        {
+            "ok": true,
+            "channel": "C024BE7LR",
+            "ts": "1417671948.000006"
+        }
+
+
     For more information see https://api.slack.com/methods/meMessage
     """
     endpoint = 'chat.meMessage'
@@ -82,7 +88,7 @@ class MeMessage(BaseAPIEndpoint):
                  text,
                  ):
         """Share a me message into a channel.
-        
+
         :param channel: Required. Channel to send message to. Can be a public channel, private group or IM channel. Can be an encoded ID, or a name. e.g. C1234567890
         :param text: Required. Text of the message to send. e.g. Hello world
         """
@@ -91,28 +97,31 @@ class MeMessage(BaseAPIEndpoint):
         return BaseAPIEndpoint.__call__(self,
                                         channel=channel,
                                         text=text,
-                                        **optional_kwargs,
+                                        **optional_kwargs
                                         )
 
 
 @Chat.register('postMessage')
-class PostMessage(BaseAPIEndpoint):
+class ChatPostMessage(BaseAPIEndpoint):
     """This method posts a message to a public channel, private channel, or direct message/IM channel.
-    
-    {
-        "ok": true,
-        "ts": "1405895017.000506",
-        "channel": "C024BE91L",
-        "message": {
-            ...
+
+
+    .. code-block:: json
+
+        {
+            "ok": true,
+            "ts": "1405895017.000506",
+            "channel": "C024BE91L",
+            "message": {
+                ...
+            }
         }
-    }
-    
+
     The response includes the timestamp (ts) and channel for the posted message. It also
     includes the complete message object, as it was parsed by our servers. This
     may differ from the provided arguments as our servers sanitize links,
     attachments and other properties.
-    
+
     For more information see https://api.slack.com/methods/postMessage
     """
     endpoint = 'chat.postMessage'
@@ -153,7 +162,7 @@ class PostMessage(BaseAPIEndpoint):
                  username=None,
                  ):
         """Sends a message to a channel.
-        
+
         :param channel: Required. Channel, private group, or IM channel to send message to. Can be an encoded ID, or a name. See below for more details. e.g. C1234567890
         :param text: Required. Text of the message to send. See below for an explanation of formatting. This field is usually required, unless you're providing only attachments instead. e.g. Hello world
         :param as_user: Optional. Pass true to post the message as the authed user, instead of as a bot. Defaults to false. See authorship below. e.g. true
@@ -195,24 +204,27 @@ class PostMessage(BaseAPIEndpoint):
         return BaseAPIEndpoint.__call__(self,
                                         channel=channel,
                                         text=text,
-                                        **optional_kwargs,
+                                        **optional_kwargs
                                         )
 
 
 @Chat.register('unfurl')
-class Unfurl(BaseAPIEndpoint):
+class ChatUnfurl(BaseAPIEndpoint):
     """This method attaches Slack app unfurl behavior to a specified and relevant message. A user token is required as this method does not support bot user tokens.
-    
-    
-    
+
+
+
     The first time this method is executed with a particular ts and channel combination, the valid unfurls attachments you provide will be attached to the message. Subsequent attempts with the same ts and channel values will modify the same attachments, rather than adding more.
-    
-    {
-        "ok": true
-    }
-    
+
+
+    .. code-block:: json
+
+        {
+            "ok": true
+        }
+
     As you can see, we provide a minimal positive response when your unfurl attempt is successful. When it is not, you'll receive one of the errors below and ok will not be false.
-    
+
     For more information see https://api.slack.com/methods/unfurl
     """
     endpoint = 'chat.unfurl'
@@ -235,10 +247,10 @@ class Unfurl(BaseAPIEndpoint):
                  user_auth_required=None,
                  ):
         """Unfurl a URL that a user posted
-        
+
         :param channel: Required. Channel ID of the message e.g. C1234567890
-        :param ts: Required. Timestamp of the message to add unfurl behavior to e.g. 
-        :param unfurls: Required. JSON mapping a set of URLs from the message to their unfurl attachments e.g. 
+        :param ts: Required. Timestamp of the message to add unfurl behavior to e.g.
+        :param unfurls: Required. JSON mapping a set of URLs from the message to their unfurl attachments e.g.
         :param user_auth_required: Optional, default=0. Set to true or 1 to indicate the user must install your Slack app to trigger unfurls for this domain e.g. true
         """
         optional_kwargs = {}
@@ -249,29 +261,32 @@ class Unfurl(BaseAPIEndpoint):
                                         channel=channel,
                                         ts=ts,
                                         unfurls=unfurls,
-                                        **optional_kwargs,
+                                        **optional_kwargs
                                         )
 
 
 @Chat.register('update')
-class Update(BaseAPIEndpoint):
+class ChatUpdate(BaseAPIEndpoint):
     """This method updates a message in a channel. Though related to chat.postMessage, some parameters of chat.update are handled differently.
-    
-    {
-            "ok": true,
-            "channel": "C024BE91L",
-            "ts": "1401383885.000061",
-            "text": "Updated Text"
-        }
+
+
+    .. code-block:: json
+
+        {
+                "ok": true,
+                "channel": "C024BE91L",
+                "ts": "1401383885.000061",
+                "text": "Updated Text"
+            }
     The response includes the text, channel and timestamp properties of the
     updated message so clients can keep their local copies of the message in sync.
-    
+
     Bot users
     To use chat.update with a bot user token, you'll need to think of your bot user as a user, and pass as_user set to true while editing a message created by that same bot user.
-    
+
     Interactive messages with buttons
     If you're posting message with buttons, you may use chat.update to continue updating ongoing state changes around a message. Provide the ts field the message you're updating and follow the bot user instructions above to update message text, remove or add attachments and actions.
-    
+
     For more information see https://api.slack.com/methods/update
     """
     endpoint = 'chat.update'
@@ -300,7 +315,7 @@ class Update(BaseAPIEndpoint):
                  parse=None,
                  ):
         """Updates a message.
-        
+
         :param channel: Required. Channel containing the message to be updated. e.g. C1234567890
         :param text: Required. New text for the message, using the default formatting rules. e.g. Hello world
         :param ts: Required. Timestamp of the message to be updated. e.g. 1405894322.002768
@@ -323,5 +338,5 @@ class Update(BaseAPIEndpoint):
                                         channel=channel,
                                         text=text,
                                         ts=ts,
-                                        **optional_kwargs,
+                                        **optional_kwargs
                                         )

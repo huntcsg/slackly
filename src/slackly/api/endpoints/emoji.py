@@ -6,24 +6,27 @@ class Emoji(BaseAPIDispatch):
 
 
 @Emoji.register('list')
-class List(BaseAPIEndpoint):
+class EmojiList(BaseAPIEndpoint):
     """This method lists the custom emoji for a team.
-    
-    {
-        "ok": true,
-        "emoji": {
-            "bowtie": "https:\/\/my.slack.com\/emoji\/bowtie\/46ec6f2bb0.png",
-            "squirrel": "https:\/\/my.slack.com\/emoji\/squirrel\/f35f40c0e0.png",
-            "shipit": "alias:squirrel",
-            …
+
+
+    .. code-block:: json
+
+        {
+            "ok": true,
+            "emoji": {
+                "bowtie": "https:\/\/my.slack.com\/emoji\/bowtie\/46ec6f2bb0.png",
+                "squirrel": "https:\/\/my.slack.com\/emoji\/squirrel\/f35f40c0e0.png",
+                "shipit": "alias:squirrel",
+                …
+            }
         }
-    }
-    
+
     The emoji property contains a map of name/url pairs, one for each custom
     emoji used by the team. The alias: pseudo-protocol will be used where the
     emoji is an alias, the string following the colon is the name of the other
     emoji this emoji is an alias to.
-    
+
     For more information see https://api.slack.com/methods/list
     """
     endpoint = 'emoji.list'
@@ -36,10 +39,10 @@ class List(BaseAPIEndpoint):
     def __call__(self,
                  ):
         """Lists custom emoji for a team.
-        
+
         """
         optional_kwargs = {}
 
         return BaseAPIEndpoint.__call__(self,
-                                        **optional_kwargs,
+                                        **optional_kwargs
                                         )

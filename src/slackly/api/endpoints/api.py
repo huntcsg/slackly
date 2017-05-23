@@ -6,27 +6,33 @@ class Api(BaseAPIDispatch):
 
 
 @Api.register('test')
-class Test(BaseAPIEndpoint):
+class ApiTest(BaseAPIEndpoint):
     """This method helps you test your calling code.
-    
+
     The response includes any supplied arguments:
-    {
-        "ok": true,
-        "args": {
-            "foo": "bar"
+
+    .. code-block:: json
+
+        {
+            "ok": true,
+            "args": {
+                "foo": "bar"
+            }
         }
-    }
-    
+
     If called with an error argument an error response is returned:
-    {
-        "ok": false,
-        "error": "my_error",
-        "args": {
-            "error": "my_error"
+
+    .. code-block:: json
+
+        {
+            "ok": false,
+            "error": "my_error",
+            "args": {
+                "error": "my_error"
+            }
         }
-    }
-    
-    
+
+
     For more information see https://api.slack.com/methods/test
     """
     endpoint = 'api.test'
@@ -42,7 +48,7 @@ class Test(BaseAPIEndpoint):
                  foo=None,
                  ):
         """Checks API calling code.
-        
+
         :param error: Optional. Error response to return e.g. my_error
         :param foo: Optional. example property to return e.g. bar
         """
@@ -53,5 +59,5 @@ class Test(BaseAPIEndpoint):
             optional_kwargs['foo'] = foo
 
         return BaseAPIEndpoint.__call__(self,
-                                        **optional_kwargs,
+                                        **optional_kwargs
                                         )

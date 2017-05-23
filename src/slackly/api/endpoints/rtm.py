@@ -6,44 +6,47 @@ class Rtm(BaseAPIDispatch):
 
 
 @Rtm.register('connect')
-class Connect(BaseAPIEndpoint):
+class RtmConnect(BaseAPIEndpoint):
     """This method begins a Real Time Messaging API session and reserves your application a specific URL with which to connect via websocket.
-    
-    
-    
+
+
+
     Unlike rtm.start, this method is focused only on connecting to the RTM API.
-    
-    
-    
+
+
+
     Use this method in conjunction with other Web API methods like channels.list, users.list, and team.info to build a full picture of the team or workspace you're connecting on behalf of.
-    
-    
-    
+
+
+
     Please consult the RTM API documentation for full details on using the RTM API.
-    
+
     This method returns a WebSocket Message Server URL and limited information about the team:
-    {
-        "ok": true,
-        "url": "wss:\/\/ms9.slack-msgs.com\/websocket\/2I5yBpcvk",
-        "team": {
-            "id": "T654321",
-            "name": "Librarian Society of Soledad",
-            "domain": "libsocos",
-            "enterprise_id": "E234567",
-            "enterprise_name": "Intercontinental Librarian Society"
-        },
-        "self": {
-            "id": "W123456",
-            "name": "brautigan"
+
+    .. code-block:: json
+
+        {
+            "ok": true,
+            "url": "wss:\/\/ms9.slack-msgs.com\/websocket\/2I5yBpcvk",
+            "team": {
+                "id": "T654321",
+                "name": "Librarian Society of Soledad",
+                "domain": "libsocos",
+                "enterprise_id": "E234567",
+                "enterprise_name": "Intercontinental Librarian Society"
+            },
+            "self": {
+                "id": "W123456",
+                "name": "brautigan"
+            }
         }
-    }
-    
+
     The url property contains a WebSocket Message Server URL. Connecting to this
     URL will initiate a Real Time Messaging session. These URLs are only valid for
     30 seconds, so connect quickly!
     The self property contains a small amount of information concerning the connecting user &mdash; an id and their name.
     The team attribute also houses brief information about the team, including its id, name, domain, and if it's part of an Enterprise Grid, the corresponding enteprise_id.
-    
+
     For more information see https://api.slack.com/methods/connect
     """
     endpoint = 'rtm.connect'
@@ -56,75 +59,78 @@ class Connect(BaseAPIEndpoint):
     def __call__(self,
                  ):
         """Starts a Real Time Messaging session.
-        
+
         """
         optional_kwargs = {}
 
         return BaseAPIEndpoint.__call__(self,
-                                        **optional_kwargs,
+                                        **optional_kwargs
                                         )
 
 
 @Rtm.register('start')
-class Start(BaseAPIEndpoint):
+class RtmStart(BaseAPIEndpoint):
     """This method begins a Real Time Messaging API session and reserves your application a specific URL with which to connect via websocket.
-    
-    
-    
+
+
+
     It's user-centric and team-centric: your app connects as a specific user or bot user on a specific team. Many apps will find the Events API's subscription model more scalable when working against multiple teams.
-    
-    
-    
+
+
+
     This method also returns a smorgasbord of data about the team, its channels, and members. Some times more information than can be provided in a timely or helpful manner.
-    
-    
-    
+
+
+
     Please use rtm.connect instead, especially when connecting on behalf of an Enterprise Grid customer.
-    
-    
-    
+
+
+
     Consult the RTM API documentation for full details on using the RTM API. You'll also find our changelog entry useful.
-    
+
     This method returns lots of data about the current state of a team, along
     with a WebSocket Message Server URL:
-    {
-        "ok": true,
-        "url": "wss:\/\/ms9.slack-msgs.com\/websocket\/7I5yBpcvk",
-    
-        "self": {
-            "id": "U023BECGF",
-            "name": "bobby",
-            "prefs": {
-                ...
+
+    .. code-block:: json
+
+        {
+            "ok": true,
+            "url": "wss:\/\/ms9.slack-msgs.com\/websocket\/7I5yBpcvk",
+
+            "self": {
+                "id": "U023BECGF",
+                "name": "bobby",
+                "prefs": {
+                    ...
+                },
+                "created": 1402463766,
+                "manual_presence": "active"
             },
-            "created": 1402463766,
-            "manual_presence": "active"
-        },
-        "team": {
-            "id": "T024BE7LD",
-            "name": "Example Team",
-            "email_domain": "",
-            "domain": "example",
-            "icon": {
-                ...
+            "team": {
+                "id": "T024BE7LD",
+                "name": "Example Team",
+                "email_domain": "",
+                "domain": "example",
+                "icon": {
+                    ...
+                },
+                "msg_edit_window_mins": -1,
+                "over_storage_limit": false
+                "prefs": {
+                    ...
+                },
+                "plan": "std"
             },
-            "msg_edit_window_mins": -1,
-            "over_storage_limit": false
-            "prefs": {
-                ...
-            },
-            "plan": "std"
-        },
-        "users": [ ... ],
-    
-        "channels": [ ... ],
-        "groups": [ ... ],
-        "mpims": [ ... ],
-        "ims": [ ... ],
-    
-        "bots": [ ... ],
-    }
-    
+            "users": [ ... ],
+
+            "channels": [ ... ],
+            "groups": [ ... ],
+            "mpims": [ ... ],
+            "ims": [ ... ],
+
+            "bots": [ ... ],
+        }
+
     The url property contains a WebSocket Message Server URL. Connecting to this
     URL will initiate a Real Time Messaging session. These URLs are only valid for
     30 seconds, so connect quickly!
@@ -149,7 +155,7 @@ class Start(BaseAPIEndpoint):
     IM objects, one for every direct message channel visible to the
     authenticated user.
     The bots property gives details of the integrations set up on this team.
-    
+
     For more information see https://api.slack.com/methods/start
     """
     endpoint = 'rtm.start'
@@ -171,7 +177,7 @@ class Start(BaseAPIEndpoint):
                  simple_latest=None,
                  ):
         """Starts a Real Time Messaging session.
-        
+
         :param mpim_aware: Optional. Returns MPIMs to the client in the API response. e.g. true
         :param no_latest: Optional, default=0. Exclude latest timestamps for channels, groups, mpims, and ims. Automatically sets no_unreads to 1 e.g. 1
         :param no_unreads: Optional. Skip unread counts for each channel (improves performance). e.g. true
@@ -188,5 +194,5 @@ class Start(BaseAPIEndpoint):
             optional_kwargs['simple_latest'] = simple_latest
 
         return BaseAPIEndpoint.__call__(self,
-                                        **optional_kwargs,
+                                        **optional_kwargs
                                         )
