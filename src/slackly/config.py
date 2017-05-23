@@ -23,7 +23,7 @@ def fill_config():
             with open(os.path.expanduser(config_file_path), 'rb') as f:
                 config_data = json.loads(f.read().decode('utf-8'))
                 _config.update(config_data)
-        except OSError as e:
+        except (OSError, IOError) as e:
             if e.errno == 2:
                 # No such file or directory. That's ok
                 continue
