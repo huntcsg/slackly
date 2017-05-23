@@ -1,6 +1,7 @@
 import json
 from functools import partial
 
+
 class SlackAPIDictResponse(object):
 
     def __init__(self, endpoint, data):
@@ -14,7 +15,6 @@ class SlackAPIDictResponse(object):
 
     def __repr__(self):
         return json.dumps(self.data)
-
 
     @classmethod
     def initialize(cls):
@@ -61,7 +61,6 @@ class SlackAPIObjectResponse(object):
         preprocessor = response_factory_spec.get('preprocessor', lambda x: x)
 
         return lambda response: factory(preprocessor(response.json()))
-
 
     @classmethod
     def initialize(cls):
