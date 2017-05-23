@@ -14,6 +14,7 @@ _config_file_paths = [
 
 
 def fill_config():
+    global _config_file_paths
     if 'SLACKLY_CONFIG_FILE' in os.environ:
         _config_file_paths = [os.environ['SLACKLY_CONFIG_FILE']]
 
