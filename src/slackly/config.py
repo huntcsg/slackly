@@ -30,7 +30,7 @@ def fill_config():
             else:
                 warnings.warn("There was an error loading configuration file [ {} ]: {}".format(config_file_path, e))
 
-        except json.JSONDecodeError as e:
+        except ValueError as e:
             warnings.warn("There was an error parsing configuration file [ {} ]: {}".format(config_file_path, e))
 
     for key in os.environ:
