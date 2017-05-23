@@ -74,6 +74,7 @@ Using Event Types
                 print("I don't care about this event")
 
 .. |gitter| image:: https://badges.gitter.im/huntcsg/slackly.png
+   :target: https://gitter.im/slackly/Lobby
 .. |travis| image:: https://travis-ci.org/huntcsg/slackly.svg?branch=master
 .. |pypi| image:: https://img.shields.io/pypi/v/slackly.svg
    :target: https://pypi.python.org/pypi/slackly
