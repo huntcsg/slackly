@@ -6,7 +6,7 @@ language: python
 python: 3.6
 
 install: pip install -U tox
-script: tox
+script: tox -e py27,py34,py36,pypy,pep8,coverage,docs
 after_success:
 - pip install -U python-coveralls
 - coveralls
