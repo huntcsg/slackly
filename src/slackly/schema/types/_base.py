@@ -10,6 +10,8 @@ class SlackType(object):
         :param kwargs: An arbitrary dictionary of keyword arguments
         :return: None
         """
+        self._repr_keys = set()
+
         if kwargs is None:
             kwargs = {}
 
@@ -17,6 +19,7 @@ class SlackType(object):
             self._dict = deepcopy(kwargs)
         else:
             self._dict = {'value': deepcopy(kwargs)}
+            self._repr_keys.add('value')
 
         if hasattr(self, 'schema'):
             for key, factory in self.schema.items():
@@ -42,7 +45,12 @@ class SlackType(object):
         return json.dumps(self._dict)
 
     def __repr__(self):
-        return "{0.__class__.__name__}()".format(self)
+        detail = []
+        for key in self._repr_keys:
+            detail.append("{}={}".format(key, repr(self._dict.get(key, None))))
+        detail = ', '.join(detail)
+
+        return "{0.__class__.__name__}({1})".format(self, detail)
 
 
 class HasIDMixin(object):
@@ -57,7 +65,6 @@ class HasIDMixin(object):
         :param id: A slack ID, e.g. T1NASNDSP
         :return: A class instance of whatever class this is mixed in to
         """
-        return cls(dict(id=id))
-
-    def __repr__(self):
-        return "{0.__class__.__name__}(id='{0.id}')".format(self)
+        cls_instance = cls(dict(id=id))
+        cls_instance._repr_keys.add('id')
+        return cls_instance

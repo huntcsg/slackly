@@ -242,7 +242,7 @@ class ChannelsHistory(BaseAPIEndpoint):
         if unreads is not None:
             optional_kwargs['unreads'] = unreads
 
-        return BaseAPIEndpoint.__call__(self,
+        return BaseAPIEndpoint.savecall(self,
                                         channel=channel,
                                         **optional_kwargs
                                         )
@@ -308,7 +308,7 @@ class ChannelsInfo(BaseAPIEndpoint):
         """
         optional_kwargs = {}
 
-        return BaseAPIEndpoint.__call__(self,
+        return BaseAPIEndpoint.savecall(self,
                                         channel=channel,
                                         **optional_kwargs
                                         )
@@ -633,7 +633,7 @@ class ChannelsList(BaseAPIEndpoint):
         if exclude_members is not None:
             optional_kwargs['exclude_members'] = exclude_members
 
-        return BaseAPIEndpoint.__call__(self,
+        return BaseAPIEndpoint.savecall(self,
                                         **optional_kwargs
                                         )
 

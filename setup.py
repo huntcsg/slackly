@@ -1,6 +1,8 @@
 import os
 from setuptools import setup, find_packages
+import sys
 
+PY2 = sys.version_info.major == 2
 
 here = os.path.abspath(os.path.dirname(__file__))
 try:
@@ -30,8 +32,16 @@ docs_require = [
 testing_requires = [
     'pytest',
     'pytest-cov',
-    'mock',
 ]
+
+if PY2:
+    install_requires.extend([
+        'backports.functools_lru_cache',
+    ])
+
+    testing_requires.extend([
+        'mock',
+    ])
 
 
 setup(
