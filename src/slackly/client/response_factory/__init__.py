@@ -2,12 +2,13 @@ import functools
 import json
 
 
-class SlackAPIDictResponse(object):
+class SlackAPIDictResponse(dict):
 
     def __init__(self, endpoint, data):
+        super(SlackAPIDictResponse, self).__init__(data)
 
         self.endpoint = endpoint
-        self.data = data
+        self.data = self
 
         self.successful = self.data['ok']
         self.warnings = self.data.get('response_metadata', {}).get('warnings', [])
