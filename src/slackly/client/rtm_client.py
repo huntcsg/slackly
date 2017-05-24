@@ -1,4 +1,5 @@
 import json
+import logging
 import ssl
 import threading
 import websocket
@@ -7,18 +8,29 @@ from ..compat import queue
 from .event_factory import SlackEventDict
 
 
-def send_messages(q, websocket, keep_alive=True):
+def send_messages(q, websocket, keep_alive=True, donotdie=True):
+    logger = logging.getLogger(__name__)
+
     ping_msg = json.dumps({'type': 'ping'}).encode('utf-8')
     while True:
         try:
             msg = q.get(timeout=3)
             websocket.send(msg)
+            raise RuntimeError
         except queue.Empty:
             if keep_alive:
                 websocket.send(ping_msg)
+        except Exception as e:
+            if donotdie:
+                logger.debug("Something went wrong in the message sender: {}".format(e), exc_info=True)
+                continue
+            else:
+                logger.exception(e)
+                raise e
 
 
-def recieve_messages(q, websocket, ignore_pong=True):
+def receive_messages(q, websocket, ignore_pong=True, donotdie=True):
+    logger = logging.getLogger(__name__)
     while True:
         try:
             msg = json.loads(websocket.recv())
@@ -26,10 +38,18 @@ def recieve_messages(q, websocket, ignore_pong=True):
                 continue
             else:
                 q.put(msg)
+            raise RuntimeError
         except ssl.SSLError as e:
             if e.errno == 2:
+                logger.debug("Something went wrong in the message receiver: {}".format(e), exc_info=True)
                 continue
-            raise
+        except Exception as e:
+            if donotdie:
+                logger.debug("Something went wrong in the message receiver: {}".format(e), exc_info=True)
+                continue
+            else:
+                logger.exception(e)
+                raise e
 
 
 class SlackRTMClient(object):
@@ -37,7 +57,7 @@ class SlackRTMClient(object):
     
     """
 
-    def __init__(self, token, url, event_factory=SlackEventDict, client=None, keep_alive=True, ignore_pong=True):
+    def __init__(self, token, url, event_factory=SlackEventDict, client=None, keep_alive=True, ignore_pong=True, donotdie=True):
         """
         
         :param token: A :class:`str` token
@@ -55,6 +75,8 @@ class SlackRTMClient(object):
         self.token = token
         self.url = url
         self.event_factory = event_factory
+
+        self.donotdie = True
 
         self.websocket = None
         self.send_queue = queue.Queue()
@@ -97,10 +119,10 @@ class SlackRTMClient(object):
         self.websocket = websocket.create_connection(self.url)
         self.websocket.sock.setblocking(True)
 
-        self.send_daemon = threading.Thread(target=send_messages, args=(self.send_queue, self.websocket, self.keep_alive), daemon=True)
+        self.send_daemon = threading.Thread(target=send_messages, args=(self.send_queue, self.websocket, self.keep_alive, self.donotdie), daemon=True)
         self.send_daemon.start()
 
-        self.receive_daemon = threading.Thread(target=recieve_messages, args=(self.receive_queue, self.websocket), daemon=True)
+        self.receive_daemon = threading.Thread(target=receive_messages, args=(self.receive_queue, self.websocket, self.donotdie), daemon=True)
         self.receive_daemon.start()
         self.connected = True
 
