@@ -31,5 +31,5 @@ class TestPreparedCalls(TestCase):
     calls.extend(call_end_points(api))
     for endpoint, callable_test_required_args, callable_test_optional_args in calls:
         endpoint_str = endpoint.replace('.', '_')
-        locals()["test_prepared_call_required_only_{}".format(endpoint)] = callable_test_required_args
-        locals()["test_prepared_call_optional_{}".format(endpoint)] = callable_test_optional_args
+        locals()["test_prepared_call_required_only_{}".format(endpoint_str)] = callable_test_required_args
+        locals()["test_prepared_call_optional_{}".format(endpoint_str)] = callable_test_optional_args
