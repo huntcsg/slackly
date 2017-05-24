@@ -3,6 +3,10 @@ Slackly - A Slack Toolkit
 
 |gitter| |travis| |pypi| |docs|
 
+.. raw:: html
+
+    <a href="https://asciinema.org/a/2c8n598yzdjhbpbfhrofxd1wz" target="_blank"><img src="https://asciinema.org/a/2c8n598yzdjhbpbfhrofxd1wz.png" /></a>
+
 Use Cases:
 
     - Use the `slackly.SlackClient` to make calls to the Web API
