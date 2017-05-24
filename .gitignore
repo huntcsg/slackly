@@ -9,3 +9,7 @@
 .tox/
 docs/build/
 src/slackly.egg-info/
+
+.coverage.*
+cover/
+tests/**/*.ipynb
