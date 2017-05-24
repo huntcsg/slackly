@@ -5,7 +5,7 @@ Slackly - A Slack Toolkit
 
 .. raw:: html
 
-    <a href="https://asciinema.org/a/2c8n598yzdjhbpbfhrofxd1wz" target="_blank"><img src="https://asciinema.org/a/2c8n598yzdjhbpbfhrofxd1wz.png" /></a>
+    <script type="text/javascript" src="https://asciinema.org/a/2c8n598yzdjhbpbfhrofxd1wz.js" id="asciicast-2c8n598yzdjhbpbfhrofxd1wz" async></script>
 
 Use Cases:
 
