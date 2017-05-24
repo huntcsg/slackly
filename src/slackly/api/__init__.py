@@ -60,4 +60,5 @@ class SlackAPI(object):
         return self.bind is not None
 
     def __repr__(self):
-        return "{0.__class__.__name__}(bind={0.bind})".format(self)
+        bind = repr(self.bind)
+        return "{0.__class__.__name__}(bind={1})".format(self, bind)
