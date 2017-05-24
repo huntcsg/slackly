@@ -7,6 +7,7 @@ def main():
     rtm_client = SlackRTMClient.from_token(token=os.environ['SLACK_TOKEN'])
     rtm_client.event_factory = SlackEventParsed
     slack = SlackAPI()
+    slack.bind = rtm_client.client
 
     for event in rtm_client.get_events_forever():
         if isinstance(event, Message):
@@ -17,7 +18,7 @@ def main():
             channel_id = event['channel'].id
             text = event['text']
 
-            slack.chat.postMessage(channel=channel_id, text=text)(rtm_client.client)
+            slack.chat.postMessage(channel=channel_id, text=text)
 
 
 if __name__ == '__main__':
