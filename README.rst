@@ -10,10 +10,10 @@ Use Cases:
     - Use the :mod:`slackly.events` and :mod:`slackly.schema.types` in this library to build higher level abstractions on the Slack API
 
 Simple Examples
----------------
+===============
 
 Creating a Client and Making an API Call
-========================================
+****************************************
 
     .. code-block:: python
 
@@ -26,7 +26,7 @@ Creating a Client and Making an API Call
         client.api_call('api.test')
 
 Creating the API object and preparing a call
-============================================
+********************************************
 
     .. code-block:: python
 
@@ -41,7 +41,7 @@ Creating the API object and preparing a call
         result = api_call(client)
 
 Printing Events off of the Real Time Messaging API
-==================================================
+**************************************************
 
     .. code-block:: python
 
@@ -53,7 +53,7 @@ Printing Events off of the Real Time Messaging API
             print(event)
         
 Using Event Types
-=================
+*****************
 
     .. code-block:: python
 

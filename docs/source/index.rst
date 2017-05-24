@@ -7,7 +7,7 @@ Welcome to slackly's documentation!
 
    introduction
    quickstart
-   tutorials/index
+   guides/index
    contributing/index
    api/index
 
