@@ -20,6 +20,7 @@ install_requires = [
     'requests',
     'websocket-client',
     'six',
+    'backports.functools_lru_cache;python_version<"3"',
 ]
 
 
@@ -33,16 +34,6 @@ testing_requires = [
     'pytest',
     'pytest-cov',
 ]
-
-if PY2:
-    install_requires.extend([
-        'backports.functools_lru_cache',
-    ])
-
-    testing_requires.extend([
-        'mock',
-    ])
-
 
 setup(
     name='slackly',
