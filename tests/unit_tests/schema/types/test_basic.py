@@ -1,5 +1,6 @@
 from unittest import TestCase
 
+
 class TestSlackTimestamp(TestCase):
 
     def callFUT(self, *args, **kwargs):
@@ -24,6 +25,7 @@ class TestSlackTimestamp(TestCase):
     def test_repr(self):
         ts = self.callFUT(self.ts)
         self.assertEqual(repr(ts), self.repr)
+
 
 class TestSlackTimestampNoDecimal(TestSlackTimestamp):
 

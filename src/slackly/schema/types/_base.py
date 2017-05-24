@@ -46,7 +46,7 @@ class SlackType(object):
 
     def __repr__(self):
         detail = []
-        for key in self._repr_keys:
+        for key in sorted(self._repr_keys):
             detail.append("{}={}".format(key, repr(self._dict.get(key, None))))
         detail = ', '.join(detail)
 
