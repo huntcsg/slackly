@@ -24,19 +24,19 @@ class StarsAdd(BaseAPIEndpoint):
     endpoint = 'stars.add'
     required_args = {}
     optional_args = {
-        'channel'
-        'file'
-        'file_comment'
-        'timestamp'
+        'channel',
+        'file',
+        'file_comment',
+        'timestamp',
     }
     options = {
-        'include_token': True
+        'include_token': True,
     }
 
     # Scope Information
     scopes = {
         'all': {
-            'stars:write'
+            'stars:write',
         },
         'bot': set(),
         'user': set(),
@@ -129,17 +129,17 @@ class StarsList(BaseAPIEndpoint):
     endpoint = 'stars.list'
     required_args = {}
     optional_args = {
-        'count'
-        'page'
+        'count',
+        'page',
     }
     options = {
-        'include_token': True
+        'include_token': True,
     }
 
     # Scope Information
     scopes = {
         'all': {
-            'stars:read'
+            'stars:read',
         },
         'bot': set(),
         'user': set(),
@@ -184,19 +184,19 @@ class StarsRemove(BaseAPIEndpoint):
     endpoint = 'stars.remove'
     required_args = {}
     optional_args = {
-        'channel'
-        'file'
-        'file_comment'
-        'timestamp'
+        'channel',
+        'file',
+        'file_comment',
+        'timestamp',
     }
     options = {
-        'include_token': True
+        'include_token': True,
     }
 
     # Scope Information
     scopes = {
         'all': {
-            'stars:write'
+            'stars:write',
         },
         'bot': set(),
         'user': set(),

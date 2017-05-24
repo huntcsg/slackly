@@ -34,12 +34,12 @@ class OauthAccess(BaseAPIEndpoint):
     """
     endpoint = 'oauth.access'
     required_args = {
-        'client_id'
-        'client_secret'
-        'code'
+        'client_id',
+        'client_secret',
+        'code',
     }
     optional_args = {
-        'redirect_uri'
+        'redirect_uri',
     }
     options = {}
 

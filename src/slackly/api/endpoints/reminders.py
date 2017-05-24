@@ -31,20 +31,20 @@ class RemindersAdd(BaseAPIEndpoint):
     """
     endpoint = 'reminders.add'
     required_args = {
-        'text'
-        'time'
+        'text',
+        'time',
     }
     optional_args = {
-        'user'
+        'user',
     }
     options = {
-        'include_token': True
+        'include_token': True,
     }
 
     # Scope Information
     scopes = {
         'all': {
-            'reminders:write'
+            'reminders:write',
         },
         'bot': set(),
         'user': set(),
@@ -88,17 +88,17 @@ class RemindersComplete(BaseAPIEndpoint):
     """
     endpoint = 'reminders.complete'
     required_args = {
-        'reminder'
+        'reminder',
     }
     optional_args = {}
     options = {
-        'include_token': True
+        'include_token': True,
     }
 
     # Scope Information
     scopes = {
         'all': {
-            'reminders:write'
+            'reminders:write',
         },
         'bot': set(),
         'user': set(),
@@ -135,17 +135,17 @@ class RemindersDelete(BaseAPIEndpoint):
     """
     endpoint = 'reminders.delete'
     required_args = {
-        'reminder'
+        'reminder',
     }
     optional_args = {}
     options = {
-        'include_token': True
+        'include_token': True,
     }
 
     # Scope Information
     scopes = {
         'all': {
-            'reminders:write'
+            'reminders:write',
         },
         'bot': set(),
         'user': set(),
@@ -192,17 +192,17 @@ class RemindersInfo(BaseAPIEndpoint):
     """
     endpoint = 'reminders.info'
     required_args = {
-        'reminder'
+        'reminder',
     }
     optional_args = {}
     options = {
-        'include_token': True
+        'include_token': True,
     }
 
     # Scope Information
     scopes = {
         'all': {
-            'reminders:read'
+            'reminders:read',
         },
         'bot': set(),
         'user': set(),
@@ -260,13 +260,13 @@ class RemindersList(BaseAPIEndpoint):
     required_args = {}
     optional_args = {}
     options = {
-        'include_token': True
+        'include_token': True,
     }
 
     # Scope Information
     scopes = {
         'all': {
-            'reminders:read'
+            'reminders:read',
         },
         'bot': set(),
         'user': set(),

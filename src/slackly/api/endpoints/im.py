@@ -32,17 +32,17 @@ class ImClose(BaseAPIEndpoint):
     """
     endpoint = 'im.close'
     required_args = {
-        'channel'
+        'channel',
     }
     optional_args = {}
     options = {
-        'include_token': True
+        'include_token': True,
     }
 
     # Scope Information
     scopes = {
         'all': {
-            'im:write'
+            'im:write',
         },
         'bot': set(),
         'user': set(),
@@ -128,23 +128,23 @@ class ImHistory(BaseAPIEndpoint):
     """
     endpoint = 'im.history'
     required_args = {
-        'channel'
+        'channel',
     }
     optional_args = {
-        'count'
-        'inclusive'
-        'latest'
-        'oldest'
-        'unreads'
+        'count',
+        'inclusive',
+        'latest',
+        'oldest',
+        'unreads',
     }
     options = {
-        'include_token': True
+        'include_token': True,
     }
 
     # Scope Information
     scopes = {
         'all': {
-            'im:history'
+            'im:history',
         },
         'bot': set(),
         'user': set(),
@@ -221,13 +221,13 @@ class ImList(BaseAPIEndpoint):
     required_args = {}
     optional_args = {}
     options = {
-        'include_token': True
+        'include_token': True,
     }
 
     # Scope Information
     scopes = {
         'all': {
-            'im:read'
+            'im:read',
         },
         'bot': set(),
         'user': set(),
@@ -268,18 +268,18 @@ class ImMark(BaseAPIEndpoint):
     """
     endpoint = 'im.mark'
     required_args = {
-        'channel'
-        'ts'
+        'channel',
+        'ts',
     }
     optional_args = {}
     options = {
-        'include_token': True
+        'include_token': True,
     }
 
     # Scope Information
     scopes = {
         'all': {
-            'im:write'
+            'im:write',
         },
         'bot': set(),
         'user': set(),
@@ -360,19 +360,19 @@ class ImOpen(BaseAPIEndpoint):
     """
     endpoint = 'im.open'
     required_args = {
-        'user'
+        'user',
     }
     optional_args = {
-        'return_im'
+        'return_im',
     }
     options = {
-        'include_token': True
+        'include_token': True,
     }
 
     # Scope Information
     scopes = {
         'all': {
-            'im:write'
+            'im:write',
         },
         'bot': set(),
         'user': set(),
@@ -437,18 +437,18 @@ class ImReplies(BaseAPIEndpoint):
     """
     endpoint = 'im.replies'
     required_args = {
-        'channel'
-        'thread_ts'
+        'channel',
+        'thread_ts',
     }
     optional_args = {}
     options = {
-        'include_token': True
+        'include_token': True,
     }
 
     # Scope Information
     scopes = {
         'all': {
-            'im:history'
+            'im:history',
         },
         'bot': set(),
         'user': set(),

@@ -21,17 +21,17 @@ class GroupsArchive(BaseAPIEndpoint):
     """
     endpoint = 'groups.archive'
     required_args = {
-        'channel'
+        'channel',
     }
     optional_args = {}
     options = {
-        'include_token': True
+        'include_token': True,
     }
 
     # Scope Information
     scopes = {
         'all': {
-            'groups:write'
+            'groups:write',
         },
         'bot': set(),
         'user': set(),
@@ -79,17 +79,17 @@ class GroupsClose(BaseAPIEndpoint):
     """
     endpoint = 'groups.close'
     required_args = {
-        'channel'
+        'channel',
     }
     optional_args = {}
     options = {
-        'include_token': True
+        'include_token': True,
     }
 
     # Scope Information
     scopes = {
         'all': {
-            'groups:write'
+            'groups:write',
         },
         'bot': set(),
         'user': set(),
@@ -153,19 +153,19 @@ class GroupsCreate(BaseAPIEndpoint):
     """
     endpoint = 'groups.create'
     required_args = {
-        'name'
+        'name',
     }
     optional_args = {
-        'validate'
+        'validate',
     }
     options = {
-        'include_token': True
+        'include_token': True,
     }
 
     # Scope Information
     scopes = {
         'all': {
-            'groups:write'
+            'groups:write',
         },
         'bot': set(),
         'user': set(),
@@ -240,17 +240,17 @@ class GroupsCreateChild(BaseAPIEndpoint):
     """
     endpoint = 'groups.createChild'
     required_args = {
-        'channel'
+        'channel',
     }
     optional_args = {}
     options = {
-        'include_token': True
+        'include_token': True,
     }
 
     # Scope Information
     scopes = {
         'all': {
-            'groups:write'
+            'groups:write',
         },
         'bot': set(),
         'user': set(),
@@ -336,23 +336,23 @@ class GroupsHistory(BaseAPIEndpoint):
     """
     endpoint = 'groups.history'
     required_args = {
-        'channel'
+        'channel',
     }
     optional_args = {
-        'count'
-        'inclusive'
-        'latest'
-        'oldest'
-        'unreads'
+        'count',
+        'inclusive',
+        'latest',
+        'oldest',
+        'unreads',
     }
     options = {
-        'include_token': True
+        'include_token': True,
     }
 
     # Scope Information
     scopes = {
         'all': {
-            'groups:history'
+            'groups:history',
         },
         'bot': set(),
         'user': set(),
@@ -430,17 +430,17 @@ class GroupsInfo(BaseAPIEndpoint):
     """
     endpoint = 'groups.info'
     required_args = {
-        'channel'
+        'channel',
     }
     optional_args = {}
     options = {
-        'include_token': True
+        'include_token': True,
     }
 
     # Scope Information
     scopes = {
         'all': {
-            'groups:read'
+            'groups:read',
         },
         'bot': set(),
         'user': set(),
@@ -500,18 +500,18 @@ class GroupsInvite(BaseAPIEndpoint):
     """
     endpoint = 'groups.invite'
     required_args = {
-        'channel'
-        'user'
+        'channel',
+        'user',
     }
     optional_args = {}
     options = {
-        'include_token': True
+        'include_token': True,
     }
 
     # Scope Information
     scopes = {
         'all': {
-            'groups:write'
+            'groups:write',
         },
         'bot': set(),
         'user': set(),
@@ -551,18 +551,18 @@ class GroupsKick(BaseAPIEndpoint):
     """
     endpoint = 'groups.kick'
     required_args = {
-        'channel'
-        'user'
+        'channel',
+        'user',
     }
     optional_args = {}
     options = {
-        'include_token': True
+        'include_token': True,
     }
 
     # Scope Information
     scopes = {
         'all': {
-            'groups:write'
+            'groups:write',
         },
         'bot': set(),
         'user': set(),
@@ -602,17 +602,17 @@ class GroupsLeave(BaseAPIEndpoint):
     """
     endpoint = 'groups.leave'
     required_args = {
-        'channel'
+        'channel',
     }
     optional_args = {}
     options = {
-        'include_token': True
+        'include_token': True,
     }
 
     # Scope Information
     scopes = {
         'all': {
-            'groups:write'
+            'groups:write',
         },
         'bot': set(),
         'user': set(),
@@ -675,16 +675,16 @@ class GroupsList(BaseAPIEndpoint):
     endpoint = 'groups.list'
     required_args = {}
     optional_args = {
-        'exclude_archived'
+        'exclude_archived',
     }
     options = {
-        'include_token': True
+        'include_token': True,
     }
 
     # Scope Information
     scopes = {
         'all': {
-            'groups:read'
+            'groups:read',
         },
         'bot': set(),
         'user': set(),
@@ -729,18 +729,18 @@ class GroupsMark(BaseAPIEndpoint):
     """
     endpoint = 'groups.mark'
     required_args = {
-        'channel'
-        'ts'
+        'channel',
+        'ts',
     }
     optional_args = {}
     options = {
-        'include_token': True
+        'include_token': True,
     }
 
     # Scope Information
     scopes = {
         'all': {
-            'groups:write'
+            'groups:write',
         },
         'bot': set(),
         'user': set(),
@@ -791,17 +791,17 @@ class GroupsOpen(BaseAPIEndpoint):
     """
     endpoint = 'groups.open'
     required_args = {
-        'channel'
+        'channel',
     }
     optional_args = {}
     options = {
-        'include_token': True
+        'include_token': True,
     }
 
     # Scope Information
     scopes = {
         'all': {
-            'groups:write'
+            'groups:write',
         },
         'bot': set(),
         'user': set(),
@@ -845,20 +845,20 @@ class GroupsRename(BaseAPIEndpoint):
     """
     endpoint = 'groups.rename'
     required_args = {
-        'channel'
-        'name'
+        'channel',
+        'name',
     }
     optional_args = {
-        'validate'
+        'validate',
     }
     options = {
-        'include_token': True
+        'include_token': True,
     }
 
     # Scope Information
     scopes = {
         'all': {
-            'groups:write'
+            'groups:write',
         },
         'bot': set(),
         'user': set(),
@@ -926,18 +926,18 @@ class GroupsReplies(BaseAPIEndpoint):
     """
     endpoint = 'groups.replies'
     required_args = {
-        'channel'
-        'thread_ts'
+        'channel',
+        'thread_ts',
     }
     optional_args = {}
     options = {
-        'include_token': True
+        'include_token': True,
     }
 
     # Scope Information
     scopes = {
         'all': {
-            'groups:history'
+            'groups:history',
         },
         'bot': set(),
         'user': set(),
@@ -978,18 +978,18 @@ class GroupsSetPurpose(BaseAPIEndpoint):
     """
     endpoint = 'groups.setPurpose'
     required_args = {
-        'channel'
-        'purpose'
+        'channel',
+        'purpose',
     }
     optional_args = {}
     options = {
-        'include_token': True
+        'include_token': True,
     }
 
     # Scope Information
     scopes = {
         'all': {
-            'groups:write'
+            'groups:write',
         },
         'bot': set(),
         'user': set(),
@@ -1030,18 +1030,18 @@ class GroupsSetTopic(BaseAPIEndpoint):
     """
     endpoint = 'groups.setTopic'
     required_args = {
-        'channel'
-        'topic'
+        'channel',
+        'topic',
     }
     optional_args = {}
     options = {
-        'include_token': True
+        'include_token': True,
     }
 
     # Scope Information
     scopes = {
         'all': {
-            'groups:write'
+            'groups:write',
         },
         'bot': set(),
         'user': set(),
@@ -1081,17 +1081,17 @@ class GroupsUnarchive(BaseAPIEndpoint):
     """
     endpoint = 'groups.unarchive'
     required_args = {
-        'channel'
+        'channel',
     }
     optional_args = {}
     options = {
-        'include_token': True
+        'include_token': True,
     }
 
     # Scope Information
     scopes = {
         'all': {
-            'groups:write'
+            'groups:write',
         },
         'bot': set(),
         'user': set(),

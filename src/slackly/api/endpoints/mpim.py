@@ -32,17 +32,17 @@ class MpimClose(BaseAPIEndpoint):
     """
     endpoint = 'mpim.close'
     required_args = {
-        'channel'
+        'channel',
     }
     optional_args = {}
     options = {
-        'include_token': True
+        'include_token': True,
     }
 
     # Scope Information
     scopes = {
         'all': {
-            'mpim:write'
+            'mpim:write',
         },
         'bot': set(),
         'user': set(),
@@ -128,23 +128,23 @@ class MpimHistory(BaseAPIEndpoint):
     """
     endpoint = 'mpim.history'
     required_args = {
-        'channel'
+        'channel',
     }
     optional_args = {
-        'count'
-        'inclusive'
-        'latest'
-        'oldest'
-        'unreads'
+        'count',
+        'inclusive',
+        'latest',
+        'oldest',
+        'unreads',
     }
     options = {
-        'include_token': True
+        'include_token': True,
     }
 
     # Scope Information
     scopes = {
         'all': {
-            'mpim:history'
+            'mpim:history',
         },
         'bot': set(),
         'user': set(),
@@ -231,13 +231,13 @@ class MpimList(BaseAPIEndpoint):
     required_args = {}
     optional_args = {}
     options = {
-        'include_token': True
+        'include_token': True,
     }
 
     # Scope Information
     scopes = {
         'all': {
-            'mpim:read'
+            'mpim:read',
         },
         'bot': set(),
         'user': set(),
@@ -278,18 +278,18 @@ class MpimMark(BaseAPIEndpoint):
     """
     endpoint = 'mpim.mark'
     required_args = {
-        'channel'
-        'ts'
+        'channel',
+        'ts',
     }
     optional_args = {}
     options = {
-        'include_token': True
+        'include_token': True,
     }
 
     # Scope Information
     scopes = {
         'all': {
-            'mpim:write'
+            'mpim:write',
         },
         'bot': set(),
         'user': set(),
@@ -366,17 +366,17 @@ class MpimOpen(BaseAPIEndpoint):
     """
     endpoint = 'mpim.open'
     required_args = {
-        'users'
+        'users',
     }
     optional_args = {}
     options = {
-        'include_token': True
+        'include_token': True,
     }
 
     # Scope Information
     scopes = {
         'all': {
-            'mpim:write'
+            'mpim:write',
         },
         'bot': set(),
         'user': set(),
@@ -437,18 +437,18 @@ class MpimReplies(BaseAPIEndpoint):
     """
     endpoint = 'mpim.replies'
     required_args = {
-        'channel'
-        'thread_ts'
+        'channel',
+        'thread_ts',
     }
     optional_args = {}
     options = {
-        'include_token': True
+        'include_token': True,
     }
 
     # Scope Information
     scopes = {
         'all': {
-            'mpim:history'
+            'mpim:history',
         },
         'bot': set(),
         'user': set(),

@@ -1,9 +1,9 @@
-from websocket import create_connection
-from ssl import SSLError
 import json
-from ..compat import queue
-from threading import Thread
+import ssl
+import threading
+import websocket
 
+from ..compat import queue
 from .event_factory import SlackEventDict
 
 
@@ -26,7 +26,7 @@ def recieve_messages(q, websocket, ignore_pong=True):
                 continue
             else:
                 q.put(msg)
-        except SSLError as e:
+        except ssl.SSLError as e:
             if e.errno == 2:
                 continue
             raise
@@ -94,13 +94,13 @@ class SlackRTMClient(object):
         return rtm_client
 
     def connect(self):
-        self.websocket = create_connection(self.url)
+        self.websocket = websocket.create_connection(self.url)
         self.websocket.sock.setblocking(True)
 
-        self.send_daemon = Thread(target=send_messages, args=(self.send_queue, self.websocket, self.keep_alive), daemon=True)
+        self.send_daemon = threading.Thread(target=send_messages, args=(self.send_queue, self.websocket, self.keep_alive), daemon=True)
         self.send_daemon.start()
 
-        self.receive_daemon = Thread(target=recieve_messages, args=(self.receive_queue, self.websocket), daemon=True)
+        self.receive_daemon = threading.Thread(target=recieve_messages, args=(self.receive_queue, self.websocket), daemon=True)
         self.receive_daemon.start()
         self.connected = True
 

@@ -42,16 +42,16 @@ class BotsInfo(BaseAPIEndpoint):
     endpoint = 'bots.info'
     required_args = {}
     optional_args = {
-        'bot'
+        'bot',
     }
     options = {
-        'include_token': True
+        'include_token': True,
     }
 
     # Scope Information
     scopes = {
         'all': {
-            'users:read'
+            'users:read',
         },
         'bot': set(),
         'user': set(),

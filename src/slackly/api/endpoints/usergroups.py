@@ -52,22 +52,22 @@ class UsergroupsCreate(BaseAPIEndpoint):
     """
     endpoint = 'usergroups.create'
     required_args = {
-        'name'
+        'name',
     }
     optional_args = {
-        'channels'
-        'description'
-        'handle'
-        'include_count'
+        'channels',
+        'description',
+        'handle',
+        'include_count',
     }
     options = {
-        'include_token': True
+        'include_token': True,
     }
 
     # Scope Information
     scopes = {
         'all': {
-            'usergroups:write'
+            'usergroups:write',
         },
         'bot': set(),
         'user': set(),
@@ -146,19 +146,19 @@ class UsergroupsDisable(BaseAPIEndpoint):
     """
     endpoint = 'usergroups.disable'
     required_args = {
-        'usergroup'
+        'usergroup',
     }
     optional_args = {
-        'include_count'
+        'include_count',
     }
     options = {
-        'include_token': True
+        'include_token': True,
     }
 
     # Scope Information
     scopes = {
         'all': {
-            'usergroups:write'
+            'usergroups:write',
         },
         'bot': set(),
         'user': set(),
@@ -225,19 +225,19 @@ class UsergroupsEnable(BaseAPIEndpoint):
     """
     endpoint = 'usergroups.enable'
     required_args = {
-        'usergroup'
+        'usergroup',
     }
     optional_args = {
-        'include_count'
+        'include_count',
     }
     options = {
-        'include_token': True
+        'include_token': True,
     }
 
     # Scope Information
     scopes = {
         'all': {
-            'usergroups:write'
+            'usergroups:write',
         },
         'bot': set(),
         'user': set(),
@@ -357,18 +357,18 @@ class UsergroupsList(BaseAPIEndpoint):
     endpoint = 'usergroups.list'
     required_args = {}
     optional_args = {
-        'include_count'
-        'include_disabled'
-        'include_users'
+        'include_count',
+        'include_disabled',
+        'include_users',
     }
     options = {
-        'include_token': True
+        'include_token': True,
     }
 
     # Scope Information
     scopes = {
         'all': {
-            'usergroups:read'
+            'usergroups:read',
         },
         'bot': set(),
         'user': set(),
@@ -439,23 +439,23 @@ class UsergroupsUpdate(BaseAPIEndpoint):
     """
     endpoint = 'usergroups.update'
     required_args = {
-        'usergroup'
+        'usergroup',
     }
     optional_args = {
-        'channels'
-        'description'
-        'handle'
-        'include_count'
-        'name'
+        'channels',
+        'description',
+        'handle',
+        'include_count',
+        'name',
     }
     options = {
-        'include_token': True
+        'include_token': True,
     }
 
     # Scope Information
     scopes = {
         'all': {
-            'usergroups:write'
+            'usergroups:write',
         },
         'bot': set(),
         'user': set(),
@@ -515,19 +515,19 @@ class UsersList(BaseAPIEndpoint):
     """
     endpoint = 'usergroups.users.list'
     required_args = {
-        'usergroup'
+        'usergroup',
     }
     optional_args = {
-        'include_disabled'
+        'include_disabled',
     }
     options = {
-        'include_token': True
+        'include_token': True,
     }
 
     # Scope Information
     scopes = {
         'all': {
-            'usergroups:read'
+            'usergroups:read',
         },
         'bot': set(),
         'user': set(),
@@ -597,20 +597,20 @@ class UsersUpdate(BaseAPIEndpoint):
     """
     endpoint = 'usergroups.users.update'
     required_args = {
-        'usergroup'
-        'users'
+        'usergroup',
+        'users',
     }
     optional_args = {
-        'include_count'
+        'include_count',
     }
     options = {
-        'include_token': True
+        'include_token': True,
     }
 
     # Scope Information
     scopes = {
         'all': {
-            'usergroups:write'
+            'usergroups:write',
         },
         'bot': set(),
         'user': set(),

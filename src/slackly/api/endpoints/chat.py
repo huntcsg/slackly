@@ -25,24 +25,24 @@ class ChatDelete(BaseAPIEndpoint):
     """
     endpoint = 'chat.delete'
     required_args = {
-        'channel'
-        'ts'
+        'channel',
+        'ts',
     }
     optional_args = {
-        'as_user'
+        'as_user',
     }
     options = {
-        'include_token': True
+        'include_token': True,
     }
 
     # Scope Information
     scopes = {
         'all': set(),
         'bot': {
-            'chat:write:bot'
+            'chat:write:bot',
         },
         'user': {
-            'chat:write:user'
+            'chat:write:user',
         },
     }
 
@@ -86,12 +86,12 @@ class ChatMeMessage(BaseAPIEndpoint):
     """
     endpoint = 'chat.meMessage'
     required_args = {
-        'channel'
-        'text'
+        'channel',
+        'text',
     }
     optional_args = {}
     options = {
-        'include_token': True
+        'include_token': True,
     }
 
     # Scope Information
@@ -99,7 +99,7 @@ class ChatMeMessage(BaseAPIEndpoint):
         'all': set(),
         'bot': set(),
         'user': {
-            'chat:write:user'
+            'chat:write:user',
         },
     }
 
@@ -146,34 +146,34 @@ class ChatPostMessage(BaseAPIEndpoint):
     """
     endpoint = 'chat.postMessage'
     required_args = {
-        'channel'
-        'text'
+        'channel',
+        'text',
     }
     optional_args = {
-        'as_user'
-        'attachments'
-        'icon_emoji'
-        'icon_url'
-        'link_names'
-        'parse'
-        'reply_broadcast'
-        'thread_ts'
-        'unfurl_links'
-        'unfurl_media'
-        'username'
+        'as_user',
+        'attachments',
+        'icon_emoji',
+        'icon_url',
+        'link_names',
+        'parse',
+        'reply_broadcast',
+        'thread_ts',
+        'unfurl_links',
+        'unfurl_media',
+        'username',
     }
     options = {
-        'include_token': True
+        'include_token': True,
     }
 
     # Scope Information
     scopes = {
         'all': set(),
         'bot': {
-            'chat:write:bot'
+            'chat:write:bot',
         },
         'user': {
-            'chat:write:user'
+            'chat:write:user',
         },
     }
 
@@ -260,21 +260,21 @@ class ChatUnfurl(BaseAPIEndpoint):
     """
     endpoint = 'chat.unfurl'
     required_args = {
-        'channel'
-        'ts'
-        'unfurls'
+        'channel',
+        'ts',
+        'unfurls',
     }
     optional_args = {
-        'user_auth_required'
+        'user_auth_required',
     }
     options = {
-        'include_token': True
+        'include_token': True,
     }
 
     # Scope Information
     scopes = {
         'all': {
-            'links:write'
+            'links:write',
         },
         'bot': set(),
         'user': set(),
@@ -331,28 +331,28 @@ class ChatUpdate(BaseAPIEndpoint):
     """
     endpoint = 'chat.update'
     required_args = {
-        'channel'
-        'text'
-        'ts'
+        'channel',
+        'text',
+        'ts',
     }
     optional_args = {
-        'as_user'
-        'attachments'
-        'link_names'
-        'parse'
+        'as_user',
+        'attachments',
+        'link_names',
+        'parse',
     }
     options = {
-        'include_token': True
+        'include_token': True,
     }
 
     # Scope Information
     scopes = {
         'all': set(),
         'bot': {
-            'chat:write:bot'
+            'chat:write:bot',
         },
         'user': {
-            'chat:write:user'
+            'chat:write:user',
         },
     }
 

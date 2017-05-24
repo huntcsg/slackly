@@ -24,10 +24,10 @@ class AuthRevoke(BaseAPIEndpoint):
     endpoint = 'auth.revoke'
     required_args = {}
     optional_args = {
-        'test'
+        'test',
     }
     options = {
-        'include_token': True
+        'include_token': True,
     }
 
     # Scope Information
@@ -77,7 +77,7 @@ class AuthTest(BaseAPIEndpoint):
     required_args = {}
     optional_args = {}
     options = {
-        'include_token': True
+        'include_token': True,
     }
 
     # Scope Information

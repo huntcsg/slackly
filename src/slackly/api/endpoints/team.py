@@ -67,12 +67,12 @@ class TeamAccessLogs(BaseAPIEndpoint):
     endpoint = 'team.accessLogs'
     required_args = {}
     optional_args = {
-        'before'
-        'count'
-        'page'
+        'before',
+        'count',
+        'page',
     }
     options = {
-        'include_token': True
+        'include_token': True,
     }
 
     # Scope Information
@@ -140,10 +140,10 @@ class TeamBillableInfo(BaseAPIEndpoint):
     endpoint = 'team.billableInfo'
     required_args = {}
     optional_args = {
-        'user'
+        'user',
     }
     options = {
-        'include_token': True
+        'include_token': True,
     }
 
     # Scope Information
@@ -208,13 +208,13 @@ class TeamInfo(BaseAPIEndpoint):
     required_args = {}
     optional_args = {}
     options = {
-        'include_token': True
+        'include_token': True,
     }
 
     # Scope Information
     scopes = {
         'all': {
-            'team:read'
+            'team:read',
         },
         'bot': set(),
         'user': set(),
@@ -304,15 +304,15 @@ class TeamIntegrationLogs(BaseAPIEndpoint):
     endpoint = 'team.integrationLogs'
     required_args = {}
     optional_args = {
-        'app_id'
-        'change_type'
-        'count'
-        'page'
-        'service_id'
-        'user'
+        'app_id',
+        'change_type',
+        'count',
+        'page',
+        'service_id',
+        'user',
     }
     options = {
-        'include_token': True
+        'include_token': True,
     }
 
     # Scope Information
@@ -443,16 +443,16 @@ class ProfileGet(BaseAPIEndpoint):
     endpoint = 'team.profile.get'
     required_args = {}
     optional_args = {
-        'visibility'
+        'visibility',
     }
     options = {
-        'include_token': True
+        'include_token': True,
     }
 
     # Scope Information
     scopes = {
         'all': {
-            'users.profile:read'
+            'users.profile:read',
         },
         'bot': set(),
         'user': set(),
