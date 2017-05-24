@@ -3,10 +3,6 @@ Slackly - A Slack Toolkit
 
 |gitter| |travis| |pypi| |docs|
 
-.. raw:: html
-
-    <script type="text/javascript" src="https://asciinema.org/a/2c8n598yzdjhbpbfhrofxd1wz.js" id="asciicast-2c8n598yzdjhbpbfhrofxd1wz" async></script>
-
 Use Cases:
 
     - Use the `slackly.SlackClient` to make calls to the Web API
