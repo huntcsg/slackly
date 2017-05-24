@@ -1,0 +1,180 @@
+{
+    "channels": [
+        {
+            "is_channel": true,
+            "created": 1495613899,
+            "creator": "U5GHXB5C1",
+            "is_org_shared": false,
+            "topic": {
+                "last_set": 0,
+                "value": "",
+                "creator": ""
+            },
+            "num_members": 0,
+            "id": "C5GFMAW48",
+            "is_member": false,
+            "previous_names": [],
+            "is_shared": false,
+            "name": "an_archived_channel",
+            "purpose": {
+                "last_set": 1495613900,
+                "value": "A Channel that was archived",
+                "creator": "U5GHXB5C1"
+            },
+            "name_normalized": "an_archived_channel",
+            "is_archived": true,
+            "is_general": false
+        },
+        {
+            "is_channel": true,
+            "created": 1495610431,
+            "creator": "U5GHXB5C1",
+            "is_org_shared": false,
+            "topic": {
+                "last_set": 0,
+                "value": "",
+                "creator": ""
+            },
+            "num_members": 2,
+            "id": "C5H36UJJF",
+            "is_member": true,
+            "previous_names": [],
+            "is_shared": false,
+            "name": "app_invited",
+            "purpose": {
+                "last_set": 1495610432,
+                "value": "A Channel the app was invited to",
+                "creator": "U5GHXB5C1"
+            },
+            "name_normalized": "app_invited",
+            "is_archived": false,
+            "is_general": false
+        },
+        {
+            "is_channel": true,
+            "created": 1495610356,
+            "creator": "U5GHXB5C1",
+            "is_org_shared": false,
+            "topic": {
+                "last_set": 0,
+                "value": "",
+                "creator": ""
+            },
+            "num_members": 1,
+            "id": "C5H36K0KD",
+            "is_member": false,
+            "previous_names": [],
+            "is_shared": false,
+            "name": "app_no_invite_no_post",
+            "purpose": {
+                "last_set": 1495610357,
+                "value": "A channel that the app was not invited to and can't post to",
+                "creator": "U5GHXB5C1"
+            },
+            "name_normalized": "app_no_invite_no_post",
+            "is_archived": false,
+            "is_general": false
+        },
+        {
+            "is_channel": true,
+            "created": 1495609173,
+            "creator": "U5GHXB5C1",
+            "is_org_shared": false,
+            "topic": {
+                "last_set": 0,
+                "value": "Company-wide announcements and work-based matters",
+                "creator": ""
+            },
+            "num_members": 1,
+            "id": "C5H31A7QB",
+            "is_member": false,
+            "previous_names": [],
+            "is_shared": false,
+            "name": "general",
+            "purpose": {
+                "last_set": 0,
+                "value": "This channel is for team-wide communication and announcements. All team members are in this channel.",
+                "creator": ""
+            },
+            "name_normalized": "general",
+            "is_archived": false,
+            "is_general": true
+        },
+        {
+            "is_channel": true,
+            "created": 1495610401,
+            "creator": "U5GHXB5C1",
+            "is_org_shared": false,
+            "topic": {
+                "last_set": 0,
+                "value": "",
+                "creator": ""
+            },
+            "num_members": 1,
+            "id": "C5GF3SGD6",
+            "is_member": false,
+            "previous_names": [],
+            "is_shared": false,
+            "name": "no_invite_can_post",
+            "purpose": {
+                "last_set": 1495610402,
+                "value": "App not invited, but has posting permissions",
+                "creator": "U5GHXB5C1"
+            },
+            "name_normalized": "no_invite_can_post",
+            "is_archived": false,
+            "is_general": false
+        },
+        {
+            "is_channel": true,
+            "created": 1495615610,
+            "creator": "U5GHXB5C1",
+            "is_org_shared": false,
+            "topic": {
+                "last_set": 0,
+                "value": "",
+                "creator": ""
+            },
+            "num_members": 1,
+            "id": "C5J0DFD3Q",
+            "is_member": false,
+            "previous_names": [],
+            "is_shared": false,
+            "name": "post_message",
+            "purpose": {
+                "last_set": 1495615611,
+                "value": "a place to test postMessage",
+                "creator": "U5GHXB5C1"
+            },
+            "name_normalized": "post_message",
+            "is_archived": false,
+            "is_general": false
+        },
+        {
+            "is_channel": true,
+            "created": 1495609173,
+            "creator": "U5GHXB5C1",
+            "is_org_shared": false,
+            "topic": {
+                "last_set": 0,
+                "value": "Non-work banter and water cooler conversation",
+                "creator": ""
+            },
+            "num_members": 1,
+            "id": "C5GHXB8C9",
+            "is_member": false,
+            "previous_names": [],
+            "is_shared": false,
+            "name": "random",
+            "purpose": {
+                "last_set": 0,
+                "value": "A place for non-work-related flimflam, faffing, hodge-podge or jibber-jabber you'd prefer to keep out of more focused work-related channels.",
+                "creator": ""
+            },
+            "name_normalized": "random",
+            "is_archived": false,
+            "is_general": false
+        }
+    ],
+    "ok": true
+}

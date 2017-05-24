@@ -1,0 +1,29 @@
+{
+    "ok": true,
+    "groups": [
+        {
+            "topic": {
+                "creator": "",
+                "last_set": 0,
+                "value": ""
+            },
+            "name": "secret_bot_chan",
+            "creator": "U5GHXB5C1",
+            "name_normalized": "secret_bot_chan",
+            "members": [
+                "U5GF0M8JU",
+                "U5GHXB5C1"
+            ],
+            "is_group": true,
+            "id": "G5H8K8KMH",
+            "purpose": {
+                "creator": "U5GHXB5C1",
+                "last_set": 1495637224,
+                "value": "A private channel with a bot"
+            },
+            "is_archived": false,
+            "is_mpim": false,
+            "created": 1495637223
+        }
+    ]
+}

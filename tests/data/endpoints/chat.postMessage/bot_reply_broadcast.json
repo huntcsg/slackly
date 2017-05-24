@@ -1,0 +1,104 @@
+{
+    "channel": "C5H36UJJF",
+    "ts": "1495617250.043087",
+    "message": {
+        "user": "U00",
+        "text": "A posted message",
+        "subtype": "thread_broadcast",
+        "thread_ts": "1495616018.733983",
+        "ts": "1495617250.043087",
+        "username": "slackly_testing_admin",
+        "root": {
+            "replies": [
+                {
+                    "ts": "1495616392.826796",
+                    "user": "U00"
+                },
+                {
+                    "ts": "1495616392.826991",
+                    "user": "U00"
+                },
+                {
+                    "ts": "1495616441.841401",
+                    "user": "U00"
+                },
+                {
+                    "ts": "1495616442.841581",
+                    "user": "U00"
+                },
+                {
+                    "ts": "1495616443.841851",
+                    "user": "U00"
+                },
+                {
+                    "ts": "1495616444.842068",
+                    "user": "U00"
+                },
+                {
+                    "ts": "1495616444.842263",
+                    "user": "U00"
+                },
+                {
+                    "ts": "1495616445.842443",
+                    "user": "U00"
+                },
+                {
+                    "ts": "1495616788.930526",
+                    "user": "U00"
+                },
+                {
+                    "ts": "1495616789.930701",
+                    "user": "U00"
+                },
+                {
+                    "ts": "1495616789.930886",
+                    "user": "U00"
+                },
+                {
+                    "ts": "1495616790.931088",
+                    "user": "U00"
+                },
+                {
+                    "ts": "1495616791.931300",
+                    "user": "U00"
+                },
+                {
+                    "ts": "1495616792.931510",
+                    "user": "U00"
+                },
+                {
+                    "ts": "1495617248.042601",
+                    "user": "U00"
+                },
+                {
+                    "ts": "1495617248.042744",
+                    "user": "U00"
+                },
+                {
+                    "ts": "1495617249.042926",
+                    "user": "U00"
+                },
+                {
+                    "ts": "1495617250.043087",
+                    "user": "U00"
+                }
+            ],
+            "ts": "1495616018.733983",
+            "subtype": "bot_message",
+            "text": "A posted message",
+            "subscribed": false,
+            "bot_id": "B5H58RUTC",
+            "type": "message",
+            "thread_ts": "1495616018.733983",
+            "unread_count": 18,
+            "reply_count": 18,
+            "username": "slackly_testing_admin"
+        },
+        "unfurl_links": false,
+        "bot_id": "B5GHZKMPB",
+        "type": "message",
+        "is_thread_broadcast": true,
+        "channel_id": "187108970627"
+    },
+    "ok": true
+}

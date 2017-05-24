@@ -1,0 +1,15 @@
+{
+    "bot": {
+        "name": "slackly_testing_admin",
+        "deleted": false,
+        "icons": {
+            "image_72": "https://fst.slack-edge.com/b48b/plugins/slack_api_news/assets/service_72.png",
+            "image_48": "https://fst.slack-edge.com/b48b/plugins/slack_api_news/assets/service_48.png",
+            "image_36": "https://fst.slack-edge.com/b48b/plugins/slack_api_news/assets/service_36.png"
+        },
+        "app_id": "A5H56U0RG",
+        "updated": 1495609680,
+        "id": "B5GHZKMPB"
+    },
+    "ok": true
+}

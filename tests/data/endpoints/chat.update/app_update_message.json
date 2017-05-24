@@ -1,0 +1,12 @@
+{
+    "text": "new text",
+    "ts": "1495635245.630082",
+    "channel": "C5H36UJJF",
+    "ok": true,
+    "message": {
+        "text": "new text",
+        "type": "message",
+        "user": "U5GHXB5C1",
+        "bot_id": "B5H58RUTC"
+    }
+}

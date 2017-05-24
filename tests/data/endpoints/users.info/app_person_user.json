@@ -1,0 +1,36 @@
+{
+    "user": {
+        "tz": "America/Los_Angeles",
+        "is_restricted": false,
+        "tz_label": "Pacific Daylight Time",
+        "updated": 1495609173,
+        "is_ultra_restricted": false,
+        "is_bot": false,
+        "is_primary_owner": true,
+        "deleted": false,
+        "tz_offset": -25200,
+        "id": "U5GHXB5C1",
+        "team_id": "T5HUVEPSA",
+        "is_owner": true,
+        "is_admin": true,
+        "has_2fa": false,
+        "profile": {
+            "real_name_normalized": "slackly admin",
+            "image_48": "https://secure.gravatar.com/avatar/fca1d7f187119297c5ebcfd633d5bfe1.jpg?s=48&d=https%3A%2F%2Ffst.slack-edge.com%2F66f9%2Fimg%2Favatars%2Fava_0005-48.png",
+            "image_72": "https://secure.gravatar.com/avatar/fca1d7f187119297c5ebcfd633d5bfe1.jpg?s=72&d=https%3A%2F%2Ffst.slack-edge.com%2F66f9%2Fimg%2Favatars%2Fava_0005-72.png",
+            "image_192": "https://secure.gravatar.com/avatar/fca1d7f187119297c5ebcfd633d5bfe1.jpg?s=192&d=https%3A%2F%2Ffst.slack-edge.com%2F7fa9%2Fimg%2Favatars%2Fava_0005-192.png",
+            "email": "huntcsg@gmail.com",
+            "last_name": "admin",
+            "avatar_hash": "gfca1d7f1871",
+            "first_name": "slackly",
+            "image_512": "https://secure.gravatar.com/avatar/fca1d7f187119297c5ebcfd633d5bfe1.jpg?s=512&d=https%3A%2F%2Ffst.slack-edge.com%2F7fa9%2Fimg%2Favatars%2Fava_0005-512.png",
+            "image_32": "https://secure.gravatar.com/avatar/fca1d7f187119297c5ebcfd633d5bfe1.jpg?s=32&d=https%3A%2F%2Ffst.slack-edge.com%2F66f9%2Fimg%2Favatars%2Fava_0005-32.png",
+            "image_24": "https://secure.gravatar.com/avatar/fca1d7f187119297c5ebcfd633d5bfe1.jpg?s=24&d=https%3A%2F%2Ffst.slack-edge.com%2F66f9%2Fimg%2Favatars%2Fava_0005-24.png",
+            "real_name": "slackly admin"
+        },
+        "name": "slackly_admin",
+        "color": "9f69e7",
+        "real_name": "slackly admin"
+    },
+    "ok": true
+}

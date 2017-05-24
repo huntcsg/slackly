@@ -1,0 +1,43 @@
+{
+    "channel": {
+        "is_channel": true,
+        "latest": {
+            "subtype": "bot_message",
+            "text": "A posted message",
+            "bot_id": "B5GHZKMPB",
+            "type": "message",
+            "thread_ts": "1495616018.733983",
+            "ts": "1495617251.043405",
+            "username": "slackly_testing_admin"
+        },
+        "created": 1495610431,
+        "topic": {
+            "last_set": 0,
+            "value": "",
+            "creator": ""
+        },
+        "creator": "U5GHXB5C1",
+        "is_org_shared": false,
+        "unread_count_display": 49,
+        "id": "C5H36UJJF",
+        "is_member": true,
+        "previous_names": [],
+        "members": [
+            "U5GF0M8JU",
+            "U5GHXB5C1"
+        ],
+        "last_read": "1495610471.490050",
+        "is_shared": false,
+        "name": "app_invited",
+        "unread_count": 57,
+        "purpose": {
+            "last_set": 1495610432,
+            "value": "A Channel the app was invited to",
+            "creator": "U5GHXB5C1"
+        },
+        "name_normalized": "app_invited",
+        "is_archived": false,
+        "is_general": false
+    },
+    "ok": true
+}
