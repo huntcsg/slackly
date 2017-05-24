@@ -6,9 +6,8 @@ Slack Events
 Base Classes and Utilities
 --------------------------
 
-.. autoclass:: slackly.events._base.BaseEvent
-
-.. py:function:: slackly.events._base.register_event
+.. automodule:: slackly.events._base
+    :members:
 
 Events
 ------
