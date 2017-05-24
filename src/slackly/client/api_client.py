@@ -51,7 +51,10 @@ class SlackClient(object):
         }
 
         for key in kwargs:
-            if not isinstance(kwargs[key], str):
+            if isinstance(kwargs[key], bool):
+                value = kwargs[key]
+                kwargs[key] = 0 if not value else 1
+            elif not isinstance(kwargs[key], str):
                 kwargs[key] = json.dumps(kwargs[key])
 
         response = requests.post(self.url(endpoint), data=kwargs, headers=headers)
