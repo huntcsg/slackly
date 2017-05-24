@@ -15,7 +15,8 @@ class SlackAPIDictResponse(dict):
         self.error = self.data.get('error', None)
 
     def __repr__(self):
-        return "{0.__class__.__name__}('{0.endpoint}', {0.data})".format(self)
+        data_repr = dict.__repr__(self)
+        return "{0.__class__.__name__}('{0.endpoint}', {1})".format(self, data_repr)
 
     @classmethod
     def initialize(cls):
