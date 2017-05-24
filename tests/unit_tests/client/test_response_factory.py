@@ -43,7 +43,7 @@ class TestResponseObjectFactory(TestCase):
 
             case_name = file.replace('.json', '')
 
-            locals()['test_{}_{}'.format(endpoint.replace('.','_'), case_name)] = test_func
+            locals()['test_{}_{}'.format(endpoint.replace('.', '_'), case_name)] = test_func
 
 
 class TestResponseDictFactory(TestCase):
@@ -81,6 +81,7 @@ class TestResponseDictFactory(TestCase):
                         self.assertIsInstance(test_object, self.dict_response)
                     else:
                         self.assertIsInstance(result, self.dict_response)
+                        self.assertIs(result, result.data)
 
             case_name = file.replace('.json', '')
 
