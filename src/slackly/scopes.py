@@ -1,8 +1,10 @@
 import warnings
 import urllib
-
-OAUTH_ENDPOINT="https://slack.com/oauth/authorize/"
 import uuid
+
+
+OAUTH_ENDPOINT = "https://slack.com/oauth/authorize/"
+
 
 def get_scopes_from_methods(methods, bot=True):
     """Given a list of method instances, gets the scopes (and warns if there is a mismatch in your bot setting)

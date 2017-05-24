@@ -6,6 +6,7 @@ import json
 import sys
 from slackly import SlackClient
 
+
 class CodeServer(BaseHTTPRequestHandler):
 
     def do_GET(self):
@@ -34,6 +35,7 @@ class CodeServer(BaseHTTPRequestHandler):
         print(json.dumps(response.data, indent=4))
         return
 
+
 def main(host, port, state, client_id, client_secret, redirect_uri):
     CodeServer.state_validate = state
     server = HTTPServer((host, port), CodeServer)
@@ -48,6 +50,7 @@ def main(host, port, state, client_id, client_secret, redirect_uri):
     server.server_close()
     print(time.asctime(), "Server Stops - %s:%s" % (host, port))
 
+
 if __name__ == '__main__':
     host = sys.argv[1]
     port = int(sys.argv[2])
@@ -57,4 +60,3 @@ if __name__ == '__main__':
     redirect_uri = sys.argv[6]
 
     main(host, port, state, client_id, client_secret, redirect_uri)
-
