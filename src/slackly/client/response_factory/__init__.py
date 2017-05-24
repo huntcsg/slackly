@@ -1,5 +1,5 @@
+import functools
 import json
-from functools import partial
 
 
 class SlackAPIDictResponse(object):
@@ -55,7 +55,7 @@ class SlackAPIObjectResponse(object):
         response_factory_spec = cls._registry.get(endpoint)
 
         if response_factory_spec is None:
-            return partial(SlackAPIDictResponse, endpoint)
+            return functools.partial(SlackAPIDictResponse, endpoint)
 
         factory = response_factory_spec['factory']
         preprocessor = response_factory_spec.get('preprocessor', lambda x: x)
@@ -64,4 +64,8 @@ class SlackAPIObjectResponse(object):
 
     @classmethod
     def initialize(cls):
+        """This call ensures that the registry that this class checks for data gets filled
+        
+        :return: None
+        """
         import slackly.schema.endpoints

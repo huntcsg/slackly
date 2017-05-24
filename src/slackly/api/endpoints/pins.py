@@ -23,21 +23,21 @@ class PinsAdd(BaseAPIEndpoint):
     """
     endpoint = 'pins.add'
     required_args = {
-        'channel'
+        'channel',
     }
     optional_args = {
-        'file'
-        'file_comment'
-        'timestamp'
+        'file',
+        'file_comment',
+        'timestamp',
     }
     options = {
-        'include_token': True
+        'include_token': True,
     }
 
     # Scope Information
     scopes = {
         'all': {
-            'pins:write'
+            'pins:write',
         },
         'bot': set(),
         'user': set(),
@@ -117,17 +117,17 @@ class PinsList(BaseAPIEndpoint):
     """
     endpoint = 'pins.list'
     required_args = {
-        'channel'
+        'channel',
     }
     optional_args = {}
     options = {
-        'include_token': True
+        'include_token': True,
     }
 
     # Scope Information
     scopes = {
         'all': {
-            'pins:read'
+            'pins:read',
         },
         'bot': set(),
         'user': set(),
@@ -166,21 +166,21 @@ class PinsRemove(BaseAPIEndpoint):
     """
     endpoint = 'pins.remove'
     required_args = {
-        'channel'
+        'channel',
     }
     optional_args = {
-        'file'
-        'file_comment'
-        'timestamp'
+        'file',
+        'file_comment',
+        'timestamp',
     }
     options = {
-        'include_token': True
+        'include_token': True,
     }
 
     # Scope Information
     scopes = {
         'all': {
-            'pins:write'
+            'pins:write',
         },
         'bot': set(),
         'user': set(),

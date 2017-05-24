@@ -38,8 +38,8 @@ class ApiTest(BaseAPIEndpoint):
     endpoint = 'api.test'
     required_args = {}
     optional_args = {
-        'error'
-        'foo'
+        'error',
+        'foo',
     }
     options = {}
 

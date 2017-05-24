@@ -1,11 +1,12 @@
-from collections import defaultdict
+import collections
 import os
+
 from ...compat import lru_cache
 
 
 class BaseAPIDispatch(object):
 
-    __registry = defaultdict(dict)
+    __registry = collections.defaultdict(dict)
 
     def __init__(self, bind=None):
         self._bind = lambda: bind

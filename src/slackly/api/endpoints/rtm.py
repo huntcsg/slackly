@@ -53,7 +53,7 @@ class RtmConnect(BaseAPIEndpoint):
     required_args = {}
     optional_args = {}
     options = {
-        'include_token': True
+        'include_token': True,
     }
 
     # Scope Information
@@ -168,13 +168,13 @@ class RtmStart(BaseAPIEndpoint):
     endpoint = 'rtm.start'
     required_args = {}
     optional_args = {
-        'mpim_aware'
-        'no_latest'
-        'no_unreads'
-        'simple_latest'
+        'mpim_aware',
+        'no_latest',
+        'no_unreads',
+        'simple_latest',
     }
     options = {
-        'include_token': True
+        'include_token': True,
     }
 
     # Scope Information

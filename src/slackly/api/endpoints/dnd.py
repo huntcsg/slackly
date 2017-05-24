@@ -23,13 +23,13 @@ class DndEndDnd(BaseAPIEndpoint):
     required_args = {}
     optional_args = {}
     options = {
-        'include_token': True
+        'include_token': True,
     }
 
     # Scope Information
     scopes = {
         'all': {
-            'dnd:write'
+            'dnd:write',
         },
         'bot': set(),
         'user': set(),
@@ -69,13 +69,13 @@ class DndEndSnooze(BaseAPIEndpoint):
     required_args = {}
     optional_args = {}
     options = {
-        'include_token': True
+        'include_token': True,
     }
 
     # Scope Information
     scopes = {
         'all': {
-            'dnd:write'
+            'dnd:write',
         },
         'bot': set(),
         'user': set(),
@@ -120,16 +120,16 @@ class DndInfo(BaseAPIEndpoint):
     endpoint = 'dnd.info'
     required_args = {}
     optional_args = {
-        'user'
+        'user',
     }
     options = {
-        'include_token': True
+        'include_token': True,
     }
 
     # Scope Information
     scopes = {
         'all': {
-            'dnd:read'
+            'dnd:read',
         },
         'bot': set(),
         'user': set(),
@@ -171,17 +171,17 @@ class DndSetSnooze(BaseAPIEndpoint):
     """
     endpoint = 'dnd.setSnooze'
     required_args = {
-        'num_minutes'
+        'num_minutes',
     }
     optional_args = {}
     options = {
-        'include_token': True
+        'include_token': True,
     }
 
     # Scope Information
     scopes = {
         'all': {
-            'dnd:write'
+            'dnd:write',
         },
         'bot': set(),
         'user': set(),
@@ -231,16 +231,16 @@ class DndTeamInfo(BaseAPIEndpoint):
     endpoint = 'dnd.teamInfo'
     required_args = {}
     optional_args = {
-        'users'
+        'users',
     }
     options = {
-        'include_token': True
+        'include_token': True,
     }
 
     # Scope Information
     scopes = {
         'all': {
-            'dnd:read'
+            'dnd:read',
         },
         'bot': set(),
         'user': set(),

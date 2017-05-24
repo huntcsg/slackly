@@ -1,10 +1,15 @@
 #!/usr/bin/python3
-from http.server import BaseHTTPRequestHandler, HTTPServer
+from .compat import BaseHTTPRequestHandler, HTTPServer
 import urllib
-import time
 import json
 import sys
+import time
+import warnings
+
 from slackly import SlackClient
+
+
+warnings.warn("This part of slackly (oauth_utils) is highly experimental and will likely see api breaking changes")
 
 
 class CodeServer(BaseHTTPRequestHandler):

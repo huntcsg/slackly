@@ -1,12 +1,12 @@
+import json
 import pkg_resources
 import platform
 import requests
 import sys
-from .response_factory import SlackAPIDictResponse, SlackAPIObjectResponse
-from .rtm_client import SlackRTMClient
-import json
-from ..schema import endpoints
+
 from ..api import SlackAPI
+from .response_factory import SlackAPIDictResponse
+from .rtm_client import SlackRTMClient
 
 
 class SlackClient(object):

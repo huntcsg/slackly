@@ -1,7 +1,6 @@
-import warnings
 import urllib
 import uuid
-
+import warnings
 
 OAUTH_ENDPOINT = "https://slack.com/oauth/authorize/"
 

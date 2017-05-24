@@ -23,22 +23,22 @@ class ReactionsAdd(BaseAPIEndpoint):
     """
     endpoint = 'reactions.add'
     required_args = {
-        'name'
+        'name',
     }
     optional_args = {
-        'channel'
-        'file'
-        'file_comment'
-        'timestamp'
+        'channel',
+        'file',
+        'file_comment',
+        'timestamp',
     }
     options = {
-        'include_token': True
+        'include_token': True,
     }
 
     # Scope Information
     scopes = {
         'all': {
-            'reactions:write'
+            'reactions:write',
         },
         'bot': set(),
         'user': set(),
@@ -119,20 +119,20 @@ class ReactionsGet(BaseAPIEndpoint):
     endpoint = 'reactions.get'
     required_args = {}
     optional_args = {
-        'channel'
-        'file'
-        'file_comment'
-        'full'
-        'timestamp'
+        'channel',
+        'file',
+        'file_comment',
+        'full',
+        'timestamp',
     }
     options = {
-        'include_token': True
+        'include_token': True,
     }
 
     # Scope Information
     scopes = {
         'all': {
-            'reactions:read'
+            'reactions:read',
         },
         'bot': set(),
         'user': set(),
@@ -252,19 +252,19 @@ class ReactionsList(BaseAPIEndpoint):
     endpoint = 'reactions.list'
     required_args = {}
     optional_args = {
-        'count'
-        'full'
-        'page'
-        'user'
+        'count',
+        'full',
+        'page',
+        'user',
     }
     options = {
-        'include_token': True
+        'include_token': True,
     }
 
     # Scope Information
     scopes = {
         'all': {
-            'reactions:read'
+            'reactions:read',
         },
         'bot': set(),
         'user': set(),
@@ -316,22 +316,22 @@ class ReactionsRemove(BaseAPIEndpoint):
     """
     endpoint = 'reactions.remove'
     required_args = {
-        'name'
+        'name',
     }
     optional_args = {
-        'channel'
-        'file'
-        'file_comment'
-        'timestamp'
+        'channel',
+        'file',
+        'file_comment',
+        'timestamp',
     }
     options = {
-        'include_token': True
+        'include_token': True,
     }
 
     # Scope Information
     scopes = {
         'all': {
-            'reactions:write'
+            'reactions:write',
         },
         'bot': set(),
         'user': set(),

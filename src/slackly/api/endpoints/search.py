@@ -43,23 +43,23 @@ class SearchAll(BaseAPIEndpoint):
     """
     endpoint = 'search.all'
     required_args = {
-        'query'
+        'query',
     }
     optional_args = {
-        'count'
-        'highlight'
-        'page'
-        'sort'
-        'sort_dir'
+        'count',
+        'highlight',
+        'page',
+        'sort',
+        'sort_dir',
     }
     options = {
-        'include_token': True
+        'include_token': True,
     }
 
     # Scope Information
     scopes = {
         'all': {
-            'search:read'
+            'search:read',
         },
         'bot': set(),
         'user': set(),
@@ -140,23 +140,23 @@ class SearchFiles(BaseAPIEndpoint):
     """
     endpoint = 'search.files'
     required_args = {
-        'query'
+        'query',
     }
     optional_args = {
-        'count'
-        'highlight'
-        'page'
-        'sort'
-        'sort_dir'
+        'count',
+        'highlight',
+        'page',
+        'sort',
+        'sort_dir',
     }
     options = {
-        'include_token': True
+        'include_token': True,
     }
 
     # Scope Information
     scopes = {
         'all': {
-            'search:read'
+            'search:read',
         },
         'bot': set(),
         'user': set(),
@@ -288,23 +288,23 @@ class SearchMessages(BaseAPIEndpoint):
     """
     endpoint = 'search.messages'
     required_args = {
-        'query'
+        'query',
     }
     optional_args = {
-        'count'
-        'highlight'
-        'page'
-        'sort'
-        'sort_dir'
+        'count',
+        'highlight',
+        'page',
+        'sort',
+        'sort_dir',
     }
     options = {
-        'include_token': True
+        'include_token': True,
     }
 
     # Scope Information
     scopes = {
         'all': {
-            'search:read'
+            'search:read',
         },
         'bot': set(),
         'user': set(),

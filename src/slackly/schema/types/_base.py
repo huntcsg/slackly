@@ -1,4 +1,4 @@
-from copy import deepcopy
+import copy
 import json
 
 
@@ -16,9 +16,9 @@ class SlackType(object):
             kwargs = {}
 
         if isinstance(kwargs, dict):
-            self._dict = deepcopy(kwargs)
+            self._dict = copy.deepcopy(kwargs)
         else:
-            self._dict = {'value': deepcopy(kwargs)}
+            self._dict = {'value': copy.deepcopy(kwargs)}
             self._repr_keys.add('value')
 
         if hasattr(self, 'schema'):
@@ -34,7 +34,7 @@ class SlackType(object):
         
         :return: A :class:`dict`
         """
-        return deepcopy(self._dict)
+        return copy.deepcopy(self._dict)
 
     @property
     def as_json(self):

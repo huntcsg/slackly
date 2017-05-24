@@ -33,13 +33,13 @@ class EmojiList(BaseAPIEndpoint):
     required_args = {}
     optional_args = {}
     options = {
-        'include_token': True
+        'include_token': True,
     }
 
     # Scope Information
     scopes = {
         'all': {
-            'emoji:read'
+            'emoji:read',
         },
         'bot': set(),
         'user': set(),

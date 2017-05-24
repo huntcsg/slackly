@@ -32,13 +32,13 @@ class UsersDeletePhoto(BaseAPIEndpoint):
     required_args = {}
     optional_args = {}
     options = {
-        'include_token': True
+        'include_token': True,
     }
 
     # Scope Information
     scopes = {
         'all': {
-            'users.profile:write'
+            'users.profile:write',
         },
         'bot': set(),
         'user': set(),
@@ -95,17 +95,17 @@ class UsersGetPresence(BaseAPIEndpoint):
     """
     endpoint = 'users.getPresence'
     required_args = {
-        'user'
+        'user',
     }
     optional_args = {}
     options = {
-        'include_token': True
+        'include_token': True,
     }
 
     # Scope Information
     scopes = {
         'all': {
-            'users:read'
+            'users:read',
         },
         'bot': set(),
         'user': set(),
@@ -217,13 +217,13 @@ class UsersIdentity(BaseAPIEndpoint):
     required_args = {}
     optional_args = {}
     options = {
-        'include_token': True
+        'include_token': True,
     }
 
     # Scope Information
     scopes = {
         'all': {
-            'identity.basic'
+            'identity.basic',
         },
         'bot': set(),
         'user': set(),
@@ -290,17 +290,17 @@ class UsersInfo(BaseAPIEndpoint):
     """
     endpoint = 'users.info'
     required_args = {
-        'user'
+        'user',
     }
     optional_args = {}
     options = {
-        'include_token': True
+        'include_token': True,
     }
 
     # Scope Information
     scopes = {
         'all': {
-            'users:read'
+            'users:read',
         },
         'bot': set(),
         'user': set(),
@@ -383,16 +383,16 @@ class UsersList(BaseAPIEndpoint):
     endpoint = 'users.list'
     required_args = {}
     optional_args = {
-        'presence'
+        'presence',
     }
     options = {
-        'include_token': True
+        'include_token': True,
     }
 
     # Scope Information
     scopes = {
         'all': {
-            'users:read'
+            'users:read',
         },
         'bot': set(),
         'user': set(),
@@ -434,13 +434,13 @@ class UsersSetActive(BaseAPIEndpoint):
     required_args = {}
     optional_args = {}
     options = {
-        'include_token': True
+        'include_token': True,
     }
 
     # Scope Information
     scopes = {
         'all': {
-            'users:write'
+            'users:write',
         },
         'bot': set(),
         'user': set(),
@@ -486,21 +486,21 @@ class UsersSetPhoto(BaseAPIEndpoint):
     """
     endpoint = 'users.setPhoto'
     required_args = {
-        'image'
+        'image',
     }
     optional_args = {
-        'crop_w'
-        'crop_x'
-        'crop_y'
+        'crop_w',
+        'crop_x',
+        'crop_y',
     }
     options = {
-        'include_token': True
+        'include_token': True,
     }
 
     # Scope Information
     scopes = {
         'all': {
-            'users.profile:write'
+            'users.profile:write',
         },
         'bot': set(),
         'user': set(),
@@ -550,17 +550,17 @@ class UsersSetPresence(BaseAPIEndpoint):
     """
     endpoint = 'users.setPresence'
     required_args = {
-        'presence'
+        'presence',
     }
     optional_args = {}
     options = {
-        'include_token': True
+        'include_token': True,
     }
 
     # Scope Information
     scopes = {
         'all': {
-            'users:write'
+            'users:write',
         },
         'bot': set(),
         'user': set(),
@@ -632,17 +632,17 @@ class ProfileGet(BaseAPIEndpoint):
     endpoint = 'users.profile.get'
     required_args = {}
     optional_args = {
-        'include_labels'
-        'user'
+        'include_labels',
+        'user',
     }
     options = {
-        'include_token': True
+        'include_token': True,
     }
 
     # Scope Information
     scopes = {
         'all': {
-            'users.profile:read'
+            'users.profile:read',
         },
         'bot': set(),
         'user': set(),
@@ -716,19 +716,19 @@ class ProfileSet(BaseAPIEndpoint):
     endpoint = 'users.profile.set'
     required_args = {}
     optional_args = {
-        'name'
-        'profile'
-        'user'
-        'value'
+        'name',
+        'profile',
+        'user',
+        'value',
     }
     options = {
-        'include_token': True
+        'include_token': True,
     }
 
     # Scope Information
     scopes = {
         'all': {
-            'users.profile:write'
+            'users.profile:write',
         },
         'bot': set(),
         'user': set(),

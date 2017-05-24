@@ -21,17 +21,17 @@ class ChannelsArchive(BaseAPIEndpoint):
     """
     endpoint = 'channels.archive'
     required_args = {
-        'channel'
+        'channel',
     }
     optional_args = {}
     options = {
-        'include_token': True
+        'include_token': True,
     }
 
     # Scope Information
     scopes = {
         'all': {
-            'channels:write'
+            'channels:write',
         },
         'bot': set(),
         'user': set(),
@@ -89,19 +89,19 @@ class ChannelsCreate(BaseAPIEndpoint):
     """
     endpoint = 'channels.create'
     required_args = {
-        'name'
+        'name',
     }
     optional_args = {
-        'validate'
+        'validate',
     }
     options = {
-        'include_token': True
+        'include_token': True,
     }
 
     # Scope Information
     scopes = {
         'all': {
-            'channels:write'
+            'channels:write',
         },
         'bot': set(),
         'user': set(),
@@ -218,23 +218,23 @@ class ChannelsHistory(BaseAPIEndpoint):
     """
     endpoint = 'channels.history'
     required_args = {
-        'channel'
+        'channel',
     }
     optional_args = {
-        'count'
-        'inclusive'
-        'latest'
-        'oldest'
-        'unreads'
+        'count',
+        'inclusive',
+        'latest',
+        'oldest',
+        'unreads',
     }
     options = {
-        'include_token': True
+        'include_token': True,
     }
 
     # Scope Information
     scopes = {
         'all': {
-            'channels:history'
+            'channels:history',
         },
         'bot': set(),
         'user': set(),
@@ -319,17 +319,17 @@ class ChannelsInfo(BaseAPIEndpoint):
     """
     endpoint = 'channels.info'
     required_args = {
-        'channel'
+        'channel',
     }
     optional_args = {}
     options = {
-        'include_token': True
+        'include_token': True,
     }
 
     # Scope Information
     scopes = {
         'all': {
-            'channels:read'
+            'channels:read',
         },
         'bot': set(),
         'user': set(),
@@ -390,18 +390,18 @@ class ChannelsInvite(BaseAPIEndpoint):
     """
     endpoint = 'channels.invite'
     required_args = {
-        'channel'
-        'user'
+        'channel',
+        'user',
     }
     optional_args = {}
     options = {
-        'include_token': True
+        'include_token': True,
     }
 
     # Scope Information
     scopes = {
         'all': {
-            'channels:write'
+            'channels:write',
         },
         'bot': set(),
         'user': set(),
@@ -487,19 +487,19 @@ class ChannelsJoin(BaseAPIEndpoint):
     """
     endpoint = 'channels.join'
     required_args = {
-        'name'
+        'name',
     }
     optional_args = {
-        'validate'
+        'validate',
     }
     options = {
-        'include_token': True
+        'include_token': True,
     }
 
     # Scope Information
     scopes = {
         'all': {
-            'channels:write'
+            'channels:write',
         },
         'bot': set(),
         'user': set(),
@@ -540,18 +540,18 @@ class ChannelsKick(BaseAPIEndpoint):
     """
     endpoint = 'channels.kick'
     required_args = {
-        'channel'
-        'user'
+        'channel',
+        'user',
     }
     optional_args = {}
     options = {
-        'include_token': True
+        'include_token': True,
     }
 
     # Scope Information
     scopes = {
         'all': {
-            'channels:write'
+            'channels:write',
         },
         'bot': set(),
         'user': set(),
@@ -601,17 +601,17 @@ class ChannelsLeave(BaseAPIEndpoint):
     """
     endpoint = 'channels.leave'
     required_args = {
-        'channel'
+        'channel',
     }
     optional_args = {}
     options = {
-        'include_token': True
+        'include_token': True,
     }
 
     # Scope Information
     scopes = {
         'all': {
-            'channels:write'
+            'channels:write',
         },
         'bot': set(),
         'user': set(),
@@ -683,17 +683,17 @@ class ChannelsList(BaseAPIEndpoint):
     endpoint = 'channels.list'
     required_args = {}
     optional_args = {
-        'exclude_archived'
-        'exclude_members'
+        'exclude_archived',
+        'exclude_members',
     }
     options = {
-        'include_token': True
+        'include_token': True,
     }
 
     # Scope Information
     scopes = {
         'all': {
-            'channels:read'
+            'channels:read',
         },
         'bot': set(),
         'user': set(),
@@ -742,18 +742,18 @@ class ChannelsMark(BaseAPIEndpoint):
     """
     endpoint = 'channels.mark'
     required_args = {
-        'channel'
-        'ts'
+        'channel',
+        'ts',
     }
     optional_args = {}
     options = {
-        'include_token': True
+        'include_token': True,
     }
 
     # Scope Information
     scopes = {
         'all': {
-            'channels:write'
+            'channels:write',
         },
         'bot': set(),
         'user': set(),
@@ -805,20 +805,20 @@ class ChannelsRename(BaseAPIEndpoint):
     """
     endpoint = 'channels.rename'
     required_args = {
-        'channel'
-        'name'
+        'channel',
+        'name',
     }
     optional_args = {
-        'validate'
+        'validate',
     }
     options = {
-        'include_token': True
+        'include_token': True,
     }
 
     # Scope Information
     scopes = {
         'all': {
-            'channels:write'
+            'channels:write',
         },
         'bot': set(),
         'user': set(),
@@ -886,18 +886,18 @@ class ChannelsReplies(BaseAPIEndpoint):
     """
     endpoint = 'channels.replies'
     required_args = {
-        'channel'
-        'thread_ts'
+        'channel',
+        'thread_ts',
     }
     optional_args = {}
     options = {
-        'include_token': True
+        'include_token': True,
     }
 
     # Scope Information
     scopes = {
         'all': {
-            'channels:history'
+            'channels:history',
         },
         'bot': set(),
         'user': set(),
@@ -938,18 +938,18 @@ class ChannelsSetPurpose(BaseAPIEndpoint):
     """
     endpoint = 'channels.setPurpose'
     required_args = {
-        'channel'
-        'purpose'
+        'channel',
+        'purpose',
     }
     optional_args = {}
     options = {
-        'include_token': True
+        'include_token': True,
     }
 
     # Scope Information
     scopes = {
         'all': {
-            'channels:write'
+            'channels:write',
         },
         'bot': set(),
         'user': set(),
@@ -990,18 +990,18 @@ class ChannelsSetTopic(BaseAPIEndpoint):
     """
     endpoint = 'channels.setTopic'
     required_args = {
-        'channel'
-        'topic'
+        'channel',
+        'topic',
     }
     optional_args = {}
     options = {
-        'include_token': True
+        'include_token': True,
     }
 
     # Scope Information
     scopes = {
         'all': {
-            'channels:write'
+            'channels:write',
         },
         'bot': set(),
         'user': set(),
@@ -1041,17 +1041,17 @@ class ChannelsUnarchive(BaseAPIEndpoint):
     """
     endpoint = 'channels.unarchive'
     required_args = {
-        'channel'
+        'channel',
     }
     optional_args = {}
     options = {
-        'include_token': True
+        'include_token': True,
     }
 
     # Scope Information
     scopes = {
         'all': {
-            'channels:write'
+            'channels:write',
         },
         'bot': set(),
         'user': set(),

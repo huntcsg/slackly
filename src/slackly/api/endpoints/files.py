@@ -35,12 +35,12 @@ class CommentsAdd(BaseAPIEndpoint):
     """
     endpoint = 'files.comments.add'
     required_args = {
-        'comment'
-        'file'
+        'comment',
+        'file',
     }
     optional_args = {}
     options = {
-        'include_token': True
+        'include_token': True,
     }
 
     # Scope Information
@@ -48,7 +48,7 @@ class CommentsAdd(BaseAPIEndpoint):
         'all': set(),
         'bot': set(),
         'user': {
-            'files:write:user'
+            'files:write:user',
         },
     }
 
@@ -86,12 +86,12 @@ class CommentsDelete(BaseAPIEndpoint):
     """
     endpoint = 'files.comments.delete'
     required_args = {
-        'file'
-        'id'
+        'file',
+        'id',
     }
     optional_args = {}
     options = {
-        'include_token': True
+        'include_token': True,
     }
 
     # Scope Information
@@ -99,7 +99,7 @@ class CommentsDelete(BaseAPIEndpoint):
         'all': set(),
         'bot': set(),
         'user': {
-            'files:write:user'
+            'files:write:user',
         },
     }
 
@@ -145,13 +145,13 @@ class CommentsEdit(BaseAPIEndpoint):
     """
     endpoint = 'files.comments.edit'
     required_args = {
-        'comment'
-        'file'
-        'id'
+        'comment',
+        'file',
+        'id',
     }
     optional_args = {}
     options = {
-        'include_token': True
+        'include_token': True,
     }
 
     # Scope Information
@@ -159,7 +159,7 @@ class CommentsEdit(BaseAPIEndpoint):
         'all': set(),
         'bot': set(),
         'user': {
-            'files:write:user'
+            'files:write:user',
         },
     }
 
@@ -200,11 +200,11 @@ class FilesDelete(BaseAPIEndpoint):
     """
     endpoint = 'files.delete'
     required_args = {
-        'file'
+        'file',
     }
     optional_args = {}
     options = {
-        'include_token': True
+        'include_token': True,
     }
 
     # Scope Information
@@ -212,7 +212,7 @@ class FilesDelete(BaseAPIEndpoint):
         'all': set(),
         'bot': set(),
         'user': {
-            'files:write:user'
+            'files:write:user',
         },
     }
 
@@ -313,20 +313,20 @@ class FilesInfo(BaseAPIEndpoint):
     """
     endpoint = 'files.info'
     required_args = {
-        'file'
+        'file',
     }
     optional_args = {
-        'count'
-        'page'
+        'count',
+        'page',
     }
     options = {
-        'include_token': True
+        'include_token': True,
     }
 
     # Scope Information
     scopes = {
         'all': {
-            'files:read'
+            'files:read',
         },
         'bot': set(),
         'user': set(),
@@ -389,22 +389,22 @@ class FilesList(BaseAPIEndpoint):
     endpoint = 'files.list'
     required_args = {}
     optional_args = {
-        'channel'
-        'count'
-        'page'
-        'ts_from'
-        'ts_to'
-        'types'
-        'user'
+        'channel',
+        'count',
+        'page',
+        'ts_from',
+        'ts_to',
+        'types',
+        'user',
     }
     options = {
-        'include_token': True
+        'include_token': True,
     }
 
     # Scope Information
     scopes = {
         'all': {
-            'files:read'
+            'files:read',
         },
         'bot': set(),
         'user': set(),
@@ -472,11 +472,11 @@ class FilesRevokePublicURL(BaseAPIEndpoint):
     """
     endpoint = 'files.revokePublicURL'
     required_args = {
-        'file'
+        'file',
     }
     optional_args = {}
     options = {
-        'include_token': True
+        'include_token': True,
     }
 
     # Scope Information
@@ -484,7 +484,7 @@ class FilesRevokePublicURL(BaseAPIEndpoint):
         'all': set(),
         'bot': set(),
         'user': {
-            'files:write:user'
+            'files:write:user',
         },
     }
 
@@ -585,11 +585,11 @@ class FilesSharedPublicURL(BaseAPIEndpoint):
     """
     endpoint = 'files.sharedPublicURL'
     required_args = {
-        'file'
+        'file',
     }
     optional_args = {}
     options = {
-        'include_token': True
+        'include_token': True,
     }
 
     # Scope Information
@@ -597,7 +597,7 @@ class FilesSharedPublicURL(BaseAPIEndpoint):
         'all': set(),
         'bot': set(),
         'user': {
-            'files:write:user'
+            'files:write:user',
         },
     }
 
@@ -646,16 +646,16 @@ class FilesUpload(BaseAPIEndpoint):
     endpoint = 'files.upload'
     required_args = {}
     optional_args = {
-        'channels'
-        'content'
-        'file'
-        'filename'
-        'filetype'
-        'initial_comment'
-        'title'
+        'channels',
+        'content',
+        'file',
+        'filename',
+        'filetype',
+        'initial_comment',
+        'title',
     }
     options = {
-        'include_token': True
+        'include_token': True,
     }
 
     # Scope Information
@@ -663,7 +663,7 @@ class FilesUpload(BaseAPIEndpoint):
         'all': set(),
         'bot': set(),
         'user': {
-            'files:write:user'
+            'files:write:user',
         },
     }
 

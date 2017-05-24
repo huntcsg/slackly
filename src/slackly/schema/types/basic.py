@@ -1,6 +1,7 @@
 import datetime
+import six
+
 from ._base import SlackType
-from six import text_type
 
 
 def Epoch(value):
@@ -24,7 +25,7 @@ def String(value):
     """
     if value is None:
         return None
-    return text_type(value)
+    return six.text_type(value)
 
 
 def Integer(value):
