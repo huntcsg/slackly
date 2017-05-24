@@ -1,0 +1,13 @@
+{
+    "message": {
+        "bot_id": "B5GHZKMPB",
+        "text": "new text",
+        "subtype": "bot_message",
+        "type": "message",
+        "username": "slackly_testing_admin"
+    },
+    "text": "new text",
+    "ok": true,
+    "channel": "C5H36UJJF",
+    "ts": "1495635515.736499"
+}

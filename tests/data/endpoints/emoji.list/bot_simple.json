@@ -1,0 +1,6 @@
+{
+    "error": "missing_scope",
+    "provided": "identify,bot:basic",
+    "ok": false,
+    "needed": "emoji:read"
+}

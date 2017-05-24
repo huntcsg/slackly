@@ -1,0 +1,14 @@
+{
+    "channel": "C5H36UJJF",
+    "ts": "1495617248.042744",
+    "message": {
+        "subtype": "bot_message",
+        "text": "A posted message",
+        "bot_id": "B5GHZKMPB",
+        "type": "message",
+        "thread_ts": "1495616018.733983",
+        "ts": "1495617248.042744",
+        "username": "slackly_testing_admin"
+    },
+    "ok": true
+}
