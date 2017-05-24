@@ -11,7 +11,7 @@ class TestSlackTimestamp(TestCase):
         self.ts = '1495616018.733983'
         self.repr = 'SlackTimestamp("1495616018.733983")'
         self.uuid = '1495616018.733983'
-        self.dt = datetime.datetime(2017, 5, 24, 1, 53, 38, 733983)
+        self.dt = datetime.datetime.fromtimestamp(float(self.ts))
 
     def test_uuid(self):
         ts = self.callFUT(self.ts)
@@ -32,4 +32,4 @@ class TestSlackTimestampNoDecimal(TestSlackTimestamp):
         self.ts = '1495616018'
         self.repr = 'SlackTimestamp("1495616018")'
         self.uuid = '1495616018'
-        self.dt = datetime.datetime(2017, 5, 24, 1, 53, 38)
+        self.dt = datetime.datetime.fromtimestamp(float(self.ts))
