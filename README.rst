@@ -9,6 +9,13 @@ Use Cases:
     - Use the :class:`slackly.SlackRTMClient` to listen to the Real Time Messaging API (via a websocket connection)
     - Use the :mod:`slackly.events` and :mod:`slackly.schema.types` in this library to build higher level abstractions on the Slack API
 
+Installing
+==========
+
+   .. code-block:: shell
+
+      $ pip install slackly
+
 Simple Examples
 ===============
 
@@ -72,6 +79,23 @@ Using Event Types
 
             else:
                 print("I don't care about this event")
+
+
+Development
+===========
+
+   .. code-block:: shell
+
+      $ git clone https://github.com/huntcsg/slackly.git
+      $ cd slackly
+      $ tox    # Runs test suites against all python versions, pypy, does style and test coverage analysis
+
+1. All pull requests must pass the travis-ci builds
+2. All pull requests should include inline (docstring) documentation, updates to built documentation if applicable,
+   and test coverage. This project aspires to be a 100% test coverage library.
+3. If integration or regression test coverage is needed, let the project maintainer know and we can work out
+   the best way to do so.
+
 
 .. |gitter| image:: https://badges.gitter.im/huntcsg/slackly.png
    :target: https://gitter.im/slackly/Lobby
