@@ -5,9 +5,9 @@ Slackly - A Slack Toolkit
 
 Use Cases:
 
-    - Use the :class:`slackly.SlackClient` to make calls to the Web API
-    - Use the :class:`slackly.SlackRTMClient` to listen to the Real Time Messaging API (via a websocket connection)
-    - Use the :mod:`slackly.events` and :mod:`slackly.schema.types` in this library to build higher level abstractions on the Slack API
+    - Use the `slackly.SlackClient` to make calls to the Web API
+    - Use the `slackly.SlackRTMClient` to listen to the Real Time Messaging API (via a websocket connection)
+    - Use the `slackly.events` and `slackly.schema.types` in this library to build higher level abstractions on the Slack API
 
 .. DANGER::
 
