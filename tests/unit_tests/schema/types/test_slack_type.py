@@ -39,4 +39,4 @@ class TestSlackTypeNotDict(TestSlackType):
         self.slack_type = slack_type
         self.as_dict = {'value': 'bar'}
         self.slack_type_repr = "SlackType(value='bar')"
-        self.slack_type_repr_key = "SlackType(value='bar', foo=None)"
+        self.slack_type_repr_key = "SlackType(foo=None, value='bar')"
