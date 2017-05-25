@@ -14,3 +14,5 @@ deploy:
   on:
     distributions: sdist bdist_wheel
     repo: huntcsg/slackly
+    branch: master
+    tags: true
