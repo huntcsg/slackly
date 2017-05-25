@@ -6,12 +6,12 @@ PY2 = sys.version_info.major == 2
 
 here = os.path.abspath(os.path.dirname(__file__))
 try:
-    with open(os.path.join(here, 'README.rst')) as f:
-        README = f.read()
-    with open(os.path.join(here, 'CHANGES.txt')) as f:
-        CHANGES = f.read()
-    with open(os.path.join(here, 'AUTHORS.rst')) as f:
-        AUTHORS = f.read()
+    with open(os.path.join(here, 'README.rst'), 'rb') as f:
+        README = f.read().decode('utf-8')
+    with open(os.path.join(here, 'CHANGES.rst'), 'rb') as f:
+        CHANGES = f.read().decode('utf-8')
+    with open(os.path.join(here, 'AUTHORS.rst'), 'rb') as f:
+        AUTHORS = f.read().decode('utf-8')
 except IOError:
     README = CHANGES = AUTHORS = ''
 
