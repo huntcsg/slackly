@@ -4,18 +4,13 @@ cache:
   - "$HOME/.cache/pip"
 language: python
 python: 3.6
-
 install: pip install -U tox
 script: tox -e py27,py34,py36,pypy,pep8,coverage,docs
-after_success:
-- pip install -U codeclimate-test-reporter
-- codeclimate-test-reporter
 deploy:
   provider: pypi
   user: huntcsg
   password:
-    secure: PwWwk7Jek+prv4NesT47mybq150cFBLT8kvZM0HImxjqYGp2TZa9PKiPfsDR1zPeEZ0azfrVpoArfs+OR6CiZh7LyAZntxf+f/LPQadiSBh9KG1QaSsRIXmTRFGN5iNMYpnrZADekhYu09Qmo2YZSe8RfXnWwuog+0pjxKEfr9kd8NsLyWf47XJWJzUNtKUuX8jcGhFxMZv88j9uC75/He4NI7ce2RGP85z9J/U1A+t6tfuGqn9/iOrxwKsGTsM9FNGYMdoGAKHsTkRmfw7wGby9ayig+W4M3ZQWbaii1W2IoKA2pfMSWGXG88xsSFfqazkE4k6An1ADhcXTpUiz0qWQsoCtNCBnOQPEE3vhRO1ITwyFCVpPo2WPSO3e4DCaEvneebbFv5AVFe4sCfoXZvhnKiDPwqBSCYXEx+Gd/StaWQOOHtlp4K+67x8CudCzDSA6GCjLGjVuDbpmb/eq1uGK3rDDHSOJ0ScJ1gWwouMBcoRthjvIqj8WRnHjkwwRSsKEBLv9dqe05TWQg1Mrj1Cdsy6gboncfGLTM+RS6WalTSJI0JTxIjKx2fLrn+1ze3MpC6KLWXonAkjASYPy+AKEldWKvSZTkTif9ibzTlS8ZAl7tNNkvRUAGZBOtRHlAlR6P7Ilfsn90KUxRXQ+WeES53ghAsoj+x8eGumFaow=
+    secure: QbKRu+9cmEwdyDeRXYevmMEye6WpBSHi+tGSkYt69iP4aJL1YUK8tfTYx9rEXQQ5RHh5gvR9oTOBjXaW1iTwj5yms76n/tkj7UmkUI+CA3zmXaWzNJqZRgGfKzcah4PIO+QwEPgWSWufQv4kxGoUzkGntvf0dayK7zxifK2uem1zjlQydyX/961NCltnbj+Jqik5ddznuikHpcwW2CnQPuZ4V8shjPfq1axM76VTb9m/XUZ11nMXfElhvbKLzLE6xPTnvsDNsT7bJ10WnWsAiPfzuQRfSwpPymo4o+V3B4PljAaC0PlHGkRIw6OydkDBa1xkFtAFW2sKFvIHFgBKTcOzZPv/RjBZzoIYD5xLpquEk+kH/KkUaoFl7j00+qUQVW0r/tEsQ5oc2Mv4AgAebPNnEZMpux2gFdXFxT/1NVGTqA3EHdxUJhBV3RnPJ/+b8vFwzhKua4R1AsTgBUjp/Y897hVM87DPyiq2HTEesY6GP6cnDogscV+g+wRH6yuG6Stbt9a/NLNS2VksKfR4J6JVmZafxzr+sUFOyHG5d6OZnHNIdzrloVp+r3Fl3THhvxuCt+MnAZYjorYVuj3lSAR3mNwBaCMp2gtgPHxeyaRETJ3iCCa2JZBMIl4FwirhpLOgQHvvAsDtFg4rxUhKmjEb6IMQbx1m+MDqRZLUXe8=
   on:
-    tags: true
     distributions: sdist bdist_wheel
     repo: huntcsg/slackly
