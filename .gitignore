@@ -13,3 +13,6 @@ src/slackly.egg-info/
 .coverage.*
 cover/
 tests/**/*.ipynb
+
+dist/
+build/
