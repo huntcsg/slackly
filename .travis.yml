@@ -16,3 +16,5 @@ deploy:
     repo: huntcsg/slackly
     branch: master
     tags: true
+    server: https://upload.pypi.org/legacy/
+ 
