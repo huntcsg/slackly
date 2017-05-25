@@ -9,12 +9,13 @@ Use Cases:
     - Use the `slackly.SlackRTMClient` to listen to the Real Time Messaging API (via a websocket connection)
     - Use the `slackly.events` and `slackly.schema.types` in this library to build higher level abstractions on the Slack API
 
-.. DANGER::
 
-   This library is very much in alpha and under very active development to flesh out the API. I'll do my best
-   to not make breaking changes, and hide most of these changes behind feature toggles that can become default
-   in future versions. I want users and feedback, so I will do my utmost to make usage of this library as safe
-   as can be.
+    .. DANGER::
+
+       This library is very much in alpha and under very active development to flesh out the API. I'll do my best
+       to not make breaking changes, and hide most of these changes behind feature toggles that can become default
+       in future versions. I want users and feedback, so I will do my utmost to make usage of this library as safe
+       as can be.
 
 Installing
 ==========
