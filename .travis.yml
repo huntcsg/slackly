@@ -6,15 +6,3 @@ language: python
 python: 3.6
 install: pip install -U tox
 script: tox -e py27,py34,py36,pypy,pep8,coverage,docs
-deploy:
-  provider: pypi
-  user: huntcsg
-  password:
-    secure: QbKRu+9cmEwdyDeRXYevmMEye6WpBSHi+tGSkYt69iP4aJL1YUK8tfTYx9rEXQQ5RHh5gvR9oTOBjXaW1iTwj5yms76n/tkj7UmkUI+CA3zmXaWzNJqZRgGfKzcah4PIO+QwEPgWSWufQv4kxGoUzkGntvf0dayK7zxifK2uem1zjlQydyX/961NCltnbj+Jqik5ddznuikHpcwW2CnQPuZ4V8shjPfq1axM76VTb9m/XUZ11nMXfElhvbKLzLE6xPTnvsDNsT7bJ10WnWsAiPfzuQRfSwpPymo4o+V3B4PljAaC0PlHGkRIw6OydkDBa1xkFtAFW2sKFvIHFgBKTcOzZPv/RjBZzoIYD5xLpquEk+kH/KkUaoFl7j00+qUQVW0r/tEsQ5oc2Mv4AgAebPNnEZMpux2gFdXFxT/1NVGTqA3EHdxUJhBV3RnPJ/+b8vFwzhKua4R1AsTgBUjp/Y897hVM87DPyiq2HTEesY6GP6cnDogscV+g+wRH6yuG6Stbt9a/NLNS2VksKfR4J6JVmZafxzr+sUFOyHG5d6OZnHNIdzrloVp+r3Fl3THhvxuCt+MnAZYjorYVuj3lSAR3mNwBaCMp2gtgPHxeyaRETJ3iCCa2JZBMIl4FwirhpLOgQHvvAsDtFg4rxUhKmjEb6IMQbx1m+MDqRZLUXe8=
-  on:
-    distributions: sdist bdist_wheel
-    repo: huntcsg/slackly
-    branch: master
-    tags: true
-    server: https://upload.pypi.org/legacy/
- 
