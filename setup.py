@@ -20,7 +20,7 @@ install_requires = [
     'requests',
     'websocket-client',
     'six',
-    'backports.functools_lru_cache;python_version<"3"',
+    'backports.functools_lru_cache',
 ]
 
 
